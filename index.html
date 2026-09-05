@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="VPEvolve turns audited black-box tool runs into executable engineering experience." />
+    <meta name="theme-color" content="#f5faf8" />
+    <title>VPEvolve - A Self-Evolving Virtual Process Engineer</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="VPEvolve home"><span>VP</span>VPEvolve</a>
+      <nav aria-label="Primary navigation">
+        <a href="#method">Method</a><a href="#evidence">Evidence</a><a href="#results">Results</a><a href="#dataset">Dataset</a>
+      </nav>
+      <span class="header-link preparing" aria-label="Paper preparing">Paper · preparing</span>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="kicker">VPEVOLVE · VIRTUAL PROCESS ENGINEERING</p>
+          <h1>A Self-Evolving Virtual Process Engineer<br />for <em>Computational Lithography</em></h1>
+          <p class="deck">VPEvolve turns costly runs of strict black-box tools into verified, executable experience. The language-model actor remains replaceable; the harness remembers what is safe, useful, and reusable.</p>
+          <p class="anonymous">Anonymous research project · ICLR submission materials</p>
+          <div class="actions">
+            <span class="button primary preparing" aria-label="Paper preparing">Paper · preparing</span>
+            <span class="button quiet">Code · preparing</span><span class="button quiet">Dataset · preparing</span>
+          </div>
+        </div>
+        <a class="scroll-link" href="#idea">See the idea <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="wide visual-section" id="idea">
+        <div class="section-label"><span>01 · The idea</span><p>Human trial-and-error becomes cumulative, executable experience.</p></div>
+        <img class="paper-visual" src="assets/vpevolve-paradigm.png" alt="Human versus agentic process engineering in VPEvolve" />
+      </section>
+
+      <section class="signal-strip" aria-label="Headline results">
+        <div><strong>3</strong><span>replaceable LLM actors</span></div>
+        <div><strong>100%</strong><span>valid actions</span></div>
+        <div><strong>2.8-17.2%</strong><span>physical metric gains</span></div>
+        <div><strong>7 + 2</strong><span>failure + skill families</span></div>
+      </section>
+
+      <section class="wide shift-section">
+        <div class="section-intro">
+          <p class="index">02 / The shift</p>
+          <h2>From repeated trial-and-error<br />to cumulative engineering.</h2>
+          <p>Conventional process development leaves hard-won knowledge spread across specialists and individual runs. VPEvolve makes that knowledge explicit, testable, and available to the next decision.</p>
+        </div>
+        <div class="principle-grid">
+          <article><span>Observe</span><h3>Read the tool, not a story.</h3><p>Logs, geometry, result databases, and registered physical metrics become deterministic evidence.</p></article>
+          <article><span>Decide</span><h3>Act inside an executable boundary.</h3><p>The actor proposes typed, gated recipe actions instead of editing unconstrained text.</p></article>
+          <article><span>Accumulate</span><h3>Carry verified lessons forward.</h3><p>Reproduced failures become guards; held-out gains become scoped skills.</p></article>
+        </div>
+      </section>
+
+      <section class="dark" id="method">
+        <div class="wide">
+          <div class="section-intro light">
+            <p class="index">03 / The method</p>
+            <h2>The model proposes.<br />The harness learns.</h2>
+            <p>Persistent capability lives in deterministic evidence, executable guards, reusable skills, and an auditable trial lineage - outside model weights.</p>
+          </div>
+          <div class="method-grid">
+            <div class="method-figure"><img src="assets/harness-method.png" alt="VPEvolve harness architecture" /></div>
+            <div class="method-notes">
+              <article><span>01</span><h3>Evidence, not narration</h3><p>Raw artifacts are parsed into typed evidence before they reach the actor.</p></article>
+              <article><span>02</span><h3>Feasible before optimal</h3><p>Every proposal crosses an executable invariant gate before it can spend a tool evaluation.</p></article>
+              <article><span>03</span><h3>Experience with scope</h3><p>Every lesson remains tied to the recipe, evaluator, layout, and exact parent that produced it.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wide evidence-section" id="evidence">
+        <div class="section-intro">
+          <p class="index">04 / Executable experience</p>
+          <h2>Every claim returns<br />to a tool artifact.</h2>
+          <p>The harness preserves the action, evidence, parent state, and evaluator contract needed to reproduce - and safely reuse - each lesson.</p>
+        </div>
+        <div class="evidence-explorer">
+          <div class="tabs" role="tablist" aria-label="Executable experience paths">
+            <button class="active" role="tab" aria-selected="true" data-path="failure">Failure → invariant</button>
+            <button role="tab" aria-selected="false" data-path="success">Gain → skill</button>
+            <button role="tab" aria-selected="false" data-path="portable">Across models</button>
+          </div>
+          <div class="evidence-panel failure" role="tabpanel">
+            <div class="evidence-copy"><span id="evidence-kicker">Negative experience</span><h3 id="evidence-title">A failure becomes a guard.</h3><p id="evidence-body">A conflicting SRAF width is reproduced, attributed to a minimal recipe diff, and compiled into two executable predicates. The same action class is rejected before the evaluator is called again.</p><strong id="evidence-fact">✓ 0 paid calls for a repeated encoded failure</strong></div>
+            <div class="node-flow" id="evidence-flow" aria-label="Typed edit to invariant"><div><small>01</small><b>Typed edit</b></div><i>→</i><div><small>02</small><b>Reproduce</b></div><i>→</i><div><small>03</small><b>Minimal diff</b></div><i>→</i><div><small>04</small><b>Invariant</b></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="physical">
+        <div class="wide">
+          <div class="section-intro">
+            <p class="index">05 / Physical outcome</p>
+            <h2>Recipe edits that move<br />the printed geometry.</h2>
+            <p>Selected recipes improve registered EPE and PVB metrics under a frozen five-corner evaluator while preserving manufacturability.</p>
+          </div>
+          <div class="contours">
+            <article><div><span>Initial recipe</span><b>Call 00</b></div><img src="assets/poly-baseline.png" alt="Initial Poly printed contours" /></article><i>→</i>
+            <article class="selected"><div><span>Promoted recipe</span><b>Call 07</b></div><img src="assets/poly-retained.png" alt="Improved Poly printed contours" /></article><i>→</i>
+            <article><div><span>Verified terminal</span><b>Call 12</b></div><img src="assets/poly-terminal.png" alt="Terminal Poly printed contours" /></article>
+          </div>
+          <div class="gain-grid"><div><strong>15.9%</strong><span>Nominal sidewall median EPE reduction</span></div><div><strong>17.2%</strong><span>Reduction in edges above 5 nm EPE</span></div><div><strong>9.7%</strong><span>Poly PVB per target edge reduction</span></div><div><strong>5 / 5</strong><span>Held-out Metal1 layouts improved</span></div></div>
+        </div>
+      </section>
+
+      <section class="wide results" id="results">
+        <div class="section-intro"><p class="index">06 / Evaluation</p><h2>One harness.<br />Three frozen actors.</h2><p>Matched replay freezes the task, evidence, schema, context budget, case order, and evaluator.</p></div>
+        <div class="results-grid">
+          <div class="result-table" role="table" aria-label="Cross-model VPEvolve results">
+            <div class="result-row head"><span>Actor</span><span>Accuracy</span><span>Validity</span><span>Recurrence↓</span></div>
+            <div class="result-row"><b>Qwen2.5-7B</b><span>52.4%</span><strong>100%</strong><span>20%</span></div>
+            <div class="result-row"><b>Qwen3.6-27B</b><span>85.7%</span><strong>100%</strong><span>0%</span></div>
+            <div class="result-row"><b>GLM-4.7</b><span>71.4%</span><strong>100%</strong><span>10%</span></div>
+            <p>Full VPEvolve exceeds Raw, ReAct, and three adapted persistent-memory conditions for every actor.</p>
+          </div>
+          <div class="trajectory"><div><span>Online optimization</span><b>Best verified improvement</b></div><img src="assets/online-evolution.png" alt="Poly and Metal1 recipe evolution trajectories" /></div>
+        </div>
+        <div class="repair">
+          <div class="repair-copy"><span class="index">A real held-out repair</span><h3>One structural skill removes an MRC violation.</h3><p>The layout, process model, evaluator, numeric parameters, and crop remain fixed. The admitted structural edit is the only semantic recipe change.</p><div><span>MRC_MAIN_WIDTH</span><strong>1 → 0</strong></div></div>
+          <figure><img src="assets/mrc-before.png" alt="Metal1 before repair with MRC violation" /><figcaption>Before · marker present</figcaption></figure>
+          <figure><img src="assets/mrc-after.png" alt="Metal1 after repair without MRC violation" /><figcaption>After · marker removed</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="dataset" id="dataset"><div class="dataset-number">50</div><div><p class="index">07 / Open evidence</p><h2>Layouts - and the engineering path between recipes.</h2><p>The planned release covers Poly and Metal1 clips. Audited development cases preserve typed edits, tool artifacts, metrics, and lineage.</p></div><span>Preparing the audited release</span></section>
+
+      <section class="closing"><div><p class="index">VPEvolve</p><h2>Engineering capability that compounds outside model weights.</h2><p>A virtual process engineer should not forget what the last model learned. VPEvolve makes verified experience portable, executable, and ready for the next tool run.</p><span class="button primary preparing" aria-label="Paper preparing">Paper · preparing</span></div><aside><span>Anonymous release</span><p>Paper, code, data, and citation metadata will be added only after their corresponding release audits.</p></aside></section>
+    </main>
+    <footer><a class="wordmark" href="#top"><span>VP</span>VPEvolve</a><p>Anonymous project page · 2026</p><a href="#top">Back to top ↑</a></footer>
+  </body>
+</html>
