@@ -30,3 +30,44 @@ for (const button of buttons) {
     document.querySelector('#evidence-flow').innerHTML = item.nodes.map((node, index) => `<div><small>0${index + 1}</small><b>${node}</b></div>${index < item.nodes.length - 1 ? '<i>→</i>' : ''}`).join('');
   });
 }
+
+const processLayers = {
+  target: { index: '01', title: 'Target layout', image: 'assets/process/target.png', color: '#8192aa', detail: 'The intended wafer geometry and the reference used to measure edge placement.' },
+  mask: { index: '02', title: 'OPC mask', image: 'assets/process/mask.png', color: '#315ce8', detail: 'The corrected mask produced by the recipe before optical simulation.' },
+  sraf: { index: '03', title: 'Assist features', image: 'assets/process/sraf.png', color: '#11bad0', detail: 'Sub-resolution features reshape the aerial image without printing on wafer.' },
+  contour: { index: '04', title: 'Nominal contour', image: 'assets/process/contour.png', color: '#f0a11a', detail: 'The simulated wafer contour reveals where the current recipe follows—or misses—the target.' },
+  pvb: { index: '05', title: 'Process variation band', image: 'assets/process/pvb.png', color: '#ec6485', detail: 'Across focus and dose corners, the band exposes sensitivity that a nominal contour can hide.' }
+};
+
+const layerButtons = document.querySelectorAll('.layer-buttons button');
+for (const button of layerButtons) {
+  button.addEventListener('click', () => {
+    const item = processLayers[button.dataset.layer];
+    layerButtons.forEach((candidate) => {
+      candidate.classList.toggle('active', candidate === button);
+      candidate.setAttribute('aria-selected', String(candidate === button));
+    });
+    const image = document.querySelector('#layer-image');
+    image.src = item.image;
+    image.alt = item.title;
+    document.querySelector('#layer-index').textContent = `${item.index} / 05`;
+    document.querySelector('#layer-title').textContent = item.title;
+    document.querySelector('#layer-detail').textContent = item.detail;
+    document.querySelector('#layer-color').style.background = item.color;
+  });
+}
+
+const stack = document.querySelector('.hero-stack');
+if (stack && window.matchMedia('(pointer: fine)').matches) {
+  stack.addEventListener('pointermove', (event) => {
+    const bounds = stack.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    stack.style.setProperty('--stack-rx', `${y * -7}deg`);
+    stack.style.setProperty('--stack-ry', `${x * 7}deg`);
+  });
+  stack.addEventListener('pointerleave', () => {
+    stack.style.setProperty('--stack-rx', '0deg');
+    stack.style.setProperty('--stack-ry', '0deg');
+  });
+}

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="VPEvolve turns audited black-box tool runs into executable engineering experience." />
     <meta name="theme-color" content="#f5faf8" />
+    <meta property="og:title" content="VPEvolve - A Self-Evolving Virtual Process Engineer" />
+    <meta property="og:description" content="Verified failures become invariants. Validated gains become reusable skills." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vpevolve.github.io/vpevolve/" />
+    <meta property="og:image" content="https://vpevolve.github.io/vpevolve/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>VPEvolve - A Self-Evolving Virtual Process Engineer</title>
     <link rel="icon" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
@@ -30,6 +36,16 @@
             <span class="button primary preparing" aria-label="Paper preparing">Paper · preparing</span>
             <span class="button quiet">Code · preparing</span><span class="button quiet">Dataset · preparing</span>
           </div>
+        </div>
+        <div class="hero-stack-wrap">
+          <div class="hero-stack" aria-label="Real computational lithography layers from one 6 micrometre evaluation clip">
+            <div class="stack-halo"></div>
+            <figure class="stack-card stack-target"><img src="assets/process/target.png" alt="Target layout" /><figcaption><span>01</span>Target layout</figcaption></figure>
+            <figure class="stack-card stack-sraf"><img src="assets/process/sraf.png" alt="SRAF layer" /><figcaption><span>02</span>SRAF</figcaption></figure>
+            <figure class="stack-card stack-print"><img src="assets/process/overlay.png" alt="Target, mask, SRAF, contour, and process variation evidence overlay" /><figcaption><span>03</span>Physical evidence</figcaption></figure>
+            <div class="stack-orbit orbit-one"></div><div class="stack-orbit orbit-two"></div>
+          </div>
+          <div class="stack-footnote">◎ Real tool output · same 6 µm clip · 1 nm sampling</div>
         </div>
         <a class="scroll-link" href="#idea">See the idea <span aria-hidden="true">↓</span></a>
       </section>
@@ -59,10 +75,40 @@
         </div>
       </section>
 
+      <section class="process-section" id="process">
+        <div class="wide">
+          <div class="section-intro">
+            <p class="index">03 / One physical task</p>
+            <h2>From recipe action<br />to wafer evidence.</h2>
+            <p>A recipe is not a single parameter vector. It controls mask correction, assist-feature construction, printed contours, process-window robustness, and manufacturability under one strict evaluator.</p>
+          </div>
+          <div class="layer-explorer">
+            <div class="layer-canvas">
+              <div class="canvas-meta"><span>6.0 × 6.0 µm clip</span><span>1 nm / pixel</span></div>
+              <img id="layer-image" src="assets/process/target.png" alt="Target layout" />
+              <div class="canvas-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <div class="canvas-caption"><span id="layer-color"></span><div><small id="layer-index">01 / 05</small><strong id="layer-title">Target layout</strong></div></div>
+            </div>
+            <div class="layer-console">
+              <div class="console-heading">▱ Inside one commercial-tool call</div>
+              <p id="layer-detail">The intended wafer geometry and the reference used to measure edge placement.</p>
+              <div class="layer-buttons" role="tablist" aria-label="Computational lithography evidence layers">
+                <button class="active" role="tab" aria-selected="true" data-layer="target"><span style="--layer:#8192aa"></span><small>01</small><b>Target</b></button>
+                <button role="tab" aria-selected="false" data-layer="mask"><span style="--layer:#315ce8"></span><small>02</small><b>Mask</b></button>
+                <button role="tab" aria-selected="false" data-layer="sraf"><span style="--layer:#11bad0"></span><small>03</small><b>SRAF</b></button>
+                <button role="tab" aria-selected="false" data-layer="contour"><span style="--layer:#f0a11a"></span><small>04</small><b>Print</b></button>
+                <button role="tab" aria-selected="false" data-layer="pvb"><span style="--layer:#ec6485"></span><small>05</small><b>PVB</b></button>
+              </div>
+              <div class="console-note"><b>One action, several obligations.</b><span>A useful edit must improve fidelity and process-window robustness while remaining executable and manufacturable.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="dark" id="method">
         <div class="wide">
           <div class="section-intro light">
-            <p class="index">03 / The method</p>
+            <p class="index">04 / The method</p>
             <h2>The model proposes.<br />The harness learns.</h2>
             <p>Persistent capability lives in deterministic evidence, executable guards, reusable skills, and an auditable trial lineage - outside model weights.</p>
           </div>
@@ -79,7 +125,7 @@
 
       <section class="wide evidence-section" id="evidence">
         <div class="section-intro">
-          <p class="index">04 / Executable experience</p>
+          <p class="index">05 / Executable experience</p>
           <h2>Every claim returns<br />to a tool artifact.</h2>
           <p>The harness preserves the action, evidence, parent state, and evaluator contract needed to reproduce - and safely reuse - each lesson.</p>
         </div>
@@ -99,7 +145,7 @@
       <section class="physical">
         <div class="wide">
           <div class="section-intro">
-            <p class="index">05 / Physical outcome</p>
+            <p class="index">06 / Physical outcome</p>
             <h2>Recipe edits that move<br />the printed geometry.</h2>
             <p>Selected recipes improve registered EPE and PVB metrics under a frozen five-corner evaluator while preserving manufacturability.</p>
           </div>
@@ -113,7 +159,7 @@
       </section>
 
       <section class="wide results" id="results">
-        <div class="section-intro"><p class="index">06 / Evaluation</p><h2>One harness.<br />Three frozen actors.</h2><p>Matched replay freezes the task, evidence, schema, context budget, case order, and evaluator.</p></div>
+        <div class="section-intro"><p class="index">07 / Evaluation</p><h2>One harness.<br />Three frozen actors.</h2><p>Matched replay freezes the task, evidence, schema, context budget, case order, and evaluator.</p></div>
         <div class="results-grid">
           <div class="result-table" role="table" aria-label="Cross-model VPEvolve results">
             <div class="result-row head"><span>Actor</span><span>Accuracy</span><span>Validity</span><span>Recurrence↓</span></div>
@@ -131,7 +177,7 @@
         </div>
       </section>
 
-      <section class="dataset" id="dataset"><div class="dataset-number">50</div><div><p class="index">07 / Open evidence</p><h2>Layouts - and the engineering path between recipes.</h2><p>The planned release covers Poly and Metal1 clips. Audited development cases preserve typed edits, tool artifacts, metrics, and lineage.</p></div><span>Preparing the audited release</span></section>
+      <section class="dataset" id="dataset"><div class="dataset-number">50</div><div><p class="index">08 / Open evidence</p><h2>Layouts - and the engineering path between recipes.</h2><p>The planned release covers Poly and Metal1 clips. Audited development cases preserve typed edits, tool artifacts, metrics, and lineage.</p></div><span>Preparing the audited release</span></section>
 
       <section class="closing"><div><p class="index">VPEvolve</p><h2>Engineering capability that compounds outside model weights.</h2><p>A virtual process engineer should not forget what the last model learned. VPEvolve makes verified experience portable, executable, and ready for the next tool run.</p><span class="button primary preparing" aria-label="Paper preparing">Paper · preparing</span></div><aside><span>Anonymous release</span><p>Paper, code, data, and citation metadata will be added only after their corresponding release audits.</p></aside></section>
     </main>
