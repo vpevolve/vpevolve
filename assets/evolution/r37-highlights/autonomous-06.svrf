@@ -1,0 +1,425 @@
+//============================================================
+// Auto-generated Metal MBSRAF + DenseOPC + OPCVerify deck
+// Input: {input_oas_path}
+//============================================================
+
+LAYOUT SYSTEM GDSII
+LAYOUT PATH "{input_oas_path}"
+LAYOUT PRIMARY "*"
+
+LAYOUT ERROR ON INPUT YES
+LAYOUT MAGNIFY AUTO
+
+PRECISION 10000
+RESOLUTION 1
+UNIT LENGTH U
+
+DRC RESULTS DATABASE "{output_oas_path}" GDSII PSEUDO
+DRC SUMMARY REPORT "calibre_summary.rep"
+DRC MAXIMUM RESULTS ALL
+DRC MAXIMUM VERTEX 4000
+
+//============================================================
+// 1. Metal target and initial mask
+//============================================================
+
+LAYER METAL_TARGET 9 0
+
+METAL_TARGET { COPY METAL_TARGET }
+DRC CHECK MAP METAL_TARGET 30
+
+// For the first experiment, use the design target as the MBSRAF reference
+// mask. Replace this COPY with a retarget/pre-bias operation when needed.
+METAL_INIT = COPY METAL_TARGET
+
+METAL_INIT { COPY METAL_INIT }
+DRC CHECK MAP METAL_INIT 31
+
+//============================================================
+// 2. Model-based SRAF generation
+//============================================================
+
+METAL_SRAF_INITIAL = RET MBSRAF METAL_TARGET METAL_INIT FILE MBSRAF_SETUP MAP SB_RESULT
+
+METAL_SRAF_INITIAL { COPY METAL_SRAF_INITIAL }
+DRC CHECK MAP METAL_SRAF_INITIAL 41
+
+
+
+LITHO FILE MBSRAF_SETUP [
+    processing_mode flat
+    progress_meter off
+
+    modelpath /home/anonymous/zeroshot-jobs/resources
+
+    layer SRAF_TARGET
+    layer INITIAL_MASK
+
+    tilemicrons 5
+    simulation_consistency 2
+
+    image_options METAL_SRAF_MODEL {
+        litho_model models
+        layer INITIAL_MASK visible
+    }
+
+    sraf_options METAL_SRAF_OPTS {
+        algorithm 1
+        correctionlayer INITIAL_MASK
+        image_options METAL_SRAF_MODEL
+
+        minwidth 0.03
+        maxwidth 0.035
+        maxlength 0.1
+        extension 0.02
+        minlength 0.08
+        minsquarelength 0.045
+        minoffset 0.05
+        maxoffset 0.3
+        minfeaturespace 0.05
+        collecttype 0
+        # algorithm 1 owns corner preference and placement mode.  Explicit
+        # overrides were ignored by Calibre 2022.2 and obscured provenance.
+        localmaxgradient width 0.03 prior 1
+    }
+
+    setlayer SB_RESULT = mbsraf SRAF_TARGET OPTIONS METAL_SRAF_OPTS
+
+]
+
+//============================================================
+// 3. DenseOPC: main feature movable; SRAF is simulated and print-avoided
+//============================================================
+
+METAL_DENSE_FINAL = LITHO DENSEOPC METAL_TARGET METAL_SRAF_INITIAL FILE NMOPC_SETUP MAP METAL_FINAL_RESULT
+
+// Main OPC polygons retain interaction with the design target; corrected
+// SRAFs remain disjoint.  This deterministic split ensures the SRAF returned
+// by print avoidance, rather than the original MBSRAF input, enters final mask.
+METAL_OPC = INTERACT METAL_DENSE_FINAL METAL_TARGET
+METAL_SRAF = NOT METAL_DENSE_FINAL METAL_OPC
+
+METAL_OPC { COPY METAL_OPC }
+DRC CHECK MAP METAL_OPC 101
+
+METAL_FINAL_MASK = COPY METAL_DENSE_FINAL
+
+METAL_SRAF { COPY METAL_SRAF }
+DRC CHECK MAP METAL_SRAF 40
+
+METAL_FINAL_MASK { COPY METAL_FINAL_MASK }
+DRC CHECK MAP METAL_FINAL_MASK 102
+
+LITHO FILE NMOPC_SETUP [
+    modelpath /home/anonymous/zeroshot-jobs/resources/models
+
+    layer METAL_TARGET
+    layer METAL_SRAF_INITIAL
+
+    tilemicrons 5 adjust
+    processing_mode flat
+    contour_options interp_algo lagrange interp_degree 5
+    simulation_consistency 2
+
+    denseopc_options METAL_OPTS {
+        version 1
+
+        jog_freeze 0.010
+        jog_ignore_metric 0.007
+        max_opc_move 0.05
+        max_iter_movement 0.003
+
+        layer METAL_TARGET opc
+        # A hidden layer is not simulated.  SRAF must use the documented
+        # sraf type so sraf_print_avoidance can detect and correct printing.
+        layer METAL_SRAF_INITIAL sraf
+
+        image /
+        pw_condition SRAF_PRINT dose 1 spa
+
+        feedback_mode 1
+        displacement_limit_mode STRICT
+
+        fragment_min 0.025
+        line_end_fragment off
+        fragment_layer_order full
+        fragment_max 0.060 -minlen 0.200
+        fragment_corner convex convex length > 0.050 < 0.100 fragment breakinhalf
+        fragment_corner convex convex length >= 0.100 fragment 0.050 0.040 0.030 0.025
+        fragment_layer METAL_SRAF_INITIAL {
+            fragment_min 0.02
+            fragment_max 0.08
+        }
+
+        mrc_rule external METAL_TARGET { use 0.02 euclidean }
+        mrc_rule external METAL_TARGET METAL_SRAF_INITIAL { use 0.02 euclidean }
+        mrc_rule internal METAL_TARGET { use 0.02 euclidean }
+        mrc_rule internal METAL_SRAF_INITIAL { use 0.02 euclidean }
+        mrc_rule area METAL_SRAF_INITIAL {
+            use 0.0016
+            square use 0.0004
+        }
+
+        feedback -0.3 -0.4 -0.5 -0.6 -0.65 -0.6 -0.5 -0.4 -0.3 -0.2
+
+        sraf_sites_create -layer METAL_SRAF_INITIAL
+        OPC_ITERATION 6
+        OPC_ITERATION 1
+        sraf_print_avoidance -layer METAL_SRAF_INITIAL -step 0.001
+        OPC_ITERATION 1
+        sraf_print_avoidance -layer METAL_SRAF_INITIAL -step 0.001
+        OPC_ITERATION 1
+        sraf_print_avoidance -layer METAL_SRAF_INITIAL -step 0.001
+        OPC_ITERATION 2
+    }
+
+    # These setlayer calls are concurrent output mappings of one DenseOPC run.
+    setlayer METAL_OPC_RESULT = denseopc METAL_TARGET METAL_SRAF_INITIAL MAP METAL_TARGET OPTIONS METAL_OPTS
+    setlayer METAL_SRAF_RESULT = denseopc METAL_TARGET METAL_SRAF_INITIAL MAP METAL_SRAF_INITIAL OPTIONS METAL_OPTS
+    setlayer METAL_FINAL_RESULT = or METAL_OPC_RESULT METAL_SRAF_RESULT
+]
+
+//============================================================
+// 4. Independent post-OPC mask-rule checks
+//
+// These checks report violations on the actual output mask.  The mrc_rule
+// statements inside DenseOPC constrain correction, but do not by themselves
+// provide a complete, separately consumable final-mask MRC report.
+//============================================================
+
+MRC_MAIN_WIDTH {
+    @ OPC main-feature width below 0.02 um (reference check)
+    INTERNAL METAL_OPC < 0.02
+}
+DRC CHECK MAP MRC_MAIN_WIDTH 210
+DRC CHECK MAP MRC_MAIN_WIDTH ASCII "cali_res/r31-fixed-poly-x160-y640_mrc_main_width.db"
+
+
+
+MRC_MAIN_SPACE {
+    @ OPC main-feature spacing below 0.02 um
+    EXTERNAL METAL_OPC < 0.02
+}
+DRC CHECK MAP MRC_MAIN_SPACE 211
+DRC CHECK MAP MRC_MAIN_SPACE ASCII "cali_res/r31-fixed-poly-x160-y640_mrc_main_space.db"
+
+MRC_MAIN_SRAF_SPACE {
+    @ Main-feature to SRAF spacing below 0.02 um
+    EXTERNAL METAL_OPC METAL_SRAF < 0.02
+}
+DRC CHECK MAP MRC_MAIN_SRAF_SPACE 212
+DRC CHECK MAP MRC_MAIN_SRAF_SPACE ASCII "cali_res/r31-fixed-poly-x160-y640_mrc_main_sraf_space.db"
+
+MRC_SRAF_WIDTH {
+    @ SRAF width below 0.02 um
+    INTERNAL METAL_SRAF < 0.02
+}
+DRC CHECK MAP MRC_SRAF_WIDTH 213
+DRC CHECK MAP MRC_SRAF_WIDTH ASCII "cali_res/r31-fixed-poly-x160-y640_mrc_sraf_width.db"
+
+MRC_SRAF_SPACE {
+    @ SRAF-to-SRAF spacing below 0.02 um
+    EXTERNAL METAL_SRAF < 0.02
+}
+DRC CHECK MAP MRC_SRAF_SPACE 214
+DRC CHECK MAP MRC_SRAF_SPACE ASCII "cali_res/r31-fixed-poly-x160-y640_mrc_sraf_space.db"
+
+//============================================================
+// 5. OPCVerify
+//============================================================
+
+IMG_NOMINAL = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP IMG_NOMINAL
+IMG_NO_SRAF = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP IMG_NO_SRAF
+IMG_ORIGINAL = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP IMG_ORIGINAL
+PV_BAND = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP PV_BAND
+EPE_NOMINAL = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_NOMINAL
+EPE_IN = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_IN
+EPE_OUT = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_OUT
+EPE_LD_NF = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_LD_NF
+EPE_HD_NF = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_HD_NF
+EPE_LD_PF = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_LD_PF
+EPE_HD_PF = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_HD_PF
+EPE_NOMINAL_AVG_T10 = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_NOMINAL_AVG_T10
+EPE_LD_NF_AVG_T10 = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_LD_NF_AVG_T10
+EPE_HD_NF_AVG_T10 = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_HD_NF_AVG_T10
+EPE_LD_PF_AVG_T10 = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_LD_PF_AVG_T10
+EPE_HD_PF_AVG_T10 = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_HD_PF_AVG_T10
+EPE_NOMINAL_AVG_T20 = LITHO OPCVERIFY METAL_TARGET METAL_OPC METAL_SRAF FILE OPCV_M1_SETUP MAP EPE_NOMINAL_AVG_T20
+
+IMG_NOMINAL { COPY IMG_NOMINAL }
+DRC CHECK MAP IMG_NOMINAL 5
+
+PV_BAND { COPY PV_BAND }
+DRC CHECK MAP PV_BAND 6
+DRC CHECK MAP PV_BAND ASCII "cali_res/r31-fixed-poly-x160-y640_pv_band.db"
+
+IMG_NO_SRAF { COPY IMG_NO_SRAF }
+DRC CHECK MAP IMG_NO_SRAF 7
+
+IMG_ORIGINAL { COPY IMG_ORIGINAL }
+DRC CHECK MAP IMG_ORIGINAL 8
+
+EPE_NOMINAL { COPY EPE_NOMINAL }
+DRC CHECK MAP EPE_NOMINAL 9
+DRC CHECK MAP EPE_NOMINAL ASCII "cali_res/r31-fixed-poly-x160-y640_epe_nominal.db"
+
+EPE_IN { COPY EPE_IN }
+DRC CHECK MAP EPE_IN 10
+DRC CHECK MAP EPE_IN ASCII "cali_res/r31-fixed-poly-x160-y640_epe_in.db"
+
+EPE_OUT { COPY EPE_OUT }
+DRC CHECK MAP EPE_OUT 11
+DRC CHECK MAP EPE_OUT ASCII "cali_res/r31-fixed-poly-x160-y640_epe_out.db"
+EPE_LD_NF { COPY EPE_LD_NF }
+DRC CHECK MAP EPE_LD_NF ASCII "cali_res/r31-fixed-poly-x160-y640_epe_ld_nf.db"
+EPE_HD_NF { COPY EPE_HD_NF }
+DRC CHECK MAP EPE_HD_NF ASCII "cali_res/r31-fixed-poly-x160-y640_epe_hd_nf.db"
+EPE_LD_PF { COPY EPE_LD_PF }
+DRC CHECK MAP EPE_LD_PF ASCII "cali_res/r31-fixed-poly-x160-y640_epe_ld_pf.db"
+EPE_HD_PF { COPY EPE_HD_PF }
+DRC CHECK MAP EPE_HD_PF ASCII "cali_res/r31-fixed-poly-x160-y640_epe_hd_pf.db"
+RDB_EPE_NOMINAL { DFM RDB EPE_NOMINAL "cali_res/r31-fixed-poly-x160-y640_epe_nominal_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_NOMINAL }
+RDB_EPE_LD_NF { DFM RDB EPE_LD_NF "cali_res/r31-fixed-poly-x160-y640_epe_ld_nf_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_LD_NF }
+RDB_EPE_HD_NF { DFM RDB EPE_HD_NF "cali_res/r31-fixed-poly-x160-y640_epe_hd_nf_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_HD_NF }
+RDB_EPE_LD_PF { DFM RDB EPE_LD_PF "cali_res/r31-fixed-poly-x160-y640_epe_ld_pf_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_LD_PF }
+RDB_EPE_HD_PF { DFM RDB EPE_HD_PF "cali_res/r31-fixed-poly-x160-y640_epe_hd_pf_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_HD_PF }
+RDB_EPE_NOMINAL_AVG_T10 { DFM RDB EPE_NOMINAL_AVG_T10 "cali_res/r31-fixed-poly-x160-y640_epe_nominal_avg_t10_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_NOMINAL_AVG_T10 }
+RDB_EPE_LD_NF_AVG_T10 { DFM RDB EPE_LD_NF_AVG_T10 "cali_res/r31-fixed-poly-x160-y640_epe_ld_nf_avg_t10_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_LD_NF_AVG_T10 }
+RDB_EPE_HD_NF_AVG_T10 { DFM RDB EPE_HD_NF_AVG_T10 "cali_res/r31-fixed-poly-x160-y640_epe_hd_nf_avg_t10_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_HD_NF_AVG_T10 }
+RDB_EPE_LD_PF_AVG_T10 { DFM RDB EPE_LD_PF_AVG_T10 "cali_res/r31-fixed-poly-x160-y640_epe_ld_pf_avg_t10_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_LD_PF_AVG_T10 }
+RDB_EPE_HD_PF_AVG_T10 { DFM RDB EPE_HD_PF_AVG_T10 "cali_res/r31-fixed-poly-x160-y640_epe_hd_pf_avg_t10_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_HD_PF_AVG_T10 }
+RDB_EPE_NOMINAL_AVG_T20 { DFM RDB EPE_NOMINAL_AVG_T20 "cali_res/r31-fixed-poly-x160-y640_epe_nominal_avg_t20_properties.rdb" MAXIMUM ALL ALL CELLS NOEMPTY CHECKNAME EPE_NOMINAL_AVG_T20 }
+
+LITHO FILE OPCV_M1_SETUP [
+    modelpath /home/anonymous/zeroshot-jobs/resources
+
+    layer METAL_TARGET hidden clear
+    layer METAL_OPC hidden clear
+    layer METAL_SRAF hidden clear
+
+    image_options SIM_BEST {
+        litho_model models
+        layer METAL_OPC visible mask_layer 0
+        layer METAL_SRAF visible mask_layer 0
+    }
+
+    image_options SIM_NO_SRAF {
+        litho_model models
+        layer METAL_OPC visible mask_layer 0
+    }
+
+    image_options SIM_ORIGINAL {
+        litho_model models
+        layer METAL_TARGET visible mask_layer 0
+    }
+
+    simulation_consistency 2
+
+    setlayer IMG_NOMINAL = image SIM_BEST dose 1
+    setlayer IMG_NO_SRAF = image SIM_NO_SRAF dose 1
+    setlayer IMG_ORIGINAL = image SIM_ORIGINAL dose 1
+
+    setlayer IMG_HD_PF = image SIM_BEST dose 1.03 focus 30nm
+    setlayer IMG_LD_PF = image SIM_BEST dose 0.97 focus 30nm
+    setlayer IMG_HD_NF = image SIM_BEST dose 1.03 focus -30nm
+    setlayer IMG_LD_NF = image SIM_BEST dose 0.97 focus -30nm
+
+    # Individual corner contour/RDB exports stay unavailable until the exact
+    # Calibre 2022.2 OPCVerify property syntax is validated against a real
+    # fixture.  Do not reference these LITHO-local layers from top-level SVRF.
+
+    image_set PW_CONTOURS = list IMG_NOMINAL IMG_LD_NF IMG_HD_NF IMG_LD_PF IMG_HD_PF
+
+    # Construct the complete process-window envelope.  PV_OUTER is the union
+    # and PV_INNER is the intersection of nominal and all four dose/focus
+    # contours.  The band is the area between these two envelopes.
+    setlayer PV_OUTER_PF = or IMG_LD_PF IMG_HD_PF
+    setlayer PV_OUTER_NF = or IMG_LD_NF IMG_HD_NF
+    setlayer PV_OUTER_CORNERS = or PV_OUTER_PF PV_OUTER_NF
+    setlayer PV_OUTER = or PV_OUTER_CORNERS IMG_NOMINAL
+
+    setlayer PV_INNER_PF = and IMG_LD_PF IMG_HD_PF
+    setlayer PV_INNER_NF = and IMG_LD_NF IMG_HD_NF
+    setlayer PV_INNER_CORNERS = and PV_INNER_PF PV_INNER_NF
+    setlayer PV_INNER = and PV_INNER_CORNERS IMG_NOMINAL
+
+    setlayer PV_BAND = not PV_OUTER PV_INNER
+
+    setlayer EPE_NOMINAL = measure_epe IMG_NOMINAL METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+    setlayer EPE_IN = measure_epe PV_INNER METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+    setlayer EPE_OUT = measure_epe PV_OUTER METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+setlayer EPE_LD_NF = measure_epe IMG_LD_NF METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+    setlayer EPE_HD_NF = measure_epe IMG_HD_NF METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+    setlayer EPE_LD_PF = measure_epe IMG_LD_PF METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+    setlayer EPE_HD_PF = measure_epe IMG_HD_PF METAL_TARGET function max epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment property { max
+min
+min_magnitude
+max_magnitude
+}
+    setlayer EPE_NOMINAL_AVG_T10 = measure_epe IMG_NOMINAL METAL_TARGET function average magnitude epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment trim_ends 0.010 property { max
+min
+average
+min_magnitude
+max_magnitude
+average_magnitude
+}
+    setlayer EPE_LD_NF_AVG_T10 = measure_epe IMG_LD_NF METAL_TARGET function average magnitude epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment trim_ends 0.010 property { max
+min
+average
+min_magnitude
+max_magnitude
+average_magnitude
+}
+    setlayer EPE_HD_NF_AVG_T10 = measure_epe IMG_HD_NF METAL_TARGET function average magnitude epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment trim_ends 0.010 property { max
+min
+average
+min_magnitude
+max_magnitude
+average_magnitude
+}
+    setlayer EPE_LD_PF_AVG_T10 = measure_epe IMG_LD_PF METAL_TARGET function average magnitude epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment trim_ends 0.010 property { max
+min
+average
+min_magnitude
+max_magnitude
+average_magnitude
+}
+    setlayer EPE_HD_PF_AVG_T10 = measure_epe IMG_HD_PF METAL_TARGET function average magnitude epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment trim_ends 0.010 property { max
+min
+average
+min_magnitude
+max_magnitude
+average_magnitude
+}
+    setlayer EPE_NOMINAL_AVG_T20 = measure_epe IMG_NOMINAL METAL_TARGET function average magnitude epe_spacing .001 min_featsize 0.08 max_edgelen 0.1 fragment trim_ends 0.020 property { max
+min
+average
+min_magnitude
+max_magnitude
+average_magnitude
+}
+]

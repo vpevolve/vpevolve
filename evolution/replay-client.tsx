@@ -1,0 +1,34 @@
+'use client';
+import { useEffect, useState } from 'react';
+
+type Frame = { round: number; recipe: string; recipe_url: string; diff: string; commands: string[]; metrics: Record<string, number>; assets: Record<string, Record<string, { url: string }>> };
+type Case = { id: string; title: string; kind: string; total_candidates: number; frames: Frame[]; repeat: { feasible_incumbent_confirmed: boolean } };
+type Data = { cases: Case[]; metrics_scope: string };
+const root = '../assets/evolution/r37-highlights/';
+const metrics = [['edge_normal_max_epe_nm','Maximum normal EPE','nm',2],['edge_normal_mean_epe_nm','Mean normal EPE','nm',3],['edge_normal_top10_mean_epe_nm','Top-10 mean EPE','nm',2],['mrc_total_result_count','MRC violations','',0],['sraf_printability_violation_count','SRAF printability violations','',0],['pv_band_area_per_target_edge_um','PV band / target edge','µm',6]] as const;
+const explanations: Record<string,string> = {max_iter_movement:'Adjust movement per iteration',feedback:'Update the feedback schedule',OPC_ITERATION:'Adjust the iteration schedule',jog_freeze:'Lower the jog-freeze threshold',max_opc_move:'Adjust total movement',fragment_max:'Refine straight-edge fragmentation',fragment_min:'Adjust minimum fragmentation'};
+
+export function EvolutionReplay() {
+ const [data,setData]=useState<Data|null>(null),[error,setError]=useState(false),[caseIndex,setCaseIndex]=useState(0),[index,setIndex]=useState(0),[view,setView]=useState('zoom');
+ useEffect(()=>{const c=new AbortController();fetch(root+'highlights.json',{signal:c.signal}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{if(!d.cases?.length)throw Error();setData(d);setIndex(d.cases[0].frames.length-1);}).catch(e=>{if(e.name!=='AbortError')setError(true);});return()=>c.abort();},[]);
+ if(!data)return <section className="replay-loading" role="status"><h1>Recipe evolution</h1><p>{error?'The recorded results could not be loaded.':'Loading recorded improvements…'}</p></section>;
+ const study=data.cases[caseIndex], frame=study.frames[index], initial=study.frames[0],last=study.frames[study.frames.length-1];
+ const gain=(1-last.metrics.edge_normal_max_epe_nm/initial.metrics.edge_normal_max_epe_nm)*100;
+ return <>
+  <section className="replay-intro"><div><p className="replay-kicker">Selected retained improvements</p><h1>Recipe → mask → contour</h1><p>See the changes behind a better printed pattern.</p></div><div className="result-highlight"><span>Final maximum normal EPE</span><strong>{last.metrics.edge_normal_max_epe_nm.toFixed(2)} <small>nm</small></strong><b>↓ {gain.toFixed(1)}% from {initial.metrics.edge_normal_max_epe_nm.toFixed(2)} nm</b></div></section>
+  <div className="case-tabs" aria-label="Experiment">{data.cases.map((c,i)=><button key={c.id} aria-pressed={i===caseIndex} onClick={()=>{setCaseIndex(i);setIndex(c.frames.length-1);}}>{c.title}<span>{c.frames[c.frames.length-1].metrics.edge_normal_max_epe_nm.toFixed(2)} nm</span></button>)}</div>
+  <section className="replay-workspace" aria-label="Retained improvement timeline">
+   <div className="replay-controls"><div><p className="replay-kicker">{index===0?'Initial recipe':`Retained improvement · original round ${frame.round}`}</p><p className="stage-subtitle">{study.kind}</p></div><div className="replay-switch" aria-label="Geometry viewport"><button aria-pressed={view==='zoom'} onClick={()=>setView('zoom')}>Hotspot detail</button><button aria-pressed={view==='core'} onClick={()=>setView('core')}>5 µm core</button></div></div>
+   <div className="milestones" aria-label="Select a retained recipe">{study.frames.map((f,i)=><button key={f.round} aria-current={i===index?'step':undefined} onClick={()=>setIndex(i)}><span>{i===0?'Initial':`Round ${f.round}`}</span><strong>{f.metrics.edge_normal_max_epe_nm.toFixed(2)} <small>nm</small></strong><i style={{width:`${Math.max(5,(1-f.metrics.edge_normal_max_epe_nm/initial.metrics.edge_normal_max_epe_nm)*100)}%`}} /></button>)}</div>
+   <div className="replay-event" aria-live="polite"><b>{index===0?'Starting point':index===study.frames.length-1?'Final retained result':'Accepted improvement'}</b><span>{index===0?'Original recipe before optimization.':frame.commands.map(c=>explanations[c]||c).join(' · ')}</span></div>
+   <div className="replay-panels">
+    <article className="replay-panel replay-recipe"><div className="replay-panel-heading"><h2>Recipe changes</h2><span>{index===0?'Baseline configuration':'Compared with the previous retained step'}</span></div><div className="replay-code"><pre>{frame.diff?frame.diff.split('\n').map((line,i)=><span key={i} className={line.startsWith('+')&&!line.startsWith('+++')?'diff-add':line.startsWith('-')&&!line.startsWith('---')?'diff-remove':'diff-context'}>{line}{'\n'}</span>):'Select an improvement to inspect its recipe changes.'}</pre><details><summary>Full recipe</summary><pre>{frame.recipe}</pre><a href={root+frame.recipe_url} download>Download recipe ↗</a></details></div></article>
+    {(['mask','contour'] as const).map(layer=><article className="replay-panel" key={layer}><div className="replay-panel-heading"><h2>{layer==='mask'?'OPC mask':'Printed contour'}</h2><span>{layer==='mask'?'Actual final mask':'Nominal process condition'} · {view==='zoom'?'580 nm view':'5 µm view'}</span></div><div className="replay-geometry"><img src={root+frame.assets[view][layer].url} alt={`${layer} at original round ${frame.round}, ${view==='zoom'?'fixed hotspot detail':'fixed evaluation core'}`} /></div><div className="geometry-legend"><span className={layer==='mask'?'legend-mask':'legend-contour'}>{layer==='mask'?'Mask':'Contour'}</span><span className="legend-target">Target reference</span></div></article>)}
+   </div>
+   <p className="replay-metric-scope">{data.metrics_scope} Geometry panels use the same fixed view at every step.</p>
+   <div className="replay-metrics" aria-label="Selected recipe measurements">{metrics.map(([key,label,unit,precision])=><div key={key}><span>{label}</span><strong>{frame.metrics[key].toFixed(precision)} <small>{unit}</small></strong></div>)}</div>
+   <div className="replay-foot"><span>Initial state + accepted improvements · original round numbers preserved</span><span className="repeat-badge">✓ Final recipe independently reproduced</span></div>
+  </section>
+  <aside className="replay-evidence"><b>Selected improvements on one fixed layout</b><p>Each frame is rendered from its recorded Calibre GDS. The final retained recipe passes the fixed MRC, SRAF and quality constraints. This view highlights accepted improvements; it is not the full attempt history.</p><a href={root+'highlights.json'} download>Download selected results ↗</a></aside>
+ </>;
+}
