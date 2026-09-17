@@ -1,73 +1,37 @@
-const evidence = {
-  failure: {
-    className: 'failure', kicker: 'Negative experience', title: 'A failure becomes a guard.',
-    body: 'A conflicting SRAF width is reproduced, attributed to a minimal recipe diff, and compiled into two executable predicates. The same action class is rejected before the evaluator is called again.',
-    fact: '✓ 0 paid calls for a repeated encoded failure', nodes: ['Typed edit', 'Reproduce', 'Minimal diff', 'Invariant']
-  },
-  success: {
-    className: 'success', kicker: 'Positive experience', title: 'A gain becomes a skill.',
-    body: 'A documentation-grounded structural edit improves every registered selection metric on five held-out Poly families. Its command, scope, evidence, and rollback are packaged for later use.',
-    fact: '✓ MRC_MAIN_WIDTH: 1 → 0 on held-out Metal1', nodes: ['Typed edit', 'Verify gain', 'Held-out test', 'Skill']
-  },
-  portable: {
-    className: 'portable', kicker: 'Model portability', title: 'The harness survives the actor.',
-    body: 'The same executable experience is presented to three frozen language-model actors. In every case, VPEvolve reaches 100% action validity while the accumulated guards and skills remain unchanged.',
-    fact: '✓ 52.4-85.7% decision accuracy across actors', nodes: ['Qwen2.5', 'Qwen3.6', 'GLM-4.7', 'One harness']
-  }
+'use strict';
+const $ = (s) => document.querySelector(s);
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+const stages = {
+ global: ['RECIPE-WIDE INTERVENTION','Improve the common recipe first.','Change editable recipe settings such as fragmentation, movement limits, and feedback. Search begins globally, with every candidate checked against the same fixed measurement contract.',['parent recipe','typed global edit','physical evaluation'],'Both stages share one evaluation budget. The local stage opens after two consecutive feasible low-gain trials and a persistent hotspot.'],
+ local: ['SPATIALLY SCOPED INTERVENTION','Act on the pattern behind the error.','Locate the worst gauge, capture its surrounding pattern, and match that geometry. Native markers tag target-edge fragments for a local feedback override; the fixed external gauges still score the full window.',['hotspot pattern','matched fragments','scoped OPC rule'],'Track the original focus and the new global maximum. Better focus EPE alone is not sufficient for retaining a candidate.'],
+ memory: ['PERSISTENT MEASURED EXPERIENCE','Keep the evidence, including the failures.','Each physical trial joins the archive with its parent recipe, action, scope, measurements, and outcome. Later proposals retrieve relevant records and verify historical claims before execution.',['measured trial','scoped record','retrieval & checking'],'The actor and harness code remain fixed. Authored engineering skills are part of the design; trial records and retained recipes accumulate during search.']
 };
+document.querySelectorAll('[data-stage]').forEach(button => button.addEventListener('click',()=>{
+ document.querySelectorAll('[data-stage]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
+ const x=stages[button.dataset.stage];$('#stage-tag').textContent=x[0];$('#stage-title').textContent=x[1];$('#stage-body').textContent=x[2];$('#stage-note').textContent=x[4];$('#stage-code').innerHTML=x[3].map(s=>`<span>${s}</span>`).join('<b>→</b>');
+}));
+const stack=$('.hero-stack');
+if(stack){stack.addEventListener('pointermove',e=>{if(reduced.matches||e.pointerType==='touch')return;const r=stack.getBoundingClientRect();stack.style.setProperty('--rx',`${(e.clientY-r.top-r.height/2)/50}deg`);stack.style.setProperty('--ry',`${(e.clientX-r.left-r.width/2)/45}deg`);});stack.addEventListener('pointerleave',()=>{stack.style.setProperty('--rx','0deg');stack.style.setProperty('--ry','0deg');});}
+function groupButtons(selector,button){document.querySelectorAll(selector).forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});}
+const fmt=(x,n)=>x===null?'—':Number(x).toFixed(n);
+fetch('assets/current/results.json').then(r=>{if(!r.ok)throw Error('Data unavailable');return r.json();}).then(data=>{
+ function main(group){const rows=data.main[group],full=rows.find(r=>r.method==='VPEvolve'),baseline=rows.filter(r=>!['Initial recipe','VPEvolve'].includes(r.method)).sort((a,b)=>a.max-b.max)[0];
+ $('#result-main').innerHTML=`${fmt(full.max,3)} <small>nm</small>`;
+ $('#result-comparison').textContent=`${((1-full.max/baseline.max)*100).toFixed(2)}% below ${baseline.method}`;
+ $('#comparison-bars').innerHTML=[rows[0],baseline,full].map(r=>`<div class="bar-row ${r===full?'ours':''}"><span>${r.method}</span><div><i style="width:${r.max/Math.max(...rows.map(v=>v.max))*100}%"></i></div><b>${fmt(r.max,3)}</b></div>`).join('');
+ $('#results-body').innerHTML=rows.map(r=>`<tr class="${r.method==='VPEvolve'?'ours':''}"><th scope="row">${r.method}</th><td>${fmt(r.max,3)}</td><td>${fmt(r.avg,3)}</td><td>${fmt(r.pvb,6)}</td><td>${r.mrc}</td><td>${fmt(r.success,0)}</td><td>${r.calls??'—'}</td></tr>`).join('');
+ }
+ function ablation(group){const rows=data.ablation[group],full=rows[2],frozen=rows[1];
+ $('#ablation-cards').innerHTML=rows.map((r,i)=>`<article class="ablation-card ${i===2?'ours':''}"><span>0${i+1} / ${['RECORD ACCESS OFF','STARTING RECORDS ONLY','STARTING + NEW RECORDS'][i]}</span><h3>${r.method}</h3><strong>${fmt(r.max,3)}<small> nm</small></strong><p>Mean window-max EPE</p><div class="ablation-bar"><i style="width:${100*r.max/Math.max(...rows.map(x=>x.max))}%"></i></div><dl><div><dt>Avg. EPE</dt><dd>${fmt(r.avg,3)} nm</dd></div><div><dt>PVB</dt><dd>${fmt(r.pvb,6)} µm</dd></div><div><dt>MRC</dt><dd>${r.mrc}</dd></div><div><dt>Success</dt><dd>${fmt(r.success,1)}%</dd></div><div><dt>OPC / LLM</dt><dd>${r.opccalls} / ${r.llmcalls}</dd></div></dl></article>`).join('');
+ $('#ablation-takeaway').textContent=`With the same initial bank, access to newly accumulated cards lowers mean window-max EPE by ${data.ablationReductionPct[group].toFixed(2)}%${group==='all'?'. Three paired wins, three ties.':group==='poly'?'. The benefit is concentrated on Poly.':'. Metal1 is nearly tied.'}`;
+ }
+ document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{groupButtons('[data-group]',b);main(b.dataset.group);}));
+ document.querySelectorAll('[data-ablation]').forEach(b=>b.addEventListener('click',()=>{groupButtons('[data-ablation]',b);ablation(b.dataset.ablation);}));
+ main('all');ablation('all');
+ const trace=data.trajectories.find(r=>r.layer==='poly'), pts=trace.points;
+ const x=v=>30+v/trace.opc_submitted*440,y=v=>175-v/trace.initial.edge_normal_max_epe_nm*140;
+ let path='';pts.forEach((p,i)=>{path+=i?` H${x(p.opc_calls)} V${y(p.retained_metrics.edge_normal_max_epe_nm)}`:`M${x(p.opc_calls)},${y(p.retained_metrics.edge_normal_max_epe_nm)}`;});
+ document.querySelectorAll('.trajectory-preview .trace-line,.trajectory-preview .trace-glow').forEach(el=>el.setAttribute('d',path));
+ const end=pts[pts.length-1];$('.trajectory-preview circle').setAttribute('cx',String(x(end.opc_calls)));$('.trajectory-preview circle').setAttribute('cy',String(y(end.retained_metrics.edge_normal_max_epe_nm)));
 
-const panel = document.querySelector('.evidence-panel');
-const buttons = document.querySelectorAll('.tabs button');
-for (const button of buttons) {
-  button.addEventListener('click', () => {
-    const item = evidence[button.dataset.path];
-    buttons.forEach((candidate) => { candidate.classList.toggle('active', candidate === button); candidate.setAttribute('aria-selected', String(candidate === button)); });
-    panel.className = `evidence-panel ${item.className}`;
-    document.querySelector('#evidence-kicker').textContent = item.kicker;
-    document.querySelector('#evidence-title').textContent = item.title;
-    document.querySelector('#evidence-body').textContent = item.body;
-    document.querySelector('#evidence-fact').textContent = item.fact;
-    document.querySelector('#evidence-flow').innerHTML = item.nodes.map((node, index) => `<div><small>0${index + 1}</small><b>${node}</b></div>${index < item.nodes.length - 1 ? '<i>→</i>' : ''}`).join('');
-  });
-}
-
-const processLayers = {
-  target: { index: '01', title: 'Target layout', image: 'assets/process/target.png', color: '#8192aa', detail: 'The intended wafer geometry and the reference used to measure edge placement.' },
-  mask: { index: '02', title: 'OPC mask', image: 'assets/process/mask.png', color: '#315ce8', detail: 'The corrected mask produced by the recipe before optical simulation.' },
-  sraf: { index: '03', title: 'Assist features', image: 'assets/process/sraf.png', color: '#11bad0', detail: 'Sub-resolution features reshape the aerial image without printing on wafer.' },
-  contour: { index: '04', title: 'Nominal contour', image: 'assets/process/contour.png', color: '#f0a11a', detail: 'The simulated wafer contour reveals where the current recipe follows—or misses—the target.' },
-  pvb: { index: '05', title: 'Process variation band', image: 'assets/process/pvb.png', color: '#ec6485', detail: 'Across focus and dose corners, the band exposes sensitivity that a nominal contour can hide.' }
-};
-
-const layerButtons = document.querySelectorAll('.layer-buttons button');
-for (const button of layerButtons) {
-  button.addEventListener('click', () => {
-    const item = processLayers[button.dataset.layer];
-    layerButtons.forEach((candidate) => {
-      candidate.classList.toggle('active', candidate === button);
-      candidate.setAttribute('aria-selected', String(candidate === button));
-    });
-    const image = document.querySelector('#layer-image');
-    image.src = item.image;
-    image.alt = item.title;
-    document.querySelector('#layer-index').textContent = `${item.index} / 05`;
-    document.querySelector('#layer-title').textContent = item.title;
-    document.querySelector('#layer-detail').textContent = item.detail;
-    document.querySelector('#layer-color').style.background = item.color;
-  });
-}
-
-const stack = document.querySelector('.hero-stack');
-if (stack && window.matchMedia('(pointer: fine)').matches) {
-  stack.addEventListener('pointermove', (event) => {
-    const bounds = stack.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-    stack.style.setProperty('--stack-rx', `${y * -7}deg`);
-    stack.style.setProperty('--stack-ry', `${x * 7}deg`);
-  });
-  stack.addEventListener('pointerleave', () => {
-    stack.style.setProperty('--stack-rx', '0deg');
-    stack.style.setProperty('--stack-ry', '0deg');
-  });
-}
+}).catch(()=>{$('#results-body').innerHTML='<tr><td colspan="7">Results could not load. <a href="assets/current/results.json">Open the result file</a> or refresh this page.</td></tr>';$('#ablation-cards').textContent='The result file could not load. Please refresh.';});

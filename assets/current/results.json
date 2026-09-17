@@ -1,0 +1,922 @@
+{
+  "asOf": "2026-09-17",
+  "main": {
+    "poly": [
+      {
+        "method": "Initial recipe",
+        "max": 18.294,
+        "avg": 0.854,
+        "pvb": 0.007281,
+        "mrc": 0,
+        "success": null,
+        "calls": null
+      },
+      {
+        "method": "Raw Actor",
+        "max": 17.854,
+        "avg": 0.749,
+        "pvb": 0.00671,
+        "mrc": 0,
+        "success": 80.0,
+        "calls": "50 / 47"
+      },
+      {
+        "method": "ReAct",
+        "max": 17.489,
+        "avg": 0.782,
+        "pvb": 0.006929,
+        "mrc": 0,
+        "success": 80.0,
+        "calls": "50 / 42"
+      },
+      {
+        "method": "Textual Memory",
+        "max": 17.815,
+        "avg": 0.788,
+        "pvb": 0.006872,
+        "mrc": 0,
+        "success": 60.0,
+        "calls": "50 / 46"
+      },
+      {
+        "method": "ReasoningBank-style",
+        "max": 17.435,
+        "avg": 0.76,
+        "pvb": 0.006742,
+        "mrc": 0,
+        "success": 90.0,
+        "calls": "50 / 45"
+      },
+      {
+        "method": "ACE-style",
+        "max": 17.813,
+        "avg": 0.818,
+        "pvb": 0.00706,
+        "mrc": 0,
+        "success": 40.0,
+        "calls": "50 / 48"
+      },
+      {
+        "method": "Static Harness",
+        "max": 17.615,
+        "avg": 0.772,
+        "pvb": 0.006789,
+        "mrc": 0,
+        "success": 90.0,
+        "calls": "50 / 46"
+      },
+      {
+        "method": "VPEvolve",
+        "max": 8.212,
+        "avg": 0.679,
+        "pvb": 0.007339,
+        "mrc": 0,
+        "success": 80.0,
+        "calls": "49 / 44"
+      }
+    ],
+    "metal1": [
+      {
+        "method": "Initial recipe",
+        "max": 22.052,
+        "avg": 0.805,
+        "pvb": 0.005015,
+        "mrc": 0,
+        "success": null,
+        "calls": null
+      },
+      {
+        "method": "Raw Actor",
+        "max": 20.861,
+        "avg": 0.777,
+        "pvb": 0.004909,
+        "mrc": 0,
+        "success": 60.0,
+        "calls": "50 / 46"
+      },
+      {
+        "method": "ReAct",
+        "max": 21.793,
+        "avg": 0.792,
+        "pvb": 0.004881,
+        "mrc": 0,
+        "success": 50.0,
+        "calls": "49 / 50"
+      },
+      {
+        "method": "Textual Memory",
+        "max": 20.055,
+        "avg": 0.766,
+        "pvb": 0.00485,
+        "mrc": 0,
+        "success": 100.0,
+        "calls": "50 / 46"
+      },
+      {
+        "method": "ReasoningBank-style",
+        "max": 21.509,
+        "avg": 0.781,
+        "pvb": 0.004929,
+        "mrc": 0,
+        "success": 50.0,
+        "calls": "50 / 46"
+      },
+      {
+        "method": "ACE-style",
+        "max": 21.348,
+        "avg": 0.784,
+        "pvb": 0.004945,
+        "mrc": 0,
+        "success": 60.0,
+        "calls": "50 / 46"
+      },
+      {
+        "method": "Static Harness",
+        "max": 21.585,
+        "avg": 0.797,
+        "pvb": 0.004924,
+        "mrc": 0,
+        "success": 30.0,
+        "calls": "50 / 49"
+      },
+      {
+        "method": "VPEvolve",
+        "max": 19.777,
+        "avg": 0.722,
+        "pvb": 0.005026,
+        "mrc": 0,
+        "success": 100.0,
+        "calls": "48 / 41"
+      }
+    ],
+    "all": [
+      {
+        "method": "Initial recipe",
+        "max": 20.173,
+        "avg": 0.83,
+        "pvb": 0.006148,
+        "mrc": 0,
+        "success": null,
+        "calls": null
+      },
+      {
+        "method": "Raw Actor",
+        "max": 19.357,
+        "avg": 0.763,
+        "pvb": 0.00581,
+        "mrc": 0,
+        "success": 70.0,
+        "calls": "100 / 93"
+      },
+      {
+        "method": "ReAct",
+        "max": 19.641,
+        "avg": 0.787,
+        "pvb": 0.005905,
+        "mrc": 0,
+        "success": 65.0,
+        "calls": "99 / 92"
+      },
+      {
+        "method": "Textual Memory",
+        "max": 18.935,
+        "avg": 0.777,
+        "pvb": 0.005861,
+        "mrc": 0,
+        "success": 80.0,
+        "calls": "100 / 92"
+      },
+      {
+        "method": "ReasoningBank-style",
+        "max": 19.472,
+        "avg": 0.77,
+        "pvb": 0.005835,
+        "mrc": 0,
+        "success": 70.0,
+        "calls": "100 / 91"
+      },
+      {
+        "method": "ACE-style",
+        "max": 19.581,
+        "avg": 0.801,
+        "pvb": 0.006002,
+        "mrc": 0,
+        "success": 50.0,
+        "calls": "100 / 94"
+      },
+      {
+        "method": "Static Harness",
+        "max": 19.6,
+        "avg": 0.784,
+        "pvb": 0.005856,
+        "mrc": 0,
+        "success": 60.0,
+        "calls": "100 / 95"
+      },
+      {
+        "method": "VPEvolve",
+        "max": 13.995,
+        "avg": 0.701,
+        "pvb": 0.006183,
+        "mrc": 0,
+        "success": 90.0,
+        "calls": "97 / 85"
+      }
+    ]
+  },
+  "ablation": {
+    "all": [
+      {
+        "arm": "nohistory",
+        "method": "Without experience bank",
+        "max": 19.687,
+        "avg": 0.816,
+        "pvb": 0.006134,
+        "mrc": 0.0,
+        "success": 16.7,
+        "opccalls": 29.0,
+        "llmcalls": 50.0
+      },
+      {
+        "arm": "frozen",
+        "method": "Frozen experience bank",
+        "max": 13.41,
+        "avg": 0.679,
+        "pvb": 0.006199,
+        "mrc": 0.0,
+        "success": 100.0,
+        "opccalls": 26.0,
+        "llmcalls": 27.0
+      },
+      {
+        "arm": "full",
+        "method": "VPEvolve",
+        "max": 12.714,
+        "avg": 0.667,
+        "pvb": 0.006194,
+        "mrc": 0.0,
+        "success": 100.0,
+        "opccalls": 30.0,
+        "llmcalls": 24.0
+      }
+    ],
+    "poly": [
+      {
+        "arm": "nohistory",
+        "method": "Without experience bank",
+        "max": 18.109,
+        "avg": 0.854,
+        "pvb": 0.007258,
+        "mrc": 0.0,
+        "success": 33.3,
+        "opccalls": 14.0,
+        "llmcalls": 31.0
+      },
+      {
+        "arm": "frozen",
+        "method": "Frozen experience bank",
+        "max": 6.543,
+        "avg": 0.641,
+        "pvb": 0.007371,
+        "mrc": 0.0,
+        "success": 100.0,
+        "opccalls": 13.0,
+        "llmcalls": 12.0
+      },
+      {
+        "arm": "full",
+        "method": "VPEvolve",
+        "max": 5.22,
+        "avg": 0.642,
+        "pvb": 0.00736,
+        "mrc": 0.0,
+        "success": 100.0,
+        "opccalls": 15.0,
+        "llmcalls": 12.0
+      }
+    ],
+    "metal1": [
+      {
+        "arm": "nohistory",
+        "method": "Without experience bank",
+        "max": 21.266,
+        "avg": 0.779,
+        "pvb": 0.005011,
+        "mrc": 0.0,
+        "success": 0.0,
+        "opccalls": 15.0,
+        "llmcalls": 19.0
+      },
+      {
+        "arm": "frozen",
+        "method": "Frozen experience bank",
+        "max": 20.276,
+        "avg": 0.717,
+        "pvb": 0.005026,
+        "mrc": 0.0,
+        "success": 100.0,
+        "opccalls": 13.0,
+        "llmcalls": 15.0
+      },
+      {
+        "arm": "full",
+        "method": "VPEvolve",
+        "max": 20.209,
+        "avg": 0.691,
+        "pvb": 0.005028,
+        "mrc": 0.0,
+        "success": 100.0,
+        "opccalls": 15.0,
+        "llmcalls": 12.0
+      }
+    ]
+  },
+  "trajectories": [
+    {
+      "case_id": "poly-02-very_sparse-x140-y0",
+      "layer": "poly",
+      "status": "complete",
+      "stop_reason": "generation_stalled",
+      "initial": {
+        "edge_normal_max_epe_nm": 17.24021739130599,
+        "edge_normal_top10_mean_epe_nm": 16.593046025562863,
+        "edge_normal_mean_epe_nm": 0.8726900037831207,
+        "pv_band_area_per_target_edge_um": 0.007358878540453651,
+        "mrc_total_result_count": 0,
+        "sraf_printability_violation_count": 0
+      },
+      "current": {
+        "edge_normal_max_epe_nm": 6.866666666667243,
+        "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+        "edge_normal_mean_epe_nm": 0.5877653876860707,
+        "pv_band_area_per_target_edge_um": 0.007491418076783103,
+        "mrc_total_result_count": 0,
+        "sraf_printability_violation_count": 0
+      },
+      "opc_submitted": 9,
+      "llm_reserved": 10,
+      "proposal_rejections": 2,
+      "points": [
+        {
+          "opc_calls": 0,
+          "kind": "initial",
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 17.24021739130599,
+            "edge_normal_top10_mean_epe_nm": 16.593046025562863,
+            "edge_normal_mean_epe_nm": 0.8726900037831207,
+            "pv_band_area_per_target_edge_um": 0.007358878540453651,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "f6ac45fb020dee7bfcbffff577917b2e8a72cb9961c99bc89c7732034f1a3cca"
+        },
+        {
+          "opc_calls": 1,
+          "kind": "candidate",
+          "slot": 1,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 8.17014925373094,
+            "edge_normal_top10_mean_epe_nm": 7.938866126039379,
+            "edge_normal_mean_epe_nm": 0.6663698876598243,
+            "pv_band_area_per_target_edge_um": 0.007395270120693825,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 8.17014925373094,
+            "edge_normal_top10_mean_epe_nm": 7.938866126039379,
+            "edge_normal_mean_epe_nm": 0.6663698876598243,
+            "pv_band_area_per_target_edge_um": 0.007395270120693825,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "2c613472a4efb49031222e6009fd888751bf42282fdf11fd6978d8e39b1e6ea1",
+          "result_sha256": "ac51cee4052d89d2eb03c8b290b5b163abe570b4c972d944e798f37cfc8c3eba"
+        },
+        {
+          "opc_calls": 2,
+          "kind": "candidate",
+          "slot": 2,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 5.215384615384622,
+            "edge_normal_top10_mean_epe_nm": 4.875136426369231,
+            "edge_normal_mean_epe_nm": 0.6565090603260999,
+            "pv_band_area_per_target_edge_um": 0.00761186612991265,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 8.17014925373094,
+            "edge_normal_top10_mean_epe_nm": 7.938866126039379,
+            "edge_normal_mean_epe_nm": 0.6663698876598243,
+            "pv_band_area_per_target_edge_um": 0.007395270120693825,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "2c613472a4efb49031222e6009fd888751bf42282fdf11fd6978d8e39b1e6ea1",
+          "result_sha256": "5e15a177223edbdc436a0d7faa31f74938d731228ac9663cdd6fc2f0d50d1a74"
+        },
+        {
+          "opc_calls": 3,
+          "kind": "candidate",
+          "slot": 3,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 7.527173913043583,
+            "edge_normal_top10_mean_epe_nm": 6.894385274781278,
+            "edge_normal_mean_epe_nm": 0.624575910445888,
+            "pv_band_area_per_target_edge_um": 0.007440732843583199,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 7.527173913043583,
+            "edge_normal_top10_mean_epe_nm": 6.894385274781278,
+            "edge_normal_mean_epe_nm": 0.624575910445888,
+            "pv_band_area_per_target_edge_um": 0.007440732843583199,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "294acfd43fb086ab74faf56706507b81be22bc76bb6a96e1f4a1b00137de98a8",
+          "result_sha256": "d788ec6516c53015544eae9ec35f90563050aa8b9d6ec7bdf4b8973aef682100"
+        },
+        {
+          "opc_calls": 4,
+          "kind": "candidate",
+          "slot": 4,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "result_sha256": "19df0368ad92b7e66917bc4677bfbbb14077b7ca8ce701e4b4934a482ff326ff"
+        },
+        {
+          "opc_calls": 5,
+          "kind": "candidate",
+          "slot": 5,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 4.925581395347933,
+            "edge_normal_top10_mean_epe_nm": 4.691643009046764,
+            "edge_normal_mean_epe_nm": 0.6571159122302921,
+            "pv_band_area_per_target_edge_um": 0.007621080672307119,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "result_sha256": "b2191713f3131f3db48cf05ec14938fb1f9e444551f4b4ee3315f9a998f4b621"
+        },
+        {
+          "opc_calls": 6,
+          "kind": "candidate",
+          "slot": 6,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 5.429687499999503,
+            "edge_normal_top10_mean_epe_nm": 5.028229704842424,
+            "edge_normal_mean_epe_nm": 0.6849876900266351,
+            "pv_band_area_per_target_edge_um": 0.007635170957666169,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "result_sha256": "aee0a0f50668d4b23f2ad54a60d4c188fec610cf2e5269ce4a43c4261112840d"
+        },
+        {
+          "opc_calls": 7,
+          "kind": "candidate",
+          "slot": 7,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 5.482608695650981,
+            "edge_normal_top10_mean_epe_nm": 5.265866776074546,
+            "edge_normal_mean_epe_nm": 0.6993977232431539,
+            "pv_band_area_per_target_edge_um": 0.0076295393619602,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "result_sha256": "a247199fe40834f29bd5f7ebf88a0c684712c3831bee6a2a8231a5940557f4e0"
+        },
+        {
+          "opc_calls": 8,
+          "kind": "candidate",
+          "slot": 8,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 7.196739130435503,
+            "edge_normal_top10_mean_epe_nm": 6.712927536231561,
+            "edge_normal_mean_epe_nm": 0.7640019350160496,
+            "pv_band_area_per_target_edge_um": 0.007609891095038804,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "result_sha256": "98798a7d0c2e1cfb5f566e4c697a37889933f467a1c0aff9e5b8eb80a175def3"
+        },
+        {
+          "opc_calls": 9,
+          "kind": "repeat",
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "result_sha256": "4300a5163e1e73be45f88f139c3860bf3f99701c1751fd90f479ce1b48767e01"
+        }
+      ],
+      "report_sha256": "a4c311234e4729d39fe2bedb0a79eef87ed99cadb18f545b1e1929c4b1e69d94"
+    },
+    {
+      "case_id": "metal1-29-very_sparse-x760-y620",
+      "layer": "metal1",
+      "status": "complete",
+      "stop_reason": "generation_stalled",
+      "initial": {
+        "edge_normal_max_epe_nm": 20.49487179487386,
+        "edge_normal_top10_mean_epe_nm": 19.574021801615693,
+        "edge_normal_mean_epe_nm": 0.6999640525677647,
+        "pv_band_area_per_target_edge_um": 0.005027612169092852,
+        "mrc_total_result_count": 0,
+        "sraf_printability_violation_count": 0
+      },
+      "current": {
+        "edge_normal_max_epe_nm": 19.569565217393503,
+        "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+        "edge_normal_mean_epe_nm": 0.6210029012397282,
+        "pv_band_area_per_target_edge_um": 0.005038539733502554,
+        "mrc_total_result_count": 0,
+        "sraf_printability_violation_count": 0
+      },
+      "opc_submitted": 8,
+      "llm_reserved": 9,
+      "proposal_rejections": 2,
+      "points": [
+        {
+          "opc_calls": 0,
+          "kind": "initial",
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 20.49487179487386,
+            "edge_normal_top10_mean_epe_nm": 19.574021801615693,
+            "edge_normal_mean_epe_nm": 0.6999640525677647,
+            "pv_band_area_per_target_edge_um": 0.005027612169092852,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "6897a5adccaa810483ae99aa18a9e7b972b23cdc421c3a0e00da932c2b632319"
+        },
+        {
+          "opc_calls": 1,
+          "kind": "candidate",
+          "slot": 1,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 20.186956521738963,
+            "edge_normal_top10_mean_epe_nm": 17.037995482778005,
+            "edge_normal_mean_epe_nm": 0.6691143038514301,
+            "pv_band_area_per_target_edge_um": 0.005027067311469759,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 20.186956521738963,
+            "edge_normal_top10_mean_epe_nm": 17.037995482778005,
+            "edge_normal_mean_epe_nm": 0.6691143038514301,
+            "pv_band_area_per_target_edge_um": 0.005027067311469759,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "207b60218160b152f48bddec19d7abeb2f5d619665e6611562e7df9f948680f9",
+          "result_sha256": "4970bf999a5ad8531d1d7c95efe849f9b8c44ce0daca9f1bb8ec6a23c46ceb46"
+        },
+        {
+          "opc_calls": 2,
+          "kind": "candidate",
+          "slot": 2,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 19.869565217392804,
+            "edge_normal_top10_mean_epe_nm": 15.671333759591203,
+            "edge_normal_mean_epe_nm": 0.685502872074718,
+            "pv_band_area_per_target_edge_um": 0.0050367644244915894,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.869565217392804,
+            "edge_normal_top10_mean_epe_nm": 15.671333759591203,
+            "edge_normal_mean_epe_nm": 0.685502872074718,
+            "pv_band_area_per_target_edge_um": 0.0050367644244915894,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "3fc34785eedf78d279e1b4ba93783a9124de03db0df906ecc27c1809ae3c21b7"
+        },
+        {
+          "opc_calls": 3,
+          "kind": "candidate",
+          "slot": 3,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 19.68695652174013,
+            "edge_normal_top10_mean_epe_nm": 16.986289377865482,
+            "edge_normal_mean_epe_nm": 1.0711704323510756,
+            "pv_band_area_per_target_edge_um": 0.005135371560360894,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.869565217392804,
+            "edge_normal_top10_mean_epe_nm": 15.671333759591203,
+            "edge_normal_mean_epe_nm": 0.685502872074718,
+            "pv_band_area_per_target_edge_um": 0.0050367644244915894,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "ea7651113e33e08496426dc82d1999cc4150a4be5db6e42c03c722136ef79c1e"
+        },
+        {
+          "opc_calls": 4,
+          "kind": "candidate",
+          "slot": 4,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 19.98695652173943,
+            "edge_normal_top10_mean_epe_nm": 15.705913043478414,
+            "edge_normal_mean_epe_nm": 0.653482766134807,
+            "pv_band_area_per_target_edge_um": 0.005032379388279186,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.869565217392804,
+            "edge_normal_top10_mean_epe_nm": 15.671333759591203,
+            "edge_normal_mean_epe_nm": 0.685502872074718,
+            "pv_band_area_per_target_edge_um": 0.0050367644244915894,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "6adf67eb7667b3bc4636fb714f32ca0d4f9f94e82af5bfc8e14cca7d0dbbdf23"
+        },
+        {
+          "opc_calls": 5,
+          "kind": "candidate",
+          "slot": 5,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 19.586956521740362,
+            "edge_normal_top10_mean_epe_nm": 16.61281215521324,
+            "edge_normal_mean_epe_nm": 0.7160755115705668,
+            "pv_band_area_per_target_edge_um": 0.005036634626791127,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.869565217392804,
+            "edge_normal_top10_mean_epe_nm": 15.671333759591203,
+            "edge_normal_mean_epe_nm": 0.685502872074718,
+            "pv_band_area_per_target_edge_um": 0.0050367644244915894,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "ed2fb5358509bd6e8ecbb864b2b4e4c7f8b521bc689e3893fea537572057df01"
+        },
+        {
+          "opc_calls": 6,
+          "kind": "candidate",
+          "slot": 6,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5fa74bb8f0dbcd30846423ec23c683e93353322f1c947c28b4b4bec52094150f",
+          "result_sha256": "20ff100eff8ba8b98c092a977a83661a4b06a2bc62bbfb9e330bf900bd16d93c"
+        },
+        {
+          "opc_calls": 7,
+          "kind": "candidate",
+          "slot": 7,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 20.069565217392338,
+            "edge_normal_top10_mean_epe_nm": 19.066101250657574,
+            "edge_normal_mean_epe_nm": 0.9874588230223359,
+            "pv_band_area_per_target_edge_um": 0.005004853894778315,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5fa74bb8f0dbcd30846423ec23c683e93353322f1c947c28b4b4bec52094150f",
+          "result_sha256": "aa6750b04e6d0f18b5912a902ce5843cc99f52714bc7e90090aadc60d1787b42"
+        },
+        {
+          "opc_calls": 8,
+          "kind": "repeat",
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5fa74bb8f0dbcd30846423ec23c683e93353322f1c947c28b4b4bec52094150f",
+          "result_sha256": "4b44598ecc8346cb13d930d07e4b8eaec98345350bd05005ae401e19d0f440f4"
+        }
+      ],
+      "report_sha256": "2e7c7427333f84beaccb9f201ebc01236b7dc3195b14ab3601326ce2123ddbce"
+    }
+  ],
+  "protocol": {
+    "windows": 20,
+    "poly": 10,
+    "metal1": 10,
+    "coreUm": 10,
+    "haloUm": 2,
+    "seedCount": 1,
+    "candidates": 4,
+    "actor": "Qwen3.6-27B-FP8",
+    "meanPvbLimit": 1.02,
+    "successGainNm": 0.1,
+    "scope": "Development-exposed windows from one layout family; equal window weights."
+  },
+  "sources": [
+    {
+      "file": "sections/generated/current_online_table.tex",
+      "sha256": "21de1fe7a0f558ac25060a32c54238373fb22a7507172334724c153e45d12d48"
+    },
+    {
+      "file": "sections/generated/final_experiment_values.tex",
+      "sha256": "297edcde77ed2b397108e09da58090175cbb10bb13a273f51da629c1528cc3cd"
+    },
+    {
+      "file": "current-long-derived",
+      "sha256": "13a2ecf53d215b0d198fa539f4eb4d5822fc39837479f61b539230de23a8b93b"
+    },
+    {
+      "file": "current-frozen-derived",
+      "sha256": "c230fe6ab744aa3d20dfe24af3c18bb191bc60ed6fe121a2d5f71eaa6c5976f9"
+    },
+    {
+      "file": "figures/pattern-local-rule.png",
+      "sha256": "81bf358bfe6a7ba14b1b2b8d5bcf034b50e84b6f09686649c39a3b1c25acdc10"
+    }
+  ],
+  "ablationReductionPct": {
+    "all": 5.1849450163477755,
+    "poly": 20.232558139539126,
+    "metal1": 0.32879453915153345
+  }
+}

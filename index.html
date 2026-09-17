@@ -1,185 +1,30 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="VPEvolve turns audited black-box tool runs into executable engineering experience." />
-    <meta name="theme-color" content="#f5faf8" />
-    <meta property="og:title" content="VPEvolve - A Self-Evolving Virtual Process Engineer" />
-    <meta property="og:description" content="Verified failures become invariants. Validated gains become reusable skills." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vpevolve.github.io/vpevolve/" />
-    <meta property="og:image" content="https://vpevolve.github.io/vpevolve/og.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>VPEvolve - A Self-Evolving Virtual Process Engineer</title>
-    <link rel="icon" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="VPEvolve home"><span>VP</span>VPEvolve</a>
-      <nav aria-label="Primary navigation">
-        <a href="#method">Method</a><a href="#evidence">Evidence</a><a href="#results">Results</a><a href="evolution/">Evolution</a><a href="evolution/#experience-accumulation">Experience</a><a href="#dataset">Dataset</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="kicker">VPEVOLVE · VIRTUAL PROCESS ENGINEERING</p>
-          <h1>A Self-Evolving Virtual Process Engineer<br />for <em>Computational Lithography</em></h1>
-          <p class="deck">VPEvolve turns costly runs of strict black-box tools into verified, executable experience. The language-model actor remains replaceable; the harness remembers what is safe, useful, and reusable.</p>
-          <p class="anonymous">Anonymous research project · ICLR submission materials</p>
-          <div class="actions">
-            <a class="button primary" href="evolution/">Explore recipe evolution ↗</a>
-            <span class="button quiet">Code · preparing</span><span class="button quiet">Dataset · preparing</span>
-          </div>
-        </div>
-        <div class="hero-stack-wrap">
-          <div class="hero-stack" aria-label="Real computational lithography layers from one 6 micrometre evaluation clip">
-            <div class="stack-halo"></div>
-            <figure class="stack-card stack-target"><img src="assets/process/target.png" alt="Target layout" /><figcaption><span>01</span>Target layout</figcaption></figure>
-            <figure class="stack-card stack-sraf"><img src="assets/process/sraf.png" alt="SRAF layer" /><figcaption><span>02</span>SRAF</figcaption></figure>
-            <figure class="stack-card stack-print"><img src="assets/process/overlay.png" alt="Target, mask, SRAF, contour, and process variation evidence overlay" /><figcaption><span>03</span>Physical evidence</figcaption></figure>
-            <div class="stack-orbit orbit-one"></div><div class="stack-orbit orbit-two"></div>
-          </div>
-          <div class="stack-footnote">◎ Real tool output · same 6 µm clip · 1 nm sampling</div>
-        </div>
-        <a class="scroll-link" href="#idea">See the idea <span aria-hidden="true">↓</span></a>
-      </section>
-
-      <section class="wide visual-section" id="idea">
-        <div class="section-label"><span>01 · The idea</span><p>Human trial-and-error becomes cumulative, executable experience.</p></div>
-        <img class="paper-visual" src="assets/vpevolve-paradigm.png" alt="Human versus agentic process engineering in VPEvolve" />
-      </section>
-
-      <section class="signal-strip" aria-label="Headline results">
-        <div><strong>3</strong><span>replaceable LLM actors</span></div>
-        <div><strong>100%</strong><span>valid actions</span></div>
-        <div><strong>2.8-17.2%</strong><span>physical metric gains</span></div>
-        <div><strong>7 + 2</strong><span>failure + skill families</span></div>
-      </section>
-
-      <section class="wide shift-section">
-        <div class="section-intro">
-          <p class="index">02 / The shift</p>
-          <h2>From repeated trial-and-error<br />to cumulative engineering.</h2>
-          <p>Conventional process development leaves hard-won knowledge spread across specialists and individual runs. VPEvolve makes that knowledge explicit, testable, and available to the next decision.</p>
-        </div>
-        <div class="principle-grid">
-          <article><span>Observe</span><h3>Read the tool, not a story.</h3><p>Logs, geometry, result databases, and registered physical metrics become deterministic evidence.</p></article>
-          <article><span>Decide</span><h3>Act inside an executable boundary.</h3><p>The actor proposes typed, gated recipe actions instead of editing unconstrained text.</p></article>
-          <article><span>Accumulate</span><h3>Carry verified lessons forward.</h3><p>Reproduced failures become guards; held-out gains become scoped skills.</p></article>
-        </div>
-      </section>
-
-      <section class="process-section" id="process">
-        <div class="wide">
-          <div class="section-intro">
-            <p class="index">03 / One physical task</p>
-            <h2>From recipe action<br />to wafer evidence.</h2>
-            <p>A recipe is not a single parameter vector. It controls mask correction, assist-feature construction, printed contours, process-window robustness, and manufacturability under one strict evaluator.</p>
-          </div>
-          <div class="layer-explorer">
-            <div class="layer-canvas">
-              <div class="canvas-meta"><span>6.0 × 6.0 µm clip</span><span>1 nm / pixel</span></div>
-              <img id="layer-image" src="assets/process/target.png" alt="Target layout" />
-              <div class="canvas-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-              <div class="canvas-caption"><span id="layer-color"></span><div><small id="layer-index">01 / 05</small><strong id="layer-title">Target layout</strong></div></div>
-            </div>
-            <div class="layer-console">
-              <div class="console-heading">▱ Inside one commercial-tool call</div>
-              <p id="layer-detail">The intended wafer geometry and the reference used to measure edge placement.</p>
-              <div class="layer-buttons" role="tablist" aria-label="Computational lithography evidence layers">
-                <button class="active" role="tab" aria-selected="true" data-layer="target"><span style="--layer:#8192aa"></span><small>01</small><b>Target</b></button>
-                <button role="tab" aria-selected="false" data-layer="mask"><span style="--layer:#315ce8"></span><small>02</small><b>Mask</b></button>
-                <button role="tab" aria-selected="false" data-layer="sraf"><span style="--layer:#11bad0"></span><small>03</small><b>SRAF</b></button>
-                <button role="tab" aria-selected="false" data-layer="contour"><span style="--layer:#f0a11a"></span><small>04</small><b>Print</b></button>
-                <button role="tab" aria-selected="false" data-layer="pvb"><span style="--layer:#ec6485"></span><small>05</small><b>PVB</b></button>
-              </div>
-              <div class="console-note"><b>One action, several obligations.</b><span>A useful edit must improve fidelity and process-window robustness while remaining executable and manufacturable.</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="dark" id="method">
-        <div class="wide">
-          <div class="section-intro light">
-            <p class="index">04 / The method</p>
-            <h2>The model proposes.<br />The harness learns.</h2>
-            <p>Persistent capability lives in deterministic evidence, executable guards, reusable skills, and an auditable trial lineage - outside model weights.</p>
-          </div>
-          <div class="method-grid">
-            <div class="method-figure"><img src="assets/harness-method.png" alt="VPEvolve harness architecture" /></div>
-            <div class="method-notes">
-              <article><span>01</span><h3>Evidence, not narration</h3><p>Raw artifacts are parsed into typed evidence before they reach the actor.</p></article>
-              <article><span>02</span><h3>Feasible before optimal</h3><p>Every proposal crosses an executable invariant gate before it can spend a tool evaluation.</p></article>
-              <article><span>03</span><h3>Experience with scope</h3><p>Every lesson remains tied to the recipe, evaluator, layout, and exact parent that produced it.</p></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="wide evidence-section" id="evidence">
-        <div class="section-intro">
-          <p class="index">05 / Executable experience</p>
-          <h2>Every claim returns<br />to a tool artifact.</h2>
-          <p>The harness preserves the action, evidence, parent state, and evaluator contract needed to reproduce - and safely reuse - each lesson.</p>
-        </div>
-        <div class="evidence-explorer">
-          <div class="tabs" role="tablist" aria-label="Executable experience paths">
-            <button class="active" role="tab" aria-selected="true" data-path="failure">Failure → invariant</button>
-            <button role="tab" aria-selected="false" data-path="success">Gain → skill</button>
-            <button role="tab" aria-selected="false" data-path="portable">Across models</button>
-          </div>
-          <div class="evidence-panel failure" role="tabpanel">
-            <div class="evidence-copy"><span id="evidence-kicker">Negative experience</span><h3 id="evidence-title">A failure becomes a guard.</h3><p id="evidence-body">A conflicting SRAF width is reproduced, attributed to a minimal recipe diff, and compiled into two executable predicates. The same action class is rejected before the evaluator is called again.</p><strong id="evidence-fact">✓ 0 paid calls for a repeated encoded failure</strong></div>
-            <div class="node-flow" id="evidence-flow" aria-label="Typed edit to invariant"><div><small>01</small><b>Typed edit</b></div><i>→</i><div><small>02</small><b>Reproduce</b></div><i>→</i><div><small>03</small><b>Minimal diff</b></div><i>→</i><div><small>04</small><b>Invariant</b></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="physical">
-        <div class="wide">
-          <div class="section-intro">
-            <p class="index">06 / Physical outcome</p>
-            <h2>Recipe edits that move<br />the printed geometry.</h2>
-            <p>Selected recipes improve registered EPE and PVB metrics under a frozen five-corner evaluator while preserving manufacturability.</p>
-          </div>
-          <div class="contours">
-            <article><div><span>Initial recipe</span><b>Call 00</b></div><img src="assets/poly-baseline.png" alt="Initial Poly printed contours" /></article><i>→</i>
-            <article class="selected"><div><span>Promoted recipe</span><b>Call 07</b></div><img src="assets/poly-retained.png" alt="Improved Poly printed contours" /></article><i>→</i>
-            <article><div><span>Verified terminal</span><b>Call 12</b></div><img src="assets/poly-terminal.png" alt="Terminal Poly printed contours" /></article>
-          </div>
-          <div class="gain-grid"><div><strong>15.9%</strong><span>Nominal sidewall median EPE reduction</span></div><div><strong>17.2%</strong><span>Reduction in edges above 5 nm EPE</span></div><div><strong>9.7%</strong><span>Poly PVB per target edge reduction</span></div><div><strong>5 / 5</strong><span>Held-out Metal1 layouts improved</span></div></div>
-        </div>
-      </section>
-
-      <section class="wide results" id="results">
-        <div class="section-intro"><p class="index">07 / Evaluation</p><h2>One harness.<br />Three frozen actors.</h2><p>Matched replay freezes the task, evidence, schema, context budget, case order, and evaluator.</p></div>
-        <div class="results-grid">
-          <div class="result-table" role="table" aria-label="Cross-model VPEvolve results">
-            <div class="result-row head"><span>Actor</span><span>Accuracy</span><span>Validity</span><span>Recurrence↓</span></div>
-            <div class="result-row"><b>Qwen2.5-7B</b><span>52.4%</span><strong>100%</strong><span>20%</span></div>
-            <div class="result-row"><b>Qwen3.6-27B</b><span>85.7%</span><strong>100%</strong><span>0%</span></div>
-            <div class="result-row"><b>GLM-4.7</b><span>71.4%</span><strong>100%</strong><span>10%</span></div>
-            <p>Full VPEvolve exceeds Raw, ReAct, and three adapted persistent-memory conditions for every actor.</p>
-          </div>
-          <div class="trajectory"><div><span>Online optimization</span><b>Best verified improvement</b></div><img src="assets/online-evolution.png" alt="Poly and Metal1 recipe evolution trajectories" /></div>
-        </div>
-        <div class="repair">
-          <div class="repair-copy"><span class="index">A real held-out repair</span><h3>One structural skill removes an MRC violation.</h3><p>The layout, process model, evaluator, numeric parameters, and crop remain fixed. The admitted structural edit is the only semantic recipe change.</p><div><span>MRC_MAIN_WIDTH</span><strong>1 → 0</strong></div></div>
-          <figure><img src="assets/mrc-before.png" alt="Metal1 before repair with MRC violation" /><figcaption>Before · marker present</figcaption></figure>
-          <figure><img src="assets/mrc-after.png" alt="Metal1 after repair without MRC violation" /><figcaption>After · marker removed</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="dataset" id="dataset"><div class="dataset-number">50</div><div><p class="index">08 / Open evidence</p><h2>Layouts - and the engineering path between recipes.</h2><p>The planned release covers Poly and Metal1 clips. Audited development cases preserve typed edits, tool artifacts, metrics, and lineage.</p></div><span>Preparing the audited release</span></section>
-
-      <section class="closing"><div><p class="index">VPEvolve</p><h2>Engineering capability that compounds outside model weights.</h2><p>A virtual process engineer should not forget what the last model learned. VPEvolve makes verified experience portable, executable, and ready for the next tool run.</p><a class="button primary" href="evolution/">Explore recipe evolution ↗</a></div><aside><span>Anonymous release</span><p>Paper, code, data, and citation metadata will be added only after their corresponding release audits.</p></aside></section>
-    </main>
-    <footer><a class="wordmark" href="#top"><span>VP</span>VPEvolve</a><p>Anonymous project page · 2026</p><a href="#top">Back to top ↑</a></footer>
-  </body>
-</html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VPEvolve · A Virtual Process Engineer</title>
+<meta name="description" content="Recipe search, spatially scoped correction, and measured experience for computational lithography. Explore the current VPEvolve results.">
+<meta name="theme-color" content="#081c23"><meta property="og:title" content="VPEvolve · A Virtual Process Engineer"><meta property="og:description" content="Global recipe search. Local pattern correction. Experience that informs the next trial."><meta property="og:url" content="https://vpevolve.github.io/vpevolve/"><meta property="og:image" content="https://vpevolve.github.io/vpevolve/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="styles.css?v=20260917"><script src="script.js?v=20260917" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#results">Skip to results</a>
+<header class="site-header"><a class="wordmark" href="#top"><span>VP</span>VPEvolve</a><nav aria-label="Main navigation"><a href="#method">Method</a><a href="#local">Local rules</a><a href="#results">Results</a><a href="evolution/">Evolution ↗</a></nav><a class="header-link" href="#dataset">Open research</a></header>
+<main>
+<section class="hero" id="top">
+<div class="hero-grid" aria-hidden="true"></div>
+<div class="hero-copy"><p class="eyebrow"><span class="small-line"></span> A VIRTUAL PROCESS ENGINEER</p><h1>Better recipes.<br>Sharper patterns.<br><em>Experience retained.</em></h1><p class="deck">A frozen language model develops lithography recipes through global search, pattern-guided local correction, and an archive of measured trials.</p><div class="actions"><a class="button primary" href="#results">Explore the results <span>↗</span></a><a class="button ghost" href="evolution/">Follow a recipe <span>→</span></a></div><p class="hero-meta">Computational lithography <span> / </span> Anonymous research project</p></div>
+<div class="hero-stack-wrap"><div class="hero-stack" aria-label="Actual target layout, assist features and optical evidence from a development clip"><div class="stack-halo"></div><figure class="stack-card stack-target"><img src="assets/process/target.png" alt="Target layout from a development clip"><figcaption><span>01</span> Target geometry</figcaption></figure><figure class="stack-card stack-sraf"><img src="assets/process/sraf.png" alt="Sub-resolution assist features"><figcaption><span>02</span> Mask & assist features</figcaption></figure><figure class="stack-card stack-print"><img src="assets/process/overlay.png" alt="Actual optical contour and layout overlay"><figcaption><span>03</span> Measured physical evidence</figcaption></figure><div class="stack-orbit"></div><span class="stack-coordinate">x / y / printed contour</span></div><p class="stack-footnote">Actual tool output · illustrative 6 µm development clip</p></div>
+<a class="hero-scroll" href="#idea">THE ENGINEERING LOOP <span>↓</span></a>
+</section>
+<section class="signal-strip" aria-label="Current 20-window main results"><div><strong>26.09<span>%</span></strong><p>Lower mean window-max EPE<br>than the strongest baseline</p></div><div><strong>20</strong><p>Scoring windows<br>10 Poly + 10 Metal1</p></div><div><strong>18<span>/20</span></strong><p>Feasible improvements<br>of at least 0.1 nm</p></div><div><strong>0</strong><p>Retained MRC violations<br>across all seven methods</p></div></section>
+<section class="wide intro-section" id="idea"><p class="eyebrow">01 / FROM A RUN TO THE NEXT DECISION</p><div class="split-heading"><h2>A trial ends.<br><em>Its evidence stays.</em></h2><div><p>Process engineering is more than choosing a number. A useful recipe must move the printed contour, respect manufacturing limits, and address the errors that remain.</p><p>VPEvolve keeps the recipe, intervention, physical response, and outcome together. Later proposals retrieve relevant trials and check their claims against that evidence.</p></div></div><div class="loop-strip"><div><small>01</small><b>Propose a change</b><span>Global setting or local rule</span></div><i>→</i><div><small>02</small><b>Measure its effect</b><span>EPE · PVB · MRC</span></div><i>→</i><div><small>03</small><b>Retain the evidence</b><span>Improvements and failures</span></div><i>↺</i><div><small>04</small><b>Inform the next trial</b><span>Retrieve, verify, apply</span></div></div></section>
+<section class="method-section" id="method"><div class="wide"><p class="eyebrow">02 / THE HARNESS</p><div class="split-heading"><h2>Search the recipe.<br>Then locate <em>the bottleneck.</em></h2><p>Fixed tools and checks connect the actor to physical evidence. Self-evolution happens through accumulated experience and retained recipes; the model weights and harness code stay fixed during a run.</p></div><div class="method-stage"><div class="stage-rail"><button class="active" aria-pressed="true" data-stage="global"><small>01</small><span>Global search</span><b>↗</b></button><button aria-pressed="false" data-stage="local"><small>02</small><span>Local correction</span><b>↗</b></button><button aria-pressed="false" data-stage="memory"><small>03</small><span>Measured experience</span><b>↗</b></button></div><div class="stage-content" aria-live="polite"><div class="stage-tag" id="stage-tag">RECIPE-WIDE INTERVENTION</div><h3 id="stage-title">Improve the common recipe first.</h3><p id="stage-body">Change editable recipe settings such as fragmentation, movement limits, and feedback. Search begins globally, with every candidate checked against the same fixed measurement contract.</p><div class="stage-code" id="stage-code"><span>parent recipe</span><b>→</b><span>typed global edit</span><b>→</b><span>physical evaluation</span></div><p class="stage-note" id="stage-note">Both stages share one evaluation budget. The local stage opens after two consecutive feasible low-gain trials and a persistent hotspot.</p></div></div><div class="guard-strip"><span>FIXED RETENTION LIMITS</span><b>Max EPE first</b><b>Mean EPE ≤ 102% of R0</b><b>PVB ≤ 102% of R0</b><b>MRC / SRAF = 0</b></div></div></section>
+<section class="wide local-section" id="local"><div class="split-heading"><div><p class="eyebrow">03 / WHERE GLOBAL TUNING IS NOT ENOUGH</p><h2>Find the pattern.<br><em>Move the worst edge.</em></h2></div><p>The hotspot coordinate starts the diagnosis. Native pattern matching finds the matching geometry; a marker selects edge fragments, and a scoped rule changes their OPC feedback.</p></div><div class="local-showcase"><div class="local-metric"><span>ORIGINAL FOCUS EPE</span><p><s>6.793</s><b>→</b></p><strong>3.800<small>nm</small></strong><p class="local-description">One manually authored local rule.<br>Four tagged edge fragments.</p><a href="assets/current/pattern-local-rule.png" target="_blank" rel="noopener">Inspect the measured geometry ↗</a></div><figure class="local-figure"><img src="assets/current/pattern-local-rule.png" alt="Measured local-rule diagnostic: actual pattern context, printed contours and fixed-edge EPE"><figcaption>Actual geometry and fixed-edge measurements from the paper’s local-rule case.</figcaption></figure></div><div class="local-details"><div><span>GLOBAL MAX EPE</span><b>6.793 → 6.297 nm</b><p>The worst remaining gauge moves.</p></div><div><span>PVB TRADE-OFF</span><b>+0.07845%</b><p>Relative to the diagnostic monitor.</p></div><div><span>MANUFACTURABILITY</span><b>0 MRC / SRAF violations</b><p>Repeated geometry and metrics agree.</p></div></div><p class="scope-note">This is a development mechanism case, separate from the main comparison. The weak-feedback probe exceeds its original, tighter R0-based PVB cap and is recorded as infeasible. It demonstrates a spatial effect, not an accepted main-table improvement.</p></section>
+<section class="results-section" id="results"><div class="wide"><div class="split-heading"><div><p class="eyebrow">04 / CURRENT PHYSICAL EVALUATION</p><h2>Seven methods.<br><em>One measurement contract.</em></h2></div><p>Twenty fixed 10 × 10 µm scoring windows, one search seed, and up to four candidates per method and window. Switch layers to see where the gains come from.</p></div><div class="results-toolbar"><div class="segmented" aria-label="Results group"><button class="active" aria-pressed="true" data-group="all">Overall <small>20</small></button><button aria-pressed="false" data-group="poly">Poly <small>10</small></button><button aria-pressed="false" data-group="metal1">Metal1 <small>10</small></button></div><span class="data-date">Paper snapshot · 17 Sep 2026</span></div><div class="results-spotlight"><div><span>MEAN WINDOW-MAX EPE</span><strong id="result-main">13.995 <small>nm</small></strong><p id="result-comparison">26.09% below Textual Memory</p></div><div id="comparison-bars" class="comparison-bars" aria-label="Maximum EPE comparison"></div></div><div class="table-scroll"><table class="main-table"><caption>Physical quality and actual call counts by method</caption><thead><tr><th scope="col">Method</th><th scope="col">Max EPE ↓<small>nm</small></th><th scope="col">Avg. EPE ↓<small>nm</small></th><th scope="col">PVB ↓<small>µm*</small></th><th scope="col">MRC ↓<small>count</small></th><th scope="col">Success<small>%</small></th><th scope="col">OPC / LLM<small>total calls</small></th></tr></thead><tbody id="results-body"><tr><td colspan="7">Loading the verified results…</td></tr></tbody></table></div><p class="scope-note">Max EPE averages the maximum within each window; Avg. EPE averages per-window mean errors. *PVB is band area divided by target-edge length (µm). All quality metrics use the same retained recipe. Success requires a feasible ≥ 0.1 nm maximum-EPE reduction. These windows come from one layout family and have prior development exposure.</p><details class="accounting"><summary>What do OPC / LLM counts include?</summary><p>Total calls in each group, not a ratio. OPC includes candidate evaluations and one endpoint repeat per window. Model calls include rejected proposals. Shared calibration (40 calls), historical experience acquisition, development pilots, and native pattern diagnostics are separate costs. Budget caps are matched; actual use can differ.</p></details></div></section>
+<section class="wide memory-section" id="evidence"><div class="split-heading"><div><p class="eyebrow">05 / DOES EXPERIENCE HELP?</p><h2>Same starting recipe.<br><em>Different access to experience.</em></h2></div><p>Six matched windows isolate access to measured records. Every arm keeps the same authored skills, current state, latest feedback, actor, and quality limits.</p></div><div class="segmented" aria-label="Experience comparison group"><button class="active" aria-pressed="true" data-ablation="all">Overall · 6</button><button aria-pressed="false" data-ablation="poly">Poly · 3</button><button aria-pressed="false" data-ablation="metal1">Metal1 · 3</button></div><div id="ablation-cards" class="ablation-grid"></div><div class="experience-takeaway"><span>WHAT THIS TESTS</span><p id="ablation-takeaway">With the same initial bank, access to newly accumulated cards lowers mean window-max EPE by 5.18%. Three paired wins, three ties.</p></div><p class="scope-note">The complete and frozen arms use 24 and 20 candidate evaluations under equal caps. All six complete trajectories remain global, so a no-local arm is not reported for this short budget. These single-seed comparisons support experience access; they do not establish long-horizon stability.</p></section>
+<section class="evolution-teaser"><div class="wide"><div><p class="eyebrow">06 / FOLLOW THE ACTUAL SEARCH</p><h2>Every improvement.<br>Every plateau.<br><em>Every rejected trial.</em></h2><p>Replay the completed extended-budget Poly02 and Metal29 searches. The plots preserve the attempts that failed, the retained recipe, and the point where the search stopped.</p><a class="button primary" href="evolution/">Open the trajectory explorer ↗</a></div><a href="evolution/" class="trajectory-preview" aria-label="Explore actual Poly02 maximum EPE trajectory"><div><span>POLY02 · RETAINED MAX EPE</span><b>17.240 → 6.867 nm</b></div><svg viewBox="0 0 500 220" role="img" aria-label="Actual retained maximum EPE falls to 8.170, 7.527, then 6.867 nm and plateaus"><path class="gridline" d="M30 35H470 M30 105H470 M30 175H470"/><path class="trace-glow" d="M30 35H79V153H177V161H226V169H470"/><path class="trace-line" d="M30 35H79V153H177V161H226V169H470"/><circle cx="226" cy="169" r="5"/><text x="30" y="208">R0</text><text x="410" y="208">9 OPC calls</text></svg><p>8 candidates + 1 repeat · stopped after repeated proposals<br>No local actions in this trajectory</p></a></div></section>
+<section class="wide dataset" id="dataset"><div class="dataset-number">50</div><div><p class="eyebrow">07 / TOWARD AN OPEN ENGINEERING RECORD</p><h2>Layouts, recipes,<br><em>and the trials between them.</em></h2><p>The planned release contains 50 source clips across Poly and Metal1 from one layout family. The current main study samples 20 scoring windows. Code and the dataset are being prepared for release.</p><div class="release-tags"><span>Code · preparing</span><span>Dataset · preparing</span><a href="assets/current/results.json" download>Current result data ↓</a></div></div></section>
+<section class="research-status wide"><h3>What is established. What comes next.</h3><div><p><b>Completed</b> Main comparison, experience-bank ablations, a local-rule mechanism case, and two extended-budget traces.</p><p><b>Still open</b> Current-harness cross-model and source-reuse studies; sustained autonomous local refinement. Earlier model-replay scores are not substituted for these experiments.</p></div></section>
+</main><footer><a class="wordmark" href="#top"><span>VP</span>VPEvolve</a><p>Anonymous research project · 2026</p><a href="evolution/archive.html">Earlier development archive ↗</a></footer>
+</body></html>
