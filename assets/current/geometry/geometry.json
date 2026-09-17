@@ -532,7 +532,489 @@
         "gauge_id": "cbf8feae6156529afea6:0.1645000000"
       },
       "report_sha256": "a4c311234e4729d39fe2bedb0a79eef87ed99cadb18f545b1e1929c4b1e69d94",
-      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve."
+      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve.",
+      "view_id": "poly",
+      "display_label": "Poly02",
+      "selection": "Preassigned window"
+    },
+    {
+      "case_id": "metal1-27-very_sparse-x0-y400",
+      "layer": "metal1",
+      "frames": [
+        {
+          "opc_calls": 0,
+          "kind": "initial",
+          "retained_frame": 0,
+          "recipe_sha256": "6897a5adccaa810483ae99aa18a9e7b972b23cdc421c3a0e00da932c2b632319",
+          "measurement_sha256": "87c3c357c3b1af2cf4a791d644afa1fecb92f5fbe97348b89f1d0a7a4bc02f41",
+          "result_gds_sha256": "511ad1552ee6a0ee6fc6da30ed2aadea688dd4cafbcac221d35fbb2aea3c2b5f",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 28.872127426696075,
+            "edge_normal_max_epe_nm": 18.04999999999879,
+            "edge_normal_mean_epe_nm": 0.6836867338131916,
+            "edge_normal_top10_mean_epe_nm": 15.798300319097436,
+            "max_nominal_contour_deviation_nm": 28.872127426696075,
+            "max_nominal_shape_error_nm": 28.872127426696075,
+            "mean_nominal_contour_deviation_nm": 2.361679056766752,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.1576182261444804,
+            "nominal_violation_ratio_over_5nm": 0.1576182261444804,
+            "p95_nominal_contour_deviation_nm": 14.089351070460957,
+            "pv_band_area_per_target_edge_um": 0.005055017559670701,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.21669303240418
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-00-core-target.png",
+              "mask": "metal27-00-core-mask.png",
+              "sraf": "metal27-00-core-sraf.png",
+              "contour": "metal27-00-core-contour.png",
+              "pvb": "metal27-00-core-pvb.png",
+              "overlay": "metal27-00-core-overlay.png",
+              "mask_view": "metal27-00-core-mask_view.png",
+              "resist_view": "metal27-00-core-resist_view.png",
+              "pvb_view": "metal27-00-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-00-zoom-target.png",
+              "mask": "metal27-00-zoom-mask.png",
+              "sraf": "metal27-00-zoom-sraf.png",
+              "contour": "metal27-00-zoom-contour.png",
+              "pvb": "metal27-00-zoom-pvb.png",
+              "overlay": "metal27-00-zoom-overlay.png",
+              "mask_view": "metal27-00-zoom-mask_view.png",
+              "resist_view": "metal27-00-zoom-resist_view.png",
+              "pvb_view": "metal27-00-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 1,
+          "kind": "candidate",
+          "retained_frame": 1,
+          "recipe_sha256": "207b60218160b152f48bddec19d7abeb2f5d619665e6611562e7df9f948680f9",
+          "measurement_sha256": "68d1e5b600dc77fa1755a40963be92c7c589183c1c32e4ab1f89c0ed5821e684",
+          "result_gds_sha256": "d397dea06a504a340aa84fb2f929604dcda1e01d7c565cd93c70bacaa4e6c0db",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 26.551459470243056,
+            "edge_normal_max_epe_nm": 16.075000000000728,
+            "edge_normal_mean_epe_nm": 0.6542719069422709,
+            "edge_normal_top10_mean_epe_nm": 14.075815258184042,
+            "max_nominal_contour_deviation_nm": 26.551459470243056,
+            "max_nominal_shape_error_nm": 26.551459470243056,
+            "mean_nominal_contour_deviation_nm": 2.320313053310846,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15576481658373847,
+            "nominal_violation_ratio_over_5nm": 0.15576481658373847,
+            "p95_nominal_contour_deviation_nm": 13.973688008051354,
+            "pv_band_area_per_target_edge_um": 0.005055188650229963,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.08023866633326
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-01-core-target.png",
+              "mask": "metal27-01-core-mask.png",
+              "sraf": "metal27-01-core-sraf.png",
+              "contour": "metal27-01-core-contour.png",
+              "pvb": "metal27-01-core-pvb.png",
+              "overlay": "metal27-01-core-overlay.png",
+              "mask_view": "metal27-01-core-mask_view.png",
+              "resist_view": "metal27-01-core-resist_view.png",
+              "pvb_view": "metal27-01-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-01-zoom-target.png",
+              "mask": "metal27-01-zoom-mask.png",
+              "sraf": "metal27-01-zoom-sraf.png",
+              "contour": "metal27-01-zoom-contour.png",
+              "pvb": "metal27-01-zoom-pvb.png",
+              "overlay": "metal27-01-zoom-overlay.png",
+              "mask_view": "metal27-01-zoom-mask_view.png",
+              "resist_view": "metal27-01-zoom-resist_view.png",
+              "pvb_view": "metal27-01-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 2,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "measurement_sha256": "ff78b348177b094597fd8d565988b0870dfc6ff672b1c54ef94c827e33271397",
+          "result_gds_sha256": "032593a11553709226e060e4bfde470926ccdfbca55d88a19e05a932d3f9f0e6",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 26.483579818445932,
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "max_nominal_contour_deviation_nm": 26.483579818445932,
+            "max_nominal_shape_error_nm": 26.483579818445932,
+            "mean_nominal_contour_deviation_nm": 2.3452689085811778,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15707646027287891,
+            "nominal_violation_ratio_over_5nm": 0.15707646027287891,
+            "p95_nominal_contour_deviation_nm": 13.984634424967929,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.29389140708371
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-02-core-target.png",
+              "mask": "metal27-02-core-mask.png",
+              "sraf": "metal27-02-core-sraf.png",
+              "contour": "metal27-02-core-contour.png",
+              "pvb": "metal27-02-core-pvb.png",
+              "overlay": "metal27-02-core-overlay.png",
+              "mask_view": "metal27-02-core-mask_view.png",
+              "resist_view": "metal27-02-core-resist_view.png",
+              "pvb_view": "metal27-02-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-02-zoom-target.png",
+              "mask": "metal27-02-zoom-mask.png",
+              "sraf": "metal27-02-zoom-sraf.png",
+              "contour": "metal27-02-zoom-contour.png",
+              "pvb": "metal27-02-zoom-pvb.png",
+              "overlay": "metal27-02-zoom-overlay.png",
+              "mask_view": "metal27-02-zoom-mask_view.png",
+              "resist_view": "metal27-02-zoom-resist_view.png",
+              "pvb_view": "metal27-02-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 3,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "517a08959773fe1845cc4edc735a571137a006143843b8bba474eb6739d1a738",
+          "measurement_sha256": "613e61bfc14214497abc315168efd2bf3f758eb5da523e7429502bbc4dbd2181",
+          "result_gds_sha256": "8e8b64f835f1b02c54cb3799e97de912b6070a63bae5ad80072a4d327920a45a",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 27.931523409939125,
+            "edge_normal_max_epe_nm": 15.365217391304142,
+            "edge_normal_mean_epe_nm": 1.0320961964117237,
+            "edge_normal_top10_mean_epe_nm": 14.187319697185519,
+            "max_nominal_contour_deviation_nm": 27.931523409939125,
+            "max_nominal_shape_error_nm": 27.931523409939125,
+            "mean_nominal_contour_deviation_nm": 2.7445694478364606,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.1683965155900258,
+            "nominal_violation_ratio_over_5nm": 0.1683965155900258,
+            "p95_nominal_contour_deviation_nm": 14.633898876243848,
+            "pv_band_area_per_target_edge_um": 0.005147056269624995,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.053236799818745
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-03-core-target.png",
+              "mask": "metal27-03-core-mask.png",
+              "sraf": "metal27-03-core-sraf.png",
+              "contour": "metal27-03-core-contour.png",
+              "pvb": "metal27-03-core-pvb.png",
+              "overlay": "metal27-03-core-overlay.png",
+              "mask_view": "metal27-03-core-mask_view.png",
+              "resist_view": "metal27-03-core-resist_view.png",
+              "pvb_view": "metal27-03-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-03-zoom-target.png",
+              "mask": "metal27-03-zoom-mask.png",
+              "sraf": "metal27-03-zoom-sraf.png",
+              "contour": "metal27-03-zoom-contour.png",
+              "pvb": "metal27-03-zoom-pvb.png",
+              "overlay": "metal27-03-zoom-overlay.png",
+              "mask_view": "metal27-03-zoom-mask_view.png",
+              "resist_view": "metal27-03-zoom-resist_view.png",
+              "pvb_view": "metal27-03-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 4,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "7ac73023d8c2b08103dd129463d551f4da7a6f402b7aab3b272698cb6dacde34",
+          "measurement_sha256": "af813fd9f0fd4d77cfc06876bae7845648f5b43c62d4a7576977ea6893ffe292",
+          "result_gds_sha256": "17e9761df06dc907f1f7d1d3a032657f1be7e78b38ba0bf7e546b01f67e3e649",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 26.162950903901574,
+            "edge_normal_max_epe_nm": 13.725000000000875,
+            "edge_normal_mean_epe_nm": 0.643094431518663,
+            "edge_normal_top10_mean_epe_nm": 12.926058345690006,
+            "max_nominal_contour_deviation_nm": 26.162950903901574,
+            "max_nominal_shape_error_nm": 26.162950903901574,
+            "mean_nominal_contour_deviation_nm": 2.3122473428929893,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.1559073865499494,
+            "nominal_violation_ratio_over_5nm": 0.1559073865499494,
+            "p95_nominal_contour_deviation_nm": 13.94632568098185,
+            "pv_band_area_per_target_edge_um": 0.005058509466486427,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.070648988266186
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-04-core-target.png",
+              "mask": "metal27-04-core-mask.png",
+              "sraf": "metal27-04-core-sraf.png",
+              "contour": "metal27-04-core-contour.png",
+              "pvb": "metal27-04-core-pvb.png",
+              "overlay": "metal27-04-core-overlay.png",
+              "mask_view": "metal27-04-core-mask_view.png",
+              "resist_view": "metal27-04-core-resist_view.png",
+              "pvb_view": "metal27-04-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-04-zoom-target.png",
+              "mask": "metal27-04-zoom-mask.png",
+              "sraf": "metal27-04-zoom-sraf.png",
+              "contour": "metal27-04-zoom-contour.png",
+              "pvb": "metal27-04-zoom-pvb.png",
+              "overlay": "metal27-04-zoom-overlay.png",
+              "mask_view": "metal27-04-zoom-mask_view.png",
+              "resist_view": "metal27-04-zoom-resist_view.png",
+              "pvb_view": "metal27-04-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 5,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "5fa74bb8f0dbcd30846423ec23c683e93353322f1c947c28b4b4bec52094150f",
+          "measurement_sha256": "d3affc3a379893a7e6409e566a0ffc11e0d1edb17c4f745649172c6cf1a638bf",
+          "result_gds_sha256": "12b06dd4d9649e926dd8c9d6fa65c731bddecc500b782c5d90c5a8ad7b87cd6d",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 26.9197790956784,
+            "edge_normal_max_epe_nm": 13.573333333332549,
+            "edge_normal_mean_epe_nm": 0.6176395739436863,
+            "edge_normal_top10_mean_epe_nm": 12.56464345462378,
+            "max_nominal_contour_deviation_nm": 26.9197790956784,
+            "max_nominal_shape_error_nm": 26.9197790956784,
+            "mean_nominal_contour_deviation_nm": 2.270942550419303,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15396130651117035,
+            "nominal_violation_ratio_over_5nm": 0.15396130651117035,
+            "p95_nominal_contour_deviation_nm": 13.812938931395518,
+            "pv_band_area_per_target_edge_um": 0.005059604245792481,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 25.940306843453023
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-05-core-target.png",
+              "mask": "metal27-05-core-mask.png",
+              "sraf": "metal27-05-core-sraf.png",
+              "contour": "metal27-05-core-contour.png",
+              "pvb": "metal27-05-core-pvb.png",
+              "overlay": "metal27-05-core-overlay.png",
+              "mask_view": "metal27-05-core-mask_view.png",
+              "resist_view": "metal27-05-core-resist_view.png",
+              "pvb_view": "metal27-05-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-05-zoom-target.png",
+              "mask": "metal27-05-zoom-mask.png",
+              "sraf": "metal27-05-zoom-sraf.png",
+              "contour": "metal27-05-zoom-contour.png",
+              "pvb": "metal27-05-zoom-pvb.png",
+              "overlay": "metal27-05-zoom-overlay.png",
+              "mask_view": "metal27-05-zoom-mask_view.png",
+              "resist_view": "metal27-05-zoom-resist_view.png",
+              "pvb_view": "metal27-05-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 6,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "f1385c67f2ddb26fd3960e9fa546836c8f2fea0e0e35638cd2bad59864540274",
+          "measurement_sha256": "d5329971aac1b653f515bab2051cfe69d1bfc3f7d8df46ab9639cd0b53929b6e",
+          "result_gds_sha256": "6c77d41402572987f7acaf1fd9e7b8309d6a23a5ff403cb3ab015f07135d6e35",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 27.369508581631777,
+            "edge_normal_max_epe_nm": 14.374698795181828,
+            "edge_normal_mean_epe_nm": 0.6833193132819387,
+            "edge_normal_top10_mean_epe_nm": 13.306808858284393,
+            "max_nominal_contour_deviation_nm": 27.369508581631777,
+            "max_nominal_shape_error_nm": 27.369508581631777,
+            "mean_nominal_contour_deviation_nm": 2.3575888594576027,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15720477324246873,
+            "nominal_violation_ratio_over_5nm": 0.15720477324246873,
+            "p95_nominal_contour_deviation_nm": 13.993173382437796,
+            "pv_band_area_per_target_edge_um": 0.005060472215665665,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.552263681014427
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-06-core-target.png",
+              "mask": "metal27-06-core-mask.png",
+              "sraf": "metal27-06-core-sraf.png",
+              "contour": "metal27-06-core-contour.png",
+              "pvb": "metal27-06-core-pvb.png",
+              "overlay": "metal27-06-core-overlay.png",
+              "mask_view": "metal27-06-core-mask_view.png",
+              "resist_view": "metal27-06-core-resist_view.png",
+              "pvb_view": "metal27-06-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-06-zoom-target.png",
+              "mask": "metal27-06-zoom-mask.png",
+              "sraf": "metal27-06-zoom-sraf.png",
+              "contour": "metal27-06-zoom-contour.png",
+              "pvb": "metal27-06-zoom-pvb.png",
+              "overlay": "metal27-06-zoom-overlay.png",
+              "mask_view": "metal27-06-zoom-mask_view.png",
+              "resist_view": "metal27-06-zoom-resist_view.png",
+              "pvb_view": "metal27-06-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 7,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "c0c73f1adf0b72cefe356e18716ece3a9e77f1573cb70f52f40f009d55f5df69",
+          "measurement_sha256": "ac6c596bb2189b638405e4fd08fc8f47376f1b69bd29484fc4f73df6948e566c",
+          "result_gds_sha256": "4c2165e914017e29c2d6357ce66968f0f11588d974a3dcad6b9f7ba7343dafba",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 26.679017972931486,
+            "edge_normal_max_epe_nm": 13.48695652173948,
+            "edge_normal_mean_epe_nm": 0.6701586249249543,
+            "edge_normal_top10_mean_epe_nm": 13.027703475462095,
+            "max_nominal_contour_deviation_nm": 26.679017972931486,
+            "max_nominal_shape_error_nm": 26.679017972931486,
+            "mean_nominal_contour_deviation_nm": 2.34581092010033,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15711210276443163,
+            "nominal_violation_ratio_over_5nm": 0.15711210276443163,
+            "p95_nominal_contour_deviation_nm": 13.984634424967414,
+            "pv_band_area_per_target_edge_um": 0.005060510625210114,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.327988180659542
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-07-core-target.png",
+              "mask": "metal27-07-core-mask.png",
+              "sraf": "metal27-07-core-sraf.png",
+              "contour": "metal27-07-core-contour.png",
+              "pvb": "metal27-07-core-pvb.png",
+              "overlay": "metal27-07-core-overlay.png",
+              "mask_view": "metal27-07-core-mask_view.png",
+              "resist_view": "metal27-07-core-resist_view.png",
+              "pvb_view": "metal27-07-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-07-zoom-target.png",
+              "mask": "metal27-07-zoom-mask.png",
+              "sraf": "metal27-07-zoom-sraf.png",
+              "contour": "metal27-07-zoom-contour.png",
+              "pvb": "metal27-07-zoom-pvb.png",
+              "overlay": "metal27-07-zoom-overlay.png",
+              "mask_view": "metal27-07-zoom-mask_view.png",
+              "resist_view": "metal27-07-zoom-resist_view.png",
+              "pvb_view": "metal27-07-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 8,
+          "kind": "repeat",
+          "retained_frame": 8,
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "measurement_sha256": "68f06cb7fcc18c74c5d8dc6a9214bdada457a00aabd4cde7352146fb83bf8f41",
+          "result_gds_sha256": "15e281d8a2960c78c71a151ac10374c186dd23050a3d3aa299a652ff656d757b",
+          "target_sha256": "cce0ab7307b2b64cd625fa1b776949cd17a715c6223308588a8112d13e255079",
+          "metrics": {
+            "corner_max_deviation_nm": 26.483579818445932,
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "max_nominal_contour_deviation_nm": 26.483579818445932,
+            "max_nominal_shape_error_nm": 26.483579818445932,
+            "mean_nominal_contour_deviation_nm": 2.3452689085811778,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15707646027287891,
+            "nominal_violation_ratio_over_5nm": 0.15707646027287891,
+            "p95_nominal_contour_deviation_nm": 13.984634424967929,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.29389140708371
+          },
+          "assets": {
+            "core": {
+              "target": "metal27-08-core-target.png",
+              "mask": "metal27-08-core-mask.png",
+              "sraf": "metal27-08-core-sraf.png",
+              "contour": "metal27-08-core-contour.png",
+              "pvb": "metal27-08-core-pvb.png",
+              "overlay": "metal27-08-core-overlay.png",
+              "mask_view": "metal27-08-core-mask_view.png",
+              "resist_view": "metal27-08-core-resist_view.png",
+              "pvb_view": "metal27-08-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal27-08-zoom-target.png",
+              "mask": "metal27-08-zoom-mask.png",
+              "sraf": "metal27-08-zoom-sraf.png",
+              "contour": "metal27-08-zoom-contour.png",
+              "pvb": "metal27-08-zoom-pvb.png",
+              "overlay": "metal27-08-zoom-overlay.png",
+              "mask_view": "metal27-08-zoom-mask_view.png",
+              "resist_view": "metal27-08-zoom-resist_view.png",
+              "pvb_view": "metal27-08-zoom-pvb_view.png"
+            }
+          }
+        }
+      ],
+      "viewport": {
+        "core": {
+          "bbox_um": [
+            3.9894999999999996,
+            3.0627999999999997,
+            13.9895,
+            13.0628
+          ],
+          "width_um": 10,
+          "scale_bar_um": 2
+        },
+        "zoom": {
+          "bbox_um": [
+            13.629999999999997,
+            8.2295,
+            14.229999999999999,
+            8.829500000000001
+          ],
+          "width_um": 0.6,
+          "scale_bar_um": 0.1
+        }
+      },
+      "focus": {
+        "x_um": 13.929999999999998,
+        "y_um": 8.5295,
+        "gauge_id": "19f60346c3dc71ff096a:0.1095000000"
+      },
+      "report_sha256": "f584a6b4e56a28ae0db3df67e0d4e49e220313dbc6d6e0106ae8a422e777465c",
+      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve.",
+      "view_id": "metal1",
+      "display_label": "Metal27",
+      "selection": "Selected after observing the lowest main-table Metal endpoint among ten windows; illustrative, not a random sample."
     },
     {
       "case_id": "metal1-29-very_sparse-x760-y620",
@@ -1008,7 +1490,10 @@
         "gauge_id": "52825fa1788f527bc7e7:0.0255000000"
       },
       "report_sha256": "2e7c7427333f84beaccb9f201ebc01236b7dc3195b14ab3601326ce2123ddbce",
-      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve."
+      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve.",
+      "view_id": "metal29",
+      "display_label": "Metal29",
+      "selection": "Original preassigned Metal window, preserved for comparison."
     }
   ],
   "files": [
@@ -2721,6 +3206,816 @@
       "path": "metal1-08-zoom-pvb_view.png",
       "sha256": "9d586493553f694edc7e1eca102c26ee121f21fee78e0bbd321998895237da1f",
       "bytes": 6070
+    },
+    {
+      "path": "metal27-00-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-00-core-mask.png",
+      "sha256": "8e572da2b1d7743722659ebea4bfbe18b0850b2c650e41b976dbd5b81b037ce2",
+      "bytes": 6447
+    },
+    {
+      "path": "metal27-00-core-sraf.png",
+      "sha256": "e14b0f75de782bbeb4a17e093429b914c6228ad0591f65ec54da938bc6bf6b40",
+      "bytes": 6935
+    },
+    {
+      "path": "metal27-00-core-contour.png",
+      "sha256": "97698adca83afc689e560732108b8501269d5650a646d4190a93757fcc6d93e3",
+      "bytes": 9545
+    },
+    {
+      "path": "metal27-00-core-pvb.png",
+      "sha256": "4a1b4a4b372af9b7bc5ef5eea6cb7163f26d641f369bf6cabd2e0793946d5bb6",
+      "bytes": 9364
+    },
+    {
+      "path": "metal27-00-core-overlay.png",
+      "sha256": "be85cc30f829befffbb82f3e59be787cb7a3725740890f6da07428ae73927aa7",
+      "bytes": 21331
+    },
+    {
+      "path": "metal27-00-core-mask_view.png",
+      "sha256": "b0d87da3ddc6b40c56c887ca2eed783b0a8a385817f955a8bbd13badf8ec7883",
+      "bytes": 13590
+    },
+    {
+      "path": "metal27-00-core-resist_view.png",
+      "sha256": "dc166c368823a16c260a790460aaf03412a67f1daa102c6fae8ed3f619d98f19",
+      "bytes": 14104
+    },
+    {
+      "path": "metal27-00-core-pvb_view.png",
+      "sha256": "d9fe30602f257f291b9d4df2017e2c6cfab0a01c292d72698af2eedb86295a6c",
+      "bytes": 13397
+    },
+    {
+      "path": "metal27-00-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-00-zoom-mask.png",
+      "sha256": "b00c342ff8409c6b8b6ab666aae90e71fd24549c409485eaae83774f05ab5151",
+      "bytes": 3947
+    },
+    {
+      "path": "metal27-00-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-00-zoom-contour.png",
+      "sha256": "0efb88a8dcffea02c2934fd08df1e79f794bc18d97bf0209bae5c75bb726c3f4",
+      "bytes": 5844
+    },
+    {
+      "path": "metal27-00-zoom-pvb.png",
+      "sha256": "a3374e1f85223e048de54a351b043d4157d9f20f5def994497bd90129dbb59af",
+      "bytes": 6150
+    },
+    {
+      "path": "metal27-00-zoom-overlay.png",
+      "sha256": "c9ca296541920ebbc7c4e15bc20e8c67023fc74f5d6426ef1b90b4bb0a5afb11",
+      "bytes": 10014
+    },
+    {
+      "path": "metal27-00-zoom-mask_view.png",
+      "sha256": "b14eda894e3b67503d2a31613ec49da2172f26fdac77d8bec4e4d3989a2b230b",
+      "bytes": 4324
+    },
+    {
+      "path": "metal27-00-zoom-resist_view.png",
+      "sha256": "a2e85e4e69e378d99c6402701303ca8e196d711ef599ea8243c0938e2189dd64",
+      "bytes": 8659
+    },
+    {
+      "path": "metal27-00-zoom-pvb_view.png",
+      "sha256": "8c8788a6127df33514459666ac0bd645d99d2ca5acffc820eff0bbd2b6ec36bd",
+      "bytes": 6578
+    },
+    {
+      "path": "metal27-01-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-01-core-mask.png",
+      "sha256": "a31190ca0c91708e4dba6bdf36fbb09688aed53de0000bfde1ae9587bf6314f8",
+      "bytes": 6428
+    },
+    {
+      "path": "metal27-01-core-sraf.png",
+      "sha256": "e14b0f75de782bbeb4a17e093429b914c6228ad0591f65ec54da938bc6bf6b40",
+      "bytes": 6935
+    },
+    {
+      "path": "metal27-01-core-contour.png",
+      "sha256": "93ee585b17ec049674ca67259ec41fb178bbadea20b0a14ee4bf021ca521eea4",
+      "bytes": 9544
+    },
+    {
+      "path": "metal27-01-core-pvb.png",
+      "sha256": "c8c3ef12c4122604cff1c6bc5ca918a3016ca4933064682f62e70f44f71fb42f",
+      "bytes": 9378
+    },
+    {
+      "path": "metal27-01-core-overlay.png",
+      "sha256": "420ab94087a3a84b06671c954a5524952f408a4f038b5c044a3609573b24ab01",
+      "bytes": 21204
+    },
+    {
+      "path": "metal27-01-core-mask_view.png",
+      "sha256": "2f172add42be617569e1d555bc34314005aab9bfbb4b577538d87254bcdb392a",
+      "bytes": 13715
+    },
+    {
+      "path": "metal27-01-core-resist_view.png",
+      "sha256": "475ca4452a777f6f5c57ca2bdb7de2d7aac5abda924c12e7692addba08a924c1",
+      "bytes": 13994
+    },
+    {
+      "path": "metal27-01-core-pvb_view.png",
+      "sha256": "2f6cf80952fca2e1cce03f98da78a0a94bbfe86b8ece370507229d807cf5cb18",
+      "bytes": 13435
+    },
+    {
+      "path": "metal27-01-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-01-zoom-mask.png",
+      "sha256": "6e666b92d4dd32f490fdfe9443c71293425cc279ca4913039d72073399288c3e",
+      "bytes": 3940
+    },
+    {
+      "path": "metal27-01-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-01-zoom-contour.png",
+      "sha256": "e3c2a5494a7d8c9f2c154d7542252f3cc424c256866f527fcfc54b276bc5e773",
+      "bytes": 5927
+    },
+    {
+      "path": "metal27-01-zoom-pvb.png",
+      "sha256": "2da38d7f31901fcbab098cc994fb5cebdd58832a5a49e7fc4d440cf210467340",
+      "bytes": 6164
+    },
+    {
+      "path": "metal27-01-zoom-overlay.png",
+      "sha256": "a08a5b8110638e823e07b3eece0d1ace436b87c523fc67322061a30d750062d6",
+      "bytes": 9987
+    },
+    {
+      "path": "metal27-01-zoom-mask_view.png",
+      "sha256": "c3490ec715ed81d19afd5dc26dcb06c4b32b6b5f5ad137c19ebaad81e5fe9f1d",
+      "bytes": 4321
+    },
+    {
+      "path": "metal27-01-zoom-resist_view.png",
+      "sha256": "ad8779ff6f56234af0b651dd52e8487bdae4efff41876fd4f80c34c3dfc6b989",
+      "bytes": 8630
+    },
+    {
+      "path": "metal27-01-zoom-pvb_view.png",
+      "sha256": "fd22c40f2e85d908891527a28e399fa799e1bde4b8cf9ac7e1c46a8ed36ece89",
+      "bytes": 6542
+    },
+    {
+      "path": "metal27-02-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-02-core-mask.png",
+      "sha256": "11ee7453d091510acd48587d6c25694e867ae1b724a03f07ba754cd6f55e4b10",
+      "bytes": 6515
+    },
+    {
+      "path": "metal27-02-core-sraf.png",
+      "sha256": "a47feaf3f8e4e3d89b1157a550f51d9975fc5b75a1ed7e375d091f42d5e50601",
+      "bytes": 6925
+    },
+    {
+      "path": "metal27-02-core-contour.png",
+      "sha256": "818c09ac7e6b8101533c127d6b77a4a26c2a0a42ed6faf8ebea775231df65cba",
+      "bytes": 9588
+    },
+    {
+      "path": "metal27-02-core-pvb.png",
+      "sha256": "2e6cfba8944bdeafb6747f6edc55c40e4ca66830cbd2f1a251569fbf4dbb05dd",
+      "bytes": 9214
+    },
+    {
+      "path": "metal27-02-core-overlay.png",
+      "sha256": "6954c8007c24fd0e3b4cf064846ace81498a4d48c9e1fd04826bcba7ebd9774d",
+      "bytes": 21310
+    },
+    {
+      "path": "metal27-02-core-mask_view.png",
+      "sha256": "e57f0601ca0713ac4de14bb09d03323de7be0f8b23a82d0285efb441e311db59",
+      "bytes": 13741
+    },
+    {
+      "path": "metal27-02-core-resist_view.png",
+      "sha256": "0fe0e0ffc163651e39c33b1967fc57ec290931329a6a6deabaa3bc978415b7d8",
+      "bytes": 14179
+    },
+    {
+      "path": "metal27-02-core-pvb_view.png",
+      "sha256": "1ea2ca02416c52e1b0adf061332f2918b0ade950d1e573bbe05a6845c7e2b9e3",
+      "bytes": 13188
+    },
+    {
+      "path": "metal27-02-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-02-zoom-mask.png",
+      "sha256": "84fa98084074c5867408ef09ba840324632ee93168d5633e625a4eacafecb12c",
+      "bytes": 3966
+    },
+    {
+      "path": "metal27-02-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-02-zoom-contour.png",
+      "sha256": "aa67bb03679ec37f03f643be25777ad6116d7dba4ecdc94dbed090e411ca19e6",
+      "bytes": 5883
+    },
+    {
+      "path": "metal27-02-zoom-pvb.png",
+      "sha256": "90a677fe21e6e3b166c11952fd0872e24fba27f67a301c15e8adc2f92e580000",
+      "bytes": 6106
+    },
+    {
+      "path": "metal27-02-zoom-overlay.png",
+      "sha256": "f4769ae9ca35507fbe30cfafd9b96e87fe490ce9fd44c7c73d4317a23387afbf",
+      "bytes": 9887
+    },
+    {
+      "path": "metal27-02-zoom-mask_view.png",
+      "sha256": "f4b3cf80b3654bfab0fa95d03472ddf728b17ee692dea290310e194d72d45690",
+      "bytes": 4364
+    },
+    {
+      "path": "metal27-02-zoom-resist_view.png",
+      "sha256": "7eb2495ac2bc6e3fb2ae48cdeff4d27799cb9a9b2686ad648cca74537f4b01c0",
+      "bytes": 8498
+    },
+    {
+      "path": "metal27-02-zoom-pvb_view.png",
+      "sha256": "2a0befd69611c28e6146d22348a19c7d39b1ce0b4e9424e5ddd65fa1c0dea1b5",
+      "bytes": 6484
+    },
+    {
+      "path": "metal27-03-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-03-core-mask.png",
+      "sha256": "3efd5d3a257847f4527a85e86810db58398b2b4884d4b727d382b202a604c4e2",
+      "bytes": 6479
+    },
+    {
+      "path": "metal27-03-core-sraf.png",
+      "sha256": "9622478ddd9f90c176ef42de108254fcd873a2f3dc550116acf49a477d462f3b",
+      "bytes": 6926
+    },
+    {
+      "path": "metal27-03-core-contour.png",
+      "sha256": "b785b94fa8e372fa85beb35f692ae6f1a24a95076c50b4625992e691ab013d16",
+      "bytes": 9689
+    },
+    {
+      "path": "metal27-03-core-pvb.png",
+      "sha256": "1465d1b384793935d5f60bccffd193fef9853b4db9cda47e7af89e9c2b4a2eb9",
+      "bytes": 9430
+    },
+    {
+      "path": "metal27-03-core-overlay.png",
+      "sha256": "0aafc9ea9498287ce41dd5c30f1c7f30a100aec7e846e01320da49fe42b0148b",
+      "bytes": 21827
+    },
+    {
+      "path": "metal27-03-core-mask_view.png",
+      "sha256": "9e857a9fba49df09835b94a32651d7b25ad17fc354f07d907dd5b5782b12028f",
+      "bytes": 13748
+    },
+    {
+      "path": "metal27-03-core-resist_view.png",
+      "sha256": "592f287ca4a45105a692489cdc161356d22e60703845b30f4e094e35789cf83c",
+      "bytes": 14659
+    },
+    {
+      "path": "metal27-03-core-pvb_view.png",
+      "sha256": "5f363657b1bcc77d8ade432edf714c3227bcac74471c1c1827d6912d1b9488aa",
+      "bytes": 13391
+    },
+    {
+      "path": "metal27-03-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-03-zoom-mask.png",
+      "sha256": "16842fdcf1f02093f17e8612d6bed812705de2fa8f37911ed8fbd23fc74ecc9b",
+      "bytes": 3946
+    },
+    {
+      "path": "metal27-03-zoom-sraf.png",
+      "sha256": "1a01a62bb47a3a5919b8f0dd0cf60fe4a821d6e2f1285a21b435b5bddb6eb9e5",
+      "bytes": 3808
+    },
+    {
+      "path": "metal27-03-zoom-contour.png",
+      "sha256": "5af8943277f47a72733436de02924e589566db7174f781b288a5af79d72aebde",
+      "bytes": 5839
+    },
+    {
+      "path": "metal27-03-zoom-pvb.png",
+      "sha256": "b4ca44f325267d71046aeaa54cfc5641e41b4884b36acf6122a416ef4a45d9a5",
+      "bytes": 6149
+    },
+    {
+      "path": "metal27-03-zoom-overlay.png",
+      "sha256": "2d5c1d269df20962b9dc9d0d54759c794494bbf86d363856e71a4cc4c4ae564f",
+      "bytes": 9954
+    },
+    {
+      "path": "metal27-03-zoom-mask_view.png",
+      "sha256": "50210ec4ce0e1d8b89debf57e24a697eb1d60504b70808e94a86e937faec2715",
+      "bytes": 4353
+    },
+    {
+      "path": "metal27-03-zoom-resist_view.png",
+      "sha256": "a1954e23a96fc46cb7d08c8797a524e9afe13e196fe50d84099d644464e252fd",
+      "bytes": 8502
+    },
+    {
+      "path": "metal27-03-zoom-pvb_view.png",
+      "sha256": "40a81571dc5dd08959ce623f9ce67e4e2082a987e4895f6c62782c93b9c0b1b9",
+      "bytes": 6541
+    },
+    {
+      "path": "metal27-04-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-04-core-mask.png",
+      "sha256": "c1b75019ec746967acb06636398a370b6d20288c3c1ad6dafb33016a3154500f",
+      "bytes": 6491
+    },
+    {
+      "path": "metal27-04-core-sraf.png",
+      "sha256": "e14b0f75de782bbeb4a17e093429b914c6228ad0591f65ec54da938bc6bf6b40",
+      "bytes": 6935
+    },
+    {
+      "path": "metal27-04-core-contour.png",
+      "sha256": "cbe711bc5f77716428977a7eb88efdd7f6fb95e8a4aa003903275acc18db1ba6",
+      "bytes": 9536
+    },
+    {
+      "path": "metal27-04-core-pvb.png",
+      "sha256": "512d8cb3e3b3ea25e20f5e4c111791ae7a9afa34a3b9c978c170ce088067d1c0",
+      "bytes": 9257
+    },
+    {
+      "path": "metal27-04-core-overlay.png",
+      "sha256": "b5eea18a36f614b508980f8d59a9bd79b545f702e7b15f0fdf74daff57f4b79c",
+      "bytes": 21090
+    },
+    {
+      "path": "metal27-04-core-mask_view.png",
+      "sha256": "ea46de5b82228634a70fc6661ca97b277713683233b6fcb666b493f36ebfb94c",
+      "bytes": 13710
+    },
+    {
+      "path": "metal27-04-core-resist_view.png",
+      "sha256": "2822db3b6ad7540031f0f3efdb172f626804e9a31f500c26c5c480d9dfc7bc69",
+      "bytes": 13873
+    },
+    {
+      "path": "metal27-04-core-pvb_view.png",
+      "sha256": "6bba80ded3dcfc3690df7eb2adaba6aaa445a247f28020e3516462bf43c515c6",
+      "bytes": 13280
+    },
+    {
+      "path": "metal27-04-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-04-zoom-mask.png",
+      "sha256": "1b4ef3ad9d67dee27e925c1996d9138440817fe33cbffd94fa460ea6567274be",
+      "bytes": 3944
+    },
+    {
+      "path": "metal27-04-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-04-zoom-contour.png",
+      "sha256": "a284e84a2351de70cc236dc3711907eb96c0a8ed99afd20d7a39b1180e030217",
+      "bytes": 5836
+    },
+    {
+      "path": "metal27-04-zoom-pvb.png",
+      "sha256": "6389519aa81e09824eeb7a5d82c32777b8d91dc17a2a683ee08e1a6b1fa691a5",
+      "bytes": 6064
+    },
+    {
+      "path": "metal27-04-zoom-overlay.png",
+      "sha256": "5cbd58474f6c5a877e039c2084691cd5cf5da91f4da854c4512ab87e78c63349",
+      "bytes": 9879
+    },
+    {
+      "path": "metal27-04-zoom-mask_view.png",
+      "sha256": "149d7fdcec3304555b51cfc097e5afc05ded7bb0711ae32cf88360d60280ba51",
+      "bytes": 4339
+    },
+    {
+      "path": "metal27-04-zoom-resist_view.png",
+      "sha256": "ad58688bac1ff1a180c2d513f81d238ab1c1ff35e9617465bf068dc63b9823f0",
+      "bytes": 8502
+    },
+    {
+      "path": "metal27-04-zoom-pvb_view.png",
+      "sha256": "b2e85de8c9bcdfcc329e92e008a2c8c973666cc02f319fbc0d8fc6db114dee20",
+      "bytes": 6516
+    },
+    {
+      "path": "metal27-05-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-05-core-mask.png",
+      "sha256": "578ed95450863e277163148b37f77c81180e8138ff6be8f9b14956a08b4b993d",
+      "bytes": 6553
+    },
+    {
+      "path": "metal27-05-core-sraf.png",
+      "sha256": "719b358173039f407be0fcf6d968ad6099c219c3ff4fbbefe75d987367eca26b",
+      "bytes": 6934
+    },
+    {
+      "path": "metal27-05-core-contour.png",
+      "sha256": "5c3423c5cc608269297b44f6d967152318e95d60f55d5beb63ce459173106bd4",
+      "bytes": 9421
+    },
+    {
+      "path": "metal27-05-core-pvb.png",
+      "sha256": "d1090f5c62e91b62dfcb2cfdf87f395a958b21dea4efc350c9922d1c0ffb301a",
+      "bytes": 9275
+    },
+    {
+      "path": "metal27-05-core-overlay.png",
+      "sha256": "749053f6d06fd92f3552db356b068af605d68294efd8bf7ba94405e25274d164",
+      "bytes": 21066
+    },
+    {
+      "path": "metal27-05-core-mask_view.png",
+      "sha256": "b546cfb2b2e5386dcfa264b3d63eb184250b2ae72d15bdb860630b3b8b81d3e2",
+      "bytes": 13781
+    },
+    {
+      "path": "metal27-05-core-resist_view.png",
+      "sha256": "1151ead69515362bff3291070508a4a39b7e8e9fa7f9f12d95e89649a22e61fb",
+      "bytes": 13847
+    },
+    {
+      "path": "metal27-05-core-pvb_view.png",
+      "sha256": "1892609ab9f1749515ad7b9d20b1673d83d1c6b670d98210ab4c33af03ad44fa",
+      "bytes": 13283
+    },
+    {
+      "path": "metal27-05-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-05-zoom-mask.png",
+      "sha256": "052cd6b568f62cb2f2f04b66b44a194a14a66c7b90f0ac8593fb468d7aea13b3",
+      "bytes": 3943
+    },
+    {
+      "path": "metal27-05-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-05-zoom-contour.png",
+      "sha256": "93859daba47642a29468b3929091117c5ca08401425746a2842c30e6bd8b6324",
+      "bytes": 5833
+    },
+    {
+      "path": "metal27-05-zoom-pvb.png",
+      "sha256": "013d6cc7d62cf81c457edff0459aba3e1b9875f45f1637116952f97150e6fc8c",
+      "bytes": 6018
+    },
+    {
+      "path": "metal27-05-zoom-overlay.png",
+      "sha256": "7efac5e8409296a4ed4f29841aee89ee9d041ebb9ea4f1ccec8d683030636172",
+      "bytes": 9853
+    },
+    {
+      "path": "metal27-05-zoom-mask_view.png",
+      "sha256": "e4489bc0d1bef41e245012b36d1138c8b11fb3b5590bd2c12bc461654928ff85",
+      "bytes": 4356
+    },
+    {
+      "path": "metal27-05-zoom-resist_view.png",
+      "sha256": "bf901b63eab845b6ab22c40889df5e18e9cb8d525362bf166ed18970e6ad1031",
+      "bytes": 8441
+    },
+    {
+      "path": "metal27-05-zoom-pvb_view.png",
+      "sha256": "3133f82d7d4cbd3a1cc74618801f1fc0c1bab46131b58356b4461873822927b4",
+      "bytes": 6466
+    },
+    {
+      "path": "metal27-06-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-06-core-mask.png",
+      "sha256": "4673167826c7346d617b411f4164b428862f6a7e781d3a4c6f1fb912986f84f3",
+      "bytes": 6525
+    },
+    {
+      "path": "metal27-06-core-sraf.png",
+      "sha256": "f145b2f6175058856a0fc770002ae960fe93977f0f83eaea571a4dc6385efc29",
+      "bytes": 6926
+    },
+    {
+      "path": "metal27-06-core-contour.png",
+      "sha256": "b3a408e3a9ad893f963bc3faba9df3952e86f3d7d22491011705274a2594d6f2",
+      "bytes": 9628
+    },
+    {
+      "path": "metal27-06-core-pvb.png",
+      "sha256": "afa55b79de611f6071d6efac837b0e67156cbea3887ca1baae2858df523256ba",
+      "bytes": 9200
+    },
+    {
+      "path": "metal27-06-core-overlay.png",
+      "sha256": "c4506912c0d067c7e00359a3dc81b68d5e1aa52ecded5ffba3c2b839ecb819c5",
+      "bytes": 21370
+    },
+    {
+      "path": "metal27-06-core-mask_view.png",
+      "sha256": "d194f0d487f6f725b6f8a8dc34b78630fc33bf8289171fff180f650809a49888",
+      "bytes": 13729
+    },
+    {
+      "path": "metal27-06-core-resist_view.png",
+      "sha256": "06cf96774ec50bb9d161e0285880f7fa614e713fd846c6b02ff4c565c6607334",
+      "bytes": 14191
+    },
+    {
+      "path": "metal27-06-core-pvb_view.png",
+      "sha256": "243f5622caf9564b40ed19c983d85e52f298617c11b08226173bfcfde7576f84",
+      "bytes": 13181
+    },
+    {
+      "path": "metal27-06-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-06-zoom-mask.png",
+      "sha256": "84fa98084074c5867408ef09ba840324632ee93168d5633e625a4eacafecb12c",
+      "bytes": 3966
+    },
+    {
+      "path": "metal27-06-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-06-zoom-contour.png",
+      "sha256": "aa67bb03679ec37f03f643be25777ad6116d7dba4ecdc94dbed090e411ca19e6",
+      "bytes": 5883
+    },
+    {
+      "path": "metal27-06-zoom-pvb.png",
+      "sha256": "90a677fe21e6e3b166c11952fd0872e24fba27f67a301c15e8adc2f92e580000",
+      "bytes": 6106
+    },
+    {
+      "path": "metal27-06-zoom-overlay.png",
+      "sha256": "f4769ae9ca35507fbe30cfafd9b96e87fe490ce9fd44c7c73d4317a23387afbf",
+      "bytes": 9887
+    },
+    {
+      "path": "metal27-06-zoom-mask_view.png",
+      "sha256": "f4b3cf80b3654bfab0fa95d03472ddf728b17ee692dea290310e194d72d45690",
+      "bytes": 4364
+    },
+    {
+      "path": "metal27-06-zoom-resist_view.png",
+      "sha256": "7eb2495ac2bc6e3fb2ae48cdeff4d27799cb9a9b2686ad648cca74537f4b01c0",
+      "bytes": 8498
+    },
+    {
+      "path": "metal27-06-zoom-pvb_view.png",
+      "sha256": "2a0befd69611c28e6146d22348a19c7d39b1ce0b4e9424e5ddd65fa1c0dea1b5",
+      "bytes": 6484
+    },
+    {
+      "path": "metal27-07-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-07-core-mask.png",
+      "sha256": "b79aea4ec439be1130e21620cc79bffd0aadfe77ae4e5e9e1fd0c0c21cf8493c",
+      "bytes": 6516
+    },
+    {
+      "path": "metal27-07-core-sraf.png",
+      "sha256": "5840503b5769dd3dee36f8031004596742e6caf3a54727e1822ffeec066e3c15",
+      "bytes": 6932
+    },
+    {
+      "path": "metal27-07-core-contour.png",
+      "sha256": "bce5e055a0e1211d04d14d01762930e564c495d46a8f4049ca5c9da1adfcef63",
+      "bytes": 9538
+    },
+    {
+      "path": "metal27-07-core-pvb.png",
+      "sha256": "de025793adf6d63f21781e33e541b50fcfb705cd054d7dde42ac70c9d5b0ac4f",
+      "bytes": 9236
+    },
+    {
+      "path": "metal27-07-core-overlay.png",
+      "sha256": "413858169ec748137198eadf70ea3913f1342d0f1619ed42ad27bfe1d399767e",
+      "bytes": 21291
+    },
+    {
+      "path": "metal27-07-core-mask_view.png",
+      "sha256": "2081be71f8f4864151a8bf9aa0d61ba418e41b152b87482e75cace4c0db45203",
+      "bytes": 13707
+    },
+    {
+      "path": "metal27-07-core-resist_view.png",
+      "sha256": "963fec517ee5150351dc6c11166f057c21034bb7f94f381c93871ffb058695d1",
+      "bytes": 14153
+    },
+    {
+      "path": "metal27-07-core-pvb_view.png",
+      "sha256": "e4d935549932453a59c2e066b14b06b3fbd25c2a0d637658644cfd5ac5699531",
+      "bytes": 13247
+    },
+    {
+      "path": "metal27-07-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-07-zoom-mask.png",
+      "sha256": "84fa98084074c5867408ef09ba840324632ee93168d5633e625a4eacafecb12c",
+      "bytes": 3966
+    },
+    {
+      "path": "metal27-07-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-07-zoom-contour.png",
+      "sha256": "aa67bb03679ec37f03f643be25777ad6116d7dba4ecdc94dbed090e411ca19e6",
+      "bytes": 5883
+    },
+    {
+      "path": "metal27-07-zoom-pvb.png",
+      "sha256": "90a677fe21e6e3b166c11952fd0872e24fba27f67a301c15e8adc2f92e580000",
+      "bytes": 6106
+    },
+    {
+      "path": "metal27-07-zoom-overlay.png",
+      "sha256": "f4769ae9ca35507fbe30cfafd9b96e87fe490ce9fd44c7c73d4317a23387afbf",
+      "bytes": 9887
+    },
+    {
+      "path": "metal27-07-zoom-mask_view.png",
+      "sha256": "f4b3cf80b3654bfab0fa95d03472ddf728b17ee692dea290310e194d72d45690",
+      "bytes": 4364
+    },
+    {
+      "path": "metal27-07-zoom-resist_view.png",
+      "sha256": "7eb2495ac2bc6e3fb2ae48cdeff4d27799cb9a9b2686ad648cca74537f4b01c0",
+      "bytes": 8498
+    },
+    {
+      "path": "metal27-07-zoom-pvb_view.png",
+      "sha256": "2a0befd69611c28e6146d22348a19c7d39b1ce0b4e9424e5ddd65fa1c0dea1b5",
+      "bytes": 6484
+    },
+    {
+      "path": "metal27-08-core-target.png",
+      "sha256": "e7230593d2d2d9d9b1277e718dbe54efd9f4b057d6eefae2469fad8441cf5e5c",
+      "bytes": 5935
+    },
+    {
+      "path": "metal27-08-core-mask.png",
+      "sha256": "11ee7453d091510acd48587d6c25694e867ae1b724a03f07ba754cd6f55e4b10",
+      "bytes": 6515
+    },
+    {
+      "path": "metal27-08-core-sraf.png",
+      "sha256": "a47feaf3f8e4e3d89b1157a550f51d9975fc5b75a1ed7e375d091f42d5e50601",
+      "bytes": 6925
+    },
+    {
+      "path": "metal27-08-core-contour.png",
+      "sha256": "818c09ac7e6b8101533c127d6b77a4a26c2a0a42ed6faf8ebea775231df65cba",
+      "bytes": 9588
+    },
+    {
+      "path": "metal27-08-core-pvb.png",
+      "sha256": "2e6cfba8944bdeafb6747f6edc55c40e4ca66830cbd2f1a251569fbf4dbb05dd",
+      "bytes": 9214
+    },
+    {
+      "path": "metal27-08-core-overlay.png",
+      "sha256": "6954c8007c24fd0e3b4cf064846ace81498a4d48c9e1fd04826bcba7ebd9774d",
+      "bytes": 21310
+    },
+    {
+      "path": "metal27-08-core-mask_view.png",
+      "sha256": "e57f0601ca0713ac4de14bb09d03323de7be0f8b23a82d0285efb441e311db59",
+      "bytes": 13741
+    },
+    {
+      "path": "metal27-08-core-resist_view.png",
+      "sha256": "0fe0e0ffc163651e39c33b1967fc57ec290931329a6a6deabaa3bc978415b7d8",
+      "bytes": 14179
+    },
+    {
+      "path": "metal27-08-core-pvb_view.png",
+      "sha256": "1ea2ca02416c52e1b0adf061332f2918b0ade950d1e573bbe05a6845c7e2b9e3",
+      "bytes": 13188
+    },
+    {
+      "path": "metal27-08-zoom-target.png",
+      "sha256": "63571cf5f8f0088aa1c94a4ac4549d12bad9a9bebf3cb1abbf57b912d59c5e14",
+      "bytes": 3775
+    },
+    {
+      "path": "metal27-08-zoom-mask.png",
+      "sha256": "84fa98084074c5867408ef09ba840324632ee93168d5633e625a4eacafecb12c",
+      "bytes": 3966
+    },
+    {
+      "path": "metal27-08-zoom-sraf.png",
+      "sha256": "3e2322ffaca6f2ca5d5b921c720787ea3ac654c745b819b4f8619f5061d7d108",
+      "bytes": 3809
+    },
+    {
+      "path": "metal27-08-zoom-contour.png",
+      "sha256": "aa67bb03679ec37f03f643be25777ad6116d7dba4ecdc94dbed090e411ca19e6",
+      "bytes": 5883
+    },
+    {
+      "path": "metal27-08-zoom-pvb.png",
+      "sha256": "90a677fe21e6e3b166c11952fd0872e24fba27f67a301c15e8adc2f92e580000",
+      "bytes": 6106
+    },
+    {
+      "path": "metal27-08-zoom-overlay.png",
+      "sha256": "f4769ae9ca35507fbe30cfafd9b96e87fe490ce9fd44c7c73d4317a23387afbf",
+      "bytes": 9887
+    },
+    {
+      "path": "metal27-08-zoom-mask_view.png",
+      "sha256": "f4b3cf80b3654bfab0fa95d03472ddf728b17ee692dea290310e194d72d45690",
+      "bytes": 4364
+    },
+    {
+      "path": "metal27-08-zoom-resist_view.png",
+      "sha256": "7eb2495ac2bc6e3fb2ae48cdeff4d27799cb9a9b2686ad648cca74537f4b01c0",
+      "bytes": 8498
+    },
+    {
+      "path": "metal27-08-zoom-pvb_view.png",
+      "sha256": "2a0befd69611c28e6146d22348a19c7d39b1ce0b4e9424e5ddd65fa1c0dea1b5",
+      "bytes": 6484
     }
   ],
   "source_script_sha256": "d8f26c4d3c7e54c21c7364517afa093bdcb2f44afcee10d7e0730662b3fbc2ca",
@@ -2728,5 +4023,6 @@
     "opc": 0,
     "llm": 0
   },
-  "scope": "Derived raster images, measurements and provenance hashes only. Source GDS, decks, RDB and raw responses remain on server."
+  "scope": "Derived raster images, measurements and provenance hashes only. Source GDS, decks, RDB and raw responses remain on server.",
+  "additional_source_script_sha256": "f88b683c363f59efa8c05b585ecb8b2eb223a0d31575eb84c68e15d33942748d"
 }

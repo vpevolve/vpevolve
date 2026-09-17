@@ -617,7 +617,272 @@
           "result_sha256": "4300a5163e1e73be45f88f139c3860bf3f99701c1751fd90f479ce1b48767e01"
         }
       ],
-      "report_sha256": "a4c311234e4729d39fe2bedb0a79eef87ed99cadb18f545b1e1929c4b1e69d94"
+      "report_sha256": "a4c311234e4729d39fe2bedb0a79eef87ed99cadb18f545b1e1929c4b1e69d94",
+      "view_id": "poly",
+      "display_label": "Poly02",
+      "selection": "Preassigned window"
+    },
+    {
+      "case_id": "metal1-27-very_sparse-x0-y400",
+      "layer": "metal1",
+      "status": "complete",
+      "stop_reason": "generation_stalled",
+      "initial": {
+        "edge_normal_max_epe_nm": 18.04999999999879,
+        "edge_normal_top10_mean_epe_nm": 15.798300319097436,
+        "edge_normal_mean_epe_nm": 0.6836867338131916,
+        "pv_band_area_per_target_edge_um": 0.005055017559670701,
+        "mrc_total_result_count": 0,
+        "sraf_printability_violation_count": 0
+      },
+      "current": {
+        "edge_normal_max_epe_nm": 13.286956521739945,
+        "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+        "edge_normal_mean_epe_nm": 0.6695404697319718,
+        "pv_band_area_per_target_edge_um": 0.005059517198463625,
+        "mrc_total_result_count": 0,
+        "sraf_printability_violation_count": 0
+      },
+      "opc_submitted": 8,
+      "llm_reserved": 9,
+      "proposal_rejections": 2,
+      "points": [
+        {
+          "opc_calls": 0,
+          "kind": "initial",
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 18.04999999999879,
+            "edge_normal_top10_mean_epe_nm": 15.798300319097436,
+            "edge_normal_mean_epe_nm": 0.6836867338131916,
+            "pv_band_area_per_target_edge_um": 0.005055017559670701,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "6897a5adccaa810483ae99aa18a9e7b972b23cdc421c3a0e00da932c2b632319"
+        },
+        {
+          "opc_calls": 1,
+          "kind": "candidate",
+          "slot": 1,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 16.075000000000728,
+            "edge_normal_top10_mean_epe_nm": 14.075815258184042,
+            "edge_normal_mean_epe_nm": 0.6542719069422709,
+            "pv_band_area_per_target_edge_um": 0.005055188650229963,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 16.075000000000728,
+            "edge_normal_top10_mean_epe_nm": 14.075815258184042,
+            "edge_normal_mean_epe_nm": 0.6542719069422709,
+            "pv_band_area_per_target_edge_um": 0.005055188650229963,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "207b60218160b152f48bddec19d7abeb2f5d619665e6611562e7df9f948680f9",
+          "result_sha256": "958e2095c6871335b145b76a86cf153dfa2fcb1c57b918fdb84092ae759464c7"
+        },
+        {
+          "opc_calls": 2,
+          "kind": "candidate",
+          "slot": 2,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": true,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "4b7f2801829db94b8dc2285393a61077defe0fdd84126db57afef37e51d18e62"
+        },
+        {
+          "opc_calls": 3,
+          "kind": "candidate",
+          "slot": 3,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": false,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 15.365217391304142,
+            "edge_normal_top10_mean_epe_nm": 14.187319697185519,
+            "edge_normal_mean_epe_nm": 1.0320961964117237,
+            "pv_band_area_per_target_edge_um": 0.005147056269624995,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "e9fa69333419b397eb326febd66a9bd09094f5f956eda5af2aeffb6e5adcc684"
+        },
+        {
+          "opc_calls": 4,
+          "kind": "candidate",
+          "slot": 4,
+          "stage": "global",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 13.725000000000875,
+            "edge_normal_top10_mean_epe_nm": 12.926058345690006,
+            "edge_normal_mean_epe_nm": 0.643094431518663,
+            "pv_band_area_per_target_edge_um": 0.005058509466486427,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "7677fcc595ce2ecc59069de6699bb999befb79b444559f6f728fc8f7987725eb"
+        },
+        {
+          "opc_calls": 5,
+          "kind": "candidate",
+          "slot": 5,
+          "stage": "global",
+          "next_stage": "local",
+          "retained": false,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 13.573333333332549,
+            "edge_normal_top10_mean_epe_nm": 12.56464345462378,
+            "edge_normal_mean_epe_nm": 0.6176395739436863,
+            "pv_band_area_per_target_edge_um": 0.005059604245792481,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "79c165ed5a4e3331cef1bf27fd4bb585edecb1ee4813ade4478e69995838030f"
+        },
+        {
+          "opc_calls": 6,
+          "kind": "candidate",
+          "slot": 6,
+          "stage": "local",
+          "next_stage": "local",
+          "retained": false,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 14.374698795181828,
+            "edge_normal_top10_mean_epe_nm": 13.306808858284393,
+            "edge_normal_mean_epe_nm": 0.6833193132819387,
+            "pv_band_area_per_target_edge_um": 0.005060472215665665,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "607eca253e7a1ff765ceeeddc821c6f5942dbf734986a8c40d2813177655ab23"
+        },
+        {
+          "opc_calls": 7,
+          "kind": "candidate",
+          "slot": 7,
+          "stage": "local",
+          "next_stage": "global",
+          "retained": false,
+          "feasible": true,
+          "measurement_valid": true,
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 13.48695652173948,
+            "edge_normal_top10_mean_epe_nm": 13.027703475462095,
+            "edge_normal_mean_epe_nm": 0.6701586249249543,
+            "pv_band_area_per_target_edge_um": 0.005060510625210114,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "9c0c8275d4ede26533532f5924996029e8e1f918432af475213007c7bbaf0079"
+        },
+        {
+          "opc_calls": 8,
+          "kind": "repeat",
+          "candidate_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "retained_metrics": {
+            "edge_normal_max_epe_nm": 13.286956521739945,
+            "edge_normal_top10_mean_epe_nm": 12.967305576372823,
+            "edge_normal_mean_epe_nm": 0.6695404697319718,
+            "pv_band_area_per_target_edge_um": 0.005059517198463625,
+            "mrc_total_result_count": 0,
+            "sraf_printability_violation_count": 0
+          },
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "result_sha256": "ae228bb2e382f5af405c56969f6ece5b988c8f904c707220111b968883a51fcd"
+        }
+      ],
+      "report_sha256": "f584a6b4e56a28ae0db3df67e0d4e49e220313dbc6d6e0106ae8a422e777465c",
+      "view_id": "metal1",
+      "display_label": "Metal27",
+      "selection": "Selected after observing the lowest main-table Metal endpoint among ten windows; illustrative, not a random sample."
     },
     {
       "case_id": "metal1-29-very_sparse-x760-y620",
@@ -876,7 +1141,10 @@
           "result_sha256": "4b44598ecc8346cb13d930d07e4b8eaec98345350bd05005ae401e19d0f440f4"
         }
       ],
-      "report_sha256": "2e7c7427333f84beaccb9f201ebc01236b7dc3195b14ab3601326ce2123ddbce"
+      "report_sha256": "2e7c7427333f84beaccb9f201ebc01236b7dc3195b14ab3601326ce2123ddbce",
+      "view_id": "metal29",
+      "display_label": "Metal29",
+      "selection": "Original preassigned Metal window, preserved for comparison."
     }
   ],
   "protocol": {
@@ -904,6 +1172,10 @@
     {
       "file": "current-long-derived",
       "sha256": "13a2ecf53d215b0d198fa539f4eb4d5822fc39837479f61b539230de23a8b93b"
+    },
+    {
+      "file": "selected-metal-long-derived",
+      "sha256": "9466f490aa41fe24c1625310869eb53edbec0ddebedfd01718a40f621cc1bab3"
     },
     {
       "file": "current-frozen-derived",

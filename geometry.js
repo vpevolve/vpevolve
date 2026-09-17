@@ -2,7 +2,7 @@
 'use strict';
 (() => {
  const base=new URL('assets/current/geometry/',document.currentScript.src);
- const ready=fetch(new URL('geometry.json',base)).then(r=>{if(!r.ok)throw Error('Geometry unavailable');return r.json();});
+ const ready=fetch(new URL('geometry.json?v=metal27',base)).then(r=>{if(!r.ok)throw Error('Geometry unavailable');return r.json();});
  const colors={target:'#f4c27a',mask:'#748fcf',sraf:'#c697f2',contour:'#6eefca',pvb:'#f392ad'};
  const labels={target:'Target layout',mask:'Main mask',sraf:'Assist features',contour:'Resist contour',pvb:'Variation band'};
  const order=['pvb','mask','sraf','target','contour'];
@@ -21,7 +21,7 @@
  const mount=document.getElementById('physical-microscope');if(!mount){ready.catch(()=>{});return;}
  ready.then(g=>{
   let c=g.cases[0],slot=c.frames.length-1,view='zoom',exploded=false;
-  mount.innerHTML=`<div class="microscope-toolbar"><div class="segmented"><button data-geo-case="poly" class="active" aria-pressed="true">Poly02</button><button data-geo-case="metal1" aria-pressed="false">Metal29</button></div><div class="geometry-tools"><div class="segmented"><button data-geo-view="zoom" class="active" aria-pressed="true">600 nm detail</button><button data-geo-view="core" aria-pressed="false">10 µm window</button></div><button class="explode-toggle" aria-pressed="false">Separate layers ↗</button></div></div>
+  mount.innerHTML=`<div class="microscope-toolbar"><div class="segmented"><button data-geo-case="poly" class="active" aria-pressed="true">Poly02</button><button data-geo-case="metal1" aria-pressed="false">Metal27</button><button data-geo-case="metal29" aria-pressed="false">Metal29 · prior</button></div><div class="geometry-tools"><div class="segmented"><button data-geo-view="zoom" class="active" aria-pressed="true">600 nm detail</button><button data-geo-view="core" aria-pressed="false">10 µm window</button></div><button class="explode-toggle" aria-pressed="false">Separate layers ↗</button></div></div>
   <div class="microscope-body"><div class="microscope-stage"><div class="microscope-planes"></div><div class="microscope-scale"></div><span class="microscope-coordinate">FIXED R0 HOTSPOT</span></div><aside class="microscope-controls"><p class="eyebrow">PHYSICAL LAYERS</p><h3>Look beneath<br>the numbers.</h3><p class="microscope-help">Toggle a layer to see how the corrected mask prints against its target.</p><div class="layer-switches">${['target','mask','sraf','contour','pvb'].map(k=>`<label style="--key:${colors[k]}"><input type="checkbox" data-layer="${k}" checked><i></i>${labels[k]}</label>`).join('')}</div><div class="microscope-readout"></div><div class="segmented microscope-snapshot"><button data-snapshot="initial" aria-pressed="false">Original R0</button><button data-snapshot="final" class="active" aria-pressed="true">Final retained</button></div><p class="microscope-help">Actual simulated geometry. A fixed crop makes each measured change visible.</p></aside></div>`;
   function render(){const frame=c.frames[slot];
    mount.querySelector('.microscope-planes').innerHTML=order.map((k,i)=>`<div class="microscope-plane" data-layer-plane="${k}" style="--depth:${i};--key:${colors[k]}"><img src="${url(frame.assets[view][k])}" alt="${labels[k]} at OPC ${slot}"><span>${labels[k]}</span></div>`).join('');
@@ -37,7 +37,7 @@
   function updateLayers(){mount.querySelectorAll('[data-layer]').forEach(input=>{mount.querySelector(`[data-layer-plane="${input.dataset.layer}"]`).hidden=!input.checked;});mount.querySelector('.microscope-stage').classList.toggle('exploded',exploded);}
   mount.addEventListener('change',updateLayers);
   mount.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
-   if(b.dataset.geoCase){c=g.cases.find(x=>x.layer===b.dataset.geoCase);slot=c.frames.length-1;mount.querySelectorAll('[data-geo-case]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render();}
+   if(b.dataset.geoCase){c=g.cases.find(x=>(x.view_id||x.layer)===b.dataset.geoCase);slot=c.frames.length-1;mount.querySelectorAll('[data-geo-case]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render();}
    if(b.dataset.geoView){view=b.dataset.geoView;mount.querySelectorAll('[data-geo-view]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render();}
    if(b.dataset.snapshot){slot=b.dataset.snapshot==='initial'?0:c.frames.length-1;render();}
    if(b.classList.contains('explode-toggle')){exploded=!exploded;b.setAttribute('aria-pressed',String(exploded));b.textContent=exploded?'Align layers ↙':'Separate layers ↗';updateLayers();}

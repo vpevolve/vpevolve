@@ -57,8 +57,16 @@ long = json.loads(long_path.read_text())
 assert len(long['rows']) == 2
 assert all(x['status'] == 'complete' and all(x['checks'].values()) and not x['unplotted_calls'] for x in long['rows'])
 public_keys = ['case_id','layer','status','stop_reason','initial','current','opc_submitted','llm_reserved','proposal_rejections','points','report_sha256']
-data.update(main=groups, ablation=ablation, ablationReductionPct=reductions, trajectories=[{k:row[k] for k in public_keys} for row in long['rows']])
-data['sources'] = [{'file': label, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()} for label,path in [('sections/generated/current_online_table.tex',tex_path),('sections/generated/final_experiment_values.tex',values_path),('current-long-derived',long_path),('current-frozen-derived',frozen_path),('figures/pattern-local-rule.png',paper/'figures/pattern-local-rule.png')]]
+selected_path = source/'selected-metal-long-latest.json'
+selected = json.loads(selected_path.read_text())
+assert len(selected['rows']) == 1
+row = selected['rows'][0]
+assert row['status'] == 'complete' and all(row['checks'].values()) and not row['unplotted_calls']
+trajectories = [{k:r[k] for k in public_keys} for r in [long['rows'][0], row, long['rows'][1]]]
+for r, view_id, label, selection in zip(trajectories, ['poly','metal1','metal29'], ['Poly02','Metal27','Metal29'], ['Preassigned window', 'Selected after observing the lowest main-table Metal endpoint among ten windows; illustrative, not a random sample.', 'Original preassigned Metal window, preserved for comparison.']):
+    r.update(view_id=view_id, display_label=label, selection=selection)
+data.update(main=groups, ablation=ablation, ablationReductionPct=reductions, trajectories=trajectories)
+data['sources'] = [{'file': label, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()} for label,path in [('sections/generated/current_online_table.tex',tex_path),('sections/generated/final_experiment_values.tex',values_path),('current-long-derived',long_path),('selected-metal-long-derived',selected_path),('current-frozen-derived',frozen_path),('figures/pattern-local-rule.png',paper/'figures/pattern-local-rule.png')]]
 (output/'results.json').write_text(json.dumps(data, indent=2)+'\n')
 shutil.copy2(paper/'figures/pattern-local-rule.png', output/'pattern-local-rule.png')
-print('Updated current main / ablation / two completed trajectories. Check visible claims and snapshot date before publishing.')
+print('Updated current main / ablation / three completed trajectories (selected Metal27 plus original Poly02/Metal29). Check visible claims and snapshot date before publishing.')
