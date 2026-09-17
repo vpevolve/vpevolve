@@ -35,6 +35,7 @@ function render(){
  $('#selected-metrics').innerHTML=[['Retained Max EPE',f(m[maxKey]),'nm'],['Retained Avg. EPE',f(m[meanKey]),'nm'],['Retained PVB',f(m[pvbKey],6),'µm'],['Retained MRC',m[mrcKey],'violations']].map(([label,v,u])=>`<div><dt>${label}</dt><dd>${v} <small>${u}</small></dd></div>`).join('');
  $('#stop-explanation').textContent=`${study.layer==='poly'?'Poly02':'Metal29'}: ${f(study.initial[maxKey])} → ${f(study.current[maxKey])} nm maximum EPE. Retained PVB changes by ${f(100*(study.current[pvbKey]/study.initial[pvbKey]-1),2)}%, within the fixed 2% cap. The remaining candidate allowance is unused.`;
  $('#previous').disabled=index===0;$('#next').disabled=index===study.points.length-1;
+ renderGeometry();
 }
 fetch('../assets/current/results.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{data=d;study=d.trajectories[0];index=study.points.length-1;$('#trial').disabled=false;$('#trial').max=String(index);render();
  document.querySelectorAll('[data-case]').forEach(b=>b.addEventListener('click',()=>{pause();study=data.trajectories.find(r=>r.layer===b.dataset.case);index=study.points.length-1;$('#trial').max=String(index);document.querySelectorAll('[data-case]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render();}));
@@ -42,3 +43,30 @@ fetch('../assets/current/results.json').then(r=>{if(!r.ok)throw Error();return r
  $('#play').addEventListener('click',()=>{if(timer){pause();return;}if(index===study.points.length-1)index=0;render();$('#play').textContent='Ⅱ Pause';$('#play').setAttribute('aria-label','Pause measured trials');timer=setInterval(()=>{index++;render();if(index===study.points.length-1)pause();},1100);});
 }).catch(()=>{$('#trace-summary').textContent='The recorded data could not load.';$('#trace-graphs').innerHTML='<p class="trace-error">Please refresh, or open the result data using the download link above.</p>';});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
+
+let geometryData,imageMode='retained',imageView='zoom',imageRequest=0;
+async function renderGeometry(){
+ if(!geometryData||!study)return;
+ const request=++imageRequest,c=geometryData.cases.find(c=>c.case_id===study.case_id);
+ if(!c||c.report_sha256!==study.report_sha256){$('#image-state').textContent='Geometry and trajectory sources do not match.';$('#iteration-images').replaceChildren();return;}
+ const p=study.points[index],candidate=c.frames.find(f=>f.opc_calls===p.opc_calls),frame=imageMode==='candidate'?candidate:c.frames.find(f=>f.opc_calls===candidate.retained_frame);
+ const view=imageView,tiles=[['Layout','Original target',['target']],['OPC mask','Main mask + assist features',['mask','sraf','target']],['Resist','Nominal printed contour',['target','contour']],['PVB','Process variation band',['pvb','target']]];
+ $('#iteration-images').setAttribute('aria-busy','true');
+ $('#image-state').textContent='Loading geometry for the selected trial…';
+ try{
+  await VPEGeometry.preload([...new Set(tiles.flatMap(t=>t[2]))].map(k=>VPEGeometry.url(frame.assets[view][k])));
+  if(request!==imageRequest)return;
+  $('#iteration-images').innerHTML=tiles.map(([title,subtitle,keys])=>VPEGeometry.tile(frame,c,view,title,subtitle,keys)).join('');
+  $('#iteration-images').dataset.frame=String(frame.opc_calls);
+  $('#iteration-images').dataset.view=view;
+  $('#iteration-images').setAttribute('aria-busy','false');
+  const source=frame.kind==='initial'?'original R0':frame.kind==='repeat'?'endpoint repeat':`OPC ${frame.opc_calls}`;
+  const state=imageMode==='candidate'&&p.kind==='candidate'?`This candidate · ${p.retained?'retained':p.feasible?'not retained':'rejected'}`:imageMode==='retained'?'Retained recipe':'Measured geometry';
+  $('#image-state').textContent=`${state} · images from ${source} · ${f(frame.metrics[maxKey])} nm Max EPE across the full core.`;
+ }catch(e){if(request===imageRequest){$('#iteration-images').replaceChildren();$('#iteration-images').setAttribute('aria-busy','false');$('#image-state').textContent='These images could not load. Change the trial or refresh to try again.';}}
+}
+VPEGeometry.ready.then(g=>{geometryData=g;renderGeometry();}).catch(()=>{$('#image-state').textContent='Geometry could not load. Please refresh.';});
+for(const [attribute,set] of [['imageMode',value=>imageMode=value],['imageView',value=>imageView=value]]){
+ const selector=attribute==='imageMode'?'[data-image-mode]':'[data-image-view]';
+ document.querySelectorAll(selector).forEach(b=>b.addEventListener('click',()=>{set(b.dataset[attribute]);document.querySelectorAll(selector).forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderGeometry();}));
+}

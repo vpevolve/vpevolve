@@ -1,0 +1,2732 @@
+{
+  "schema": "current-geometry-replay/v1",
+  "render_size_px": 800,
+  "layers": {
+    "target": "Original target GDS, layer9 Poly/layer11 Metal1",
+    "mask": "Corrected main mask, result101/0",
+    "sraf": "Assist features, result40/0",
+    "contour": "Nominal resist contour (not a resist-intensity image), result5/0",
+    "pvb": "Exported five-corner variation band, result6/0"
+  },
+  "cases": [
+    {
+      "case_id": "poly-02-very_sparse-x140-y0",
+      "layer": "poly",
+      "frames": [
+        {
+          "opc_calls": 0,
+          "kind": "initial",
+          "retained_frame": 0,
+          "recipe_sha256": "f6ac45fb020dee7bfcbffff577917b2e8a72cb9961c99bc89c7732034f1a3cca",
+          "measurement_sha256": "29385df5dde4e5bda32a557933d7977a919b9a2db33aae729d34bf1c7a223ace",
+          "result_gds_sha256": "32fd3907a0dd431e26d1955df991aed8f85bd952b5ddc355a3494e0cb8f3e115",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 28.232132025203725,
+            "edge_normal_max_epe_nm": 17.24021739130599,
+            "edge_normal_mean_epe_nm": 0.8726900037831207,
+            "edge_normal_top10_mean_epe_nm": 16.593046025562863,
+            "max_nominal_contour_deviation_nm": 28.232132025203725,
+            "max_nominal_shape_error_nm": 28.232132025203725,
+            "mean_nominal_contour_deviation_nm": 2.1841356289308087,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.13188121056409868,
+            "nominal_violation_ratio_over_5nm": 0.13188121056409868,
+            "p95_nominal_contour_deviation_nm": 11.774960600655296,
+            "pv_band_area_per_target_edge_um": 0.007358878540453651,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.874002545809475
+          },
+          "assets": {
+            "core": {
+              "target": "poly-00-core-target.png",
+              "mask": "poly-00-core-mask.png",
+              "sraf": "poly-00-core-sraf.png",
+              "contour": "poly-00-core-contour.png",
+              "pvb": "poly-00-core-pvb.png",
+              "overlay": "poly-00-core-overlay.png",
+              "mask_view": "poly-00-core-mask_view.png",
+              "resist_view": "poly-00-core-resist_view.png",
+              "pvb_view": "poly-00-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-00-zoom-target.png",
+              "mask": "poly-00-zoom-mask.png",
+              "sraf": "poly-00-zoom-sraf.png",
+              "contour": "poly-00-zoom-contour.png",
+              "pvb": "poly-00-zoom-pvb.png",
+              "overlay": "poly-00-zoom-overlay.png",
+              "mask_view": "poly-00-zoom-mask_view.png",
+              "resist_view": "poly-00-zoom-resist_view.png",
+              "pvb_view": "poly-00-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 1,
+          "kind": "candidate",
+          "retained_frame": 1,
+          "recipe_sha256": "2c613472a4efb49031222e6009fd888751bf42282fdf11fd6978d8e39b1e6ea1",
+          "measurement_sha256": "22fceba59e55064b1c11a8470c70c42ee0e59dc735b015a2e4ff38751f0b55f9",
+          "result_gds_sha256": "a23f1b0fbd5535617843d47a5fe8d2e1f1fc23e70e98d04b6f67be98cf6d13c6",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 22.363587923896326,
+            "edge_normal_max_epe_nm": 8.17014925373094,
+            "edge_normal_mean_epe_nm": 0.6663698876598243,
+            "edge_normal_top10_mean_epe_nm": 7.938866126039379,
+            "max_nominal_contour_deviation_nm": 22.363587923896326,
+            "max_nominal_shape_error_nm": 22.363587923896326,
+            "mean_nominal_contour_deviation_nm": 1.7947025031203132,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.10661956398534024,
+            "nominal_violation_ratio_over_5nm": 0.10661956398534024,
+            "p95_nominal_contour_deviation_nm": 10.15229677905483,
+            "pv_band_area_per_target_edge_um": 0.007395270120693825,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 22.042296764417905
+          },
+          "assets": {
+            "core": {
+              "target": "poly-01-core-target.png",
+              "mask": "poly-01-core-mask.png",
+              "sraf": "poly-01-core-sraf.png",
+              "contour": "poly-01-core-contour.png",
+              "pvb": "poly-01-core-pvb.png",
+              "overlay": "poly-01-core-overlay.png",
+              "mask_view": "poly-01-core-mask_view.png",
+              "resist_view": "poly-01-core-resist_view.png",
+              "pvb_view": "poly-01-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-01-zoom-target.png",
+              "mask": "poly-01-zoom-mask.png",
+              "sraf": "poly-01-zoom-sraf.png",
+              "contour": "poly-01-zoom-contour.png",
+              "pvb": "poly-01-zoom-pvb.png",
+              "overlay": "poly-01-zoom-overlay.png",
+              "mask_view": "poly-01-zoom-mask_view.png",
+              "resist_view": "poly-01-zoom-resist_view.png",
+              "pvb_view": "poly-01-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 2,
+          "kind": "candidate",
+          "retained_frame": 1,
+          "recipe_sha256": "415ec51780123b1e59192a71bbe470d9c7016fbb870d887ddf2a4748b552c5aa",
+          "measurement_sha256": "d011b30f9588c2e0b54491a5a6cdbb677ded2b1b68df81692f1316dad248ed3b",
+          "result_gds_sha256": "9349cc5284243d7b3021bf15287ffa9829a06ea89ab52289147c777339333df2",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 18.869885275142764,
+            "edge_normal_max_epe_nm": 5.215384615384622,
+            "edge_normal_mean_epe_nm": 0.6565090603260999,
+            "edge_normal_top10_mean_epe_nm": 4.875136426369231,
+            "max_nominal_contour_deviation_nm": 18.869885275142764,
+            "max_nominal_shape_error_nm": 18.869885275142764,
+            "mean_nominal_contour_deviation_nm": 1.5626003589610926,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.08880870518003552,
+            "nominal_violation_ratio_over_5nm": 0.08880870518003552,
+            "p95_nominal_contour_deviation_nm": 8.62670273047559,
+            "pv_band_area_per_target_edge_um": 0.00761186612991265,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 18.579291029915474
+          },
+          "assets": {
+            "core": {
+              "target": "poly-02-core-target.png",
+              "mask": "poly-02-core-mask.png",
+              "sraf": "poly-02-core-sraf.png",
+              "contour": "poly-02-core-contour.png",
+              "pvb": "poly-02-core-pvb.png",
+              "overlay": "poly-02-core-overlay.png",
+              "mask_view": "poly-02-core-mask_view.png",
+              "resist_view": "poly-02-core-resist_view.png",
+              "pvb_view": "poly-02-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-02-zoom-target.png",
+              "mask": "poly-02-zoom-mask.png",
+              "sraf": "poly-02-zoom-sraf.png",
+              "contour": "poly-02-zoom-contour.png",
+              "pvb": "poly-02-zoom-pvb.png",
+              "overlay": "poly-02-zoom-overlay.png",
+              "mask_view": "poly-02-zoom-mask_view.png",
+              "resist_view": "poly-02-zoom-resist_view.png",
+              "pvb_view": "poly-02-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 3,
+          "kind": "candidate",
+          "retained_frame": 3,
+          "recipe_sha256": "294acfd43fb086ab74faf56706507b81be22bc76bb6a96e1f4a1b00137de98a8",
+          "measurement_sha256": "96e71c470b09c99a16f474e6b5a03132c37b20538f8b23faf6c3d10fb116ec46",
+          "result_gds_sha256": "a0866455c11890267568a21ae6ac92033586edb52ed11c2a5c1d7086e0d1b2c2",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 21.30845596709821,
+            "edge_normal_max_epe_nm": 7.527173913043583,
+            "edge_normal_mean_epe_nm": 0.624575910445888,
+            "edge_normal_top10_mean_epe_nm": 6.894385274781278,
+            "max_nominal_contour_deviation_nm": 21.30845596709821,
+            "max_nominal_shape_error_nm": 21.30845596709821,
+            "mean_nominal_contour_deviation_nm": 1.7591398518094497,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.10680470019269278,
+            "nominal_violation_ratio_over_5nm": 0.10680470019269278,
+            "p95_nominal_contour_deviation_nm": 10.142306356753188,
+            "pv_band_area_per_target_edge_um": 0.007440732843583199,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 21.088719465209977
+          },
+          "assets": {
+            "core": {
+              "target": "poly-03-core-target.png",
+              "mask": "poly-03-core-mask.png",
+              "sraf": "poly-03-core-sraf.png",
+              "contour": "poly-03-core-contour.png",
+              "pvb": "poly-03-core-pvb.png",
+              "overlay": "poly-03-core-overlay.png",
+              "mask_view": "poly-03-core-mask_view.png",
+              "resist_view": "poly-03-core-resist_view.png",
+              "pvb_view": "poly-03-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-03-zoom-target.png",
+              "mask": "poly-03-zoom-mask.png",
+              "sraf": "poly-03-zoom-sraf.png",
+              "contour": "poly-03-zoom-contour.png",
+              "pvb": "poly-03-zoom-pvb.png",
+              "overlay": "poly-03-zoom-overlay.png",
+              "mask_view": "poly-03-zoom-mask_view.png",
+              "resist_view": "poly-03-zoom-resist_view.png",
+              "pvb_view": "poly-03-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 4,
+          "kind": "candidate",
+          "retained_frame": 4,
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "measurement_sha256": "dbdc04292bd890cbddb946485bdd9c4b735920f74ef0a021b3d274c45240419b",
+          "result_gds_sha256": "3409e1f96fbecf4f4790ae22fb9ab8968278230dcf28840c3e6770ae3445be87",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 21.274697488176102,
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "max_nominal_contour_deviation_nm": 21.274697488176102,
+            "max_nominal_shape_error_nm": 21.274697488176102,
+            "mean_nominal_contour_deviation_nm": 1.7237797591490889,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.10669135149431368,
+            "nominal_violation_ratio_over_5nm": 0.10669135149431368,
+            "p95_nominal_contour_deviation_nm": 10.114803424358007,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 20.958243473567883
+          },
+          "assets": {
+            "core": {
+              "target": "poly-04-core-target.png",
+              "mask": "poly-04-core-mask.png",
+              "sraf": "poly-04-core-sraf.png",
+              "contour": "poly-04-core-contour.png",
+              "pvb": "poly-04-core-pvb.png",
+              "overlay": "poly-04-core-overlay.png",
+              "mask_view": "poly-04-core-mask_view.png",
+              "resist_view": "poly-04-core-resist_view.png",
+              "pvb_view": "poly-04-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-04-zoom-target.png",
+              "mask": "poly-04-zoom-mask.png",
+              "sraf": "poly-04-zoom-sraf.png",
+              "contour": "poly-04-zoom-contour.png",
+              "pvb": "poly-04-zoom-pvb.png",
+              "overlay": "poly-04-zoom-overlay.png",
+              "mask_view": "poly-04-zoom-mask_view.png",
+              "resist_view": "poly-04-zoom-resist_view.png",
+              "pvb_view": "poly-04-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 5,
+          "kind": "candidate",
+          "retained_frame": 4,
+          "recipe_sha256": "20b3aa2b8942d59df478cc53c1103cae53d01c7357acc42d1117f5eabd624c1f",
+          "measurement_sha256": "910fd3ead150125e86459a08b4309e78ae070dd41e5dd6e53d48c7839e21967c",
+          "result_gds_sha256": "97fe1f8467799461809f8d5f80d9fcadfb263834be725e1bfce06ca4c66930c7",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 18.87038432052442,
+            "edge_normal_max_epe_nm": 4.925581395347933,
+            "edge_normal_mean_epe_nm": 0.6571159122302921,
+            "edge_normal_top10_mean_epe_nm": 4.691643009046764,
+            "max_nominal_contour_deviation_nm": 18.87038432052442,
+            "max_nominal_shape_error_nm": 18.87038432052442,
+            "mean_nominal_contour_deviation_nm": 1.5534628839684026,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.08801904258132769,
+            "nominal_violation_ratio_over_5nm": 0.08801904258132769,
+            "p95_nominal_contour_deviation_nm": 8.561044413819038,
+            "pv_band_area_per_target_edge_um": 0.007621080672307119,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 18.423561116292138
+          },
+          "assets": {
+            "core": {
+              "target": "poly-05-core-target.png",
+              "mask": "poly-05-core-mask.png",
+              "sraf": "poly-05-core-sraf.png",
+              "contour": "poly-05-core-contour.png",
+              "pvb": "poly-05-core-pvb.png",
+              "overlay": "poly-05-core-overlay.png",
+              "mask_view": "poly-05-core-mask_view.png",
+              "resist_view": "poly-05-core-resist_view.png",
+              "pvb_view": "poly-05-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-05-zoom-target.png",
+              "mask": "poly-05-zoom-mask.png",
+              "sraf": "poly-05-zoom-sraf.png",
+              "contour": "poly-05-zoom-contour.png",
+              "pvb": "poly-05-zoom-pvb.png",
+              "overlay": "poly-05-zoom-overlay.png",
+              "mask_view": "poly-05-zoom-mask_view.png",
+              "resist_view": "poly-05-zoom-resist_view.png",
+              "pvb_view": "poly-05-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 6,
+          "kind": "candidate",
+          "retained_frame": 4,
+          "recipe_sha256": "1d568269c37577066ac20853a73b0e023fd569c39136d4d49e2021bfdd628382",
+          "measurement_sha256": "a99e3e11f0ec9283958a8b63a24c1002f53b8831ff52fdb41a04f16edb71657b",
+          "result_gds_sha256": "d1dda9ec0114fc2cf2a5a7f90713ab1f048af24e2812e5ebbaaba065a22f3902",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 19.16079878511127,
+            "edge_normal_max_epe_nm": 5.429687499999503,
+            "edge_normal_mean_epe_nm": 0.6849876900266351,
+            "edge_normal_top10_mean_epe_nm": 5.028229704842424,
+            "max_nominal_contour_deviation_nm": 19.16079878511127,
+            "max_nominal_shape_error_nm": 19.16079878511127,
+            "mean_nominal_contour_deviation_nm": 1.5793106591497688,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.08832130577700532,
+            "nominal_violation_ratio_over_5nm": 0.08832130577700532,
+            "p95_nominal_contour_deviation_nm": 8.57090282579854,
+            "pv_band_area_per_target_edge_um": 0.007635170957666169,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 18.617335581280336
+          },
+          "assets": {
+            "core": {
+              "target": "poly-06-core-target.png",
+              "mask": "poly-06-core-mask.png",
+              "sraf": "poly-06-core-sraf.png",
+              "contour": "poly-06-core-contour.png",
+              "pvb": "poly-06-core-pvb.png",
+              "overlay": "poly-06-core-overlay.png",
+              "mask_view": "poly-06-core-mask_view.png",
+              "resist_view": "poly-06-core-resist_view.png",
+              "pvb_view": "poly-06-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-06-zoom-target.png",
+              "mask": "poly-06-zoom-mask.png",
+              "sraf": "poly-06-zoom-sraf.png",
+              "contour": "poly-06-zoom-contour.png",
+              "pvb": "poly-06-zoom-pvb.png",
+              "overlay": "poly-06-zoom-overlay.png",
+              "mask_view": "poly-06-zoom-mask_view.png",
+              "resist_view": "poly-06-zoom-resist_view.png",
+              "pvb_view": "poly-06-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 7,
+          "kind": "candidate",
+          "retained_frame": 4,
+          "recipe_sha256": "96e13e29886554d274dfa5d22f7767bdd490d6bfcb99a481d76b0a03de057729",
+          "measurement_sha256": "61c0e2bcfd0235c27264abf769b532665c5075e2cdd8169ba69c596ace75149f",
+          "result_gds_sha256": "2742f84805dee97e8bc9898cebcf4d5f8507afe442655c8147c2962731ed9fe4",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 19.741797772704498,
+            "edge_normal_max_epe_nm": 5.482608695650981,
+            "edge_normal_mean_epe_nm": 0.6993977232431539,
+            "edge_normal_top10_mean_epe_nm": 5.265866776074546,
+            "max_nominal_contour_deviation_nm": 19.741797772704498,
+            "max_nominal_shape_error_nm": 19.741797772704498,
+            "mean_nominal_contour_deviation_nm": 1.6025478160562354,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.08942078815128272,
+            "nominal_violation_ratio_over_5nm": 0.08942078815128272,
+            "p95_nominal_contour_deviation_nm": 8.648152372585573,
+            "pv_band_area_per_target_edge_um": 0.0076295393619602,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 18.855696781588865
+          },
+          "assets": {
+            "core": {
+              "target": "poly-07-core-target.png",
+              "mask": "poly-07-core-mask.png",
+              "sraf": "poly-07-core-sraf.png",
+              "contour": "poly-07-core-contour.png",
+              "pvb": "poly-07-core-pvb.png",
+              "overlay": "poly-07-core-overlay.png",
+              "mask_view": "poly-07-core-mask_view.png",
+              "resist_view": "poly-07-core-resist_view.png",
+              "pvb_view": "poly-07-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-07-zoom-target.png",
+              "mask": "poly-07-zoom-mask.png",
+              "sraf": "poly-07-zoom-sraf.png",
+              "contour": "poly-07-zoom-contour.png",
+              "pvb": "poly-07-zoom-pvb.png",
+              "overlay": "poly-07-zoom-overlay.png",
+              "mask_view": "poly-07-zoom-mask_view.png",
+              "resist_view": "poly-07-zoom-resist_view.png",
+              "pvb_view": "poly-07-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 8,
+          "kind": "candidate",
+          "retained_frame": 4,
+          "recipe_sha256": "5cbf68a47781dc1ad9d9a8065594c5770167c79b857cf4932c42eef6c9aacbe0",
+          "measurement_sha256": "5615299849f75c89e5339860f65a3a6b292b393d16fb6930daa57bfab2bb7181",
+          "result_gds_sha256": "4bf488fb6944877792f26089fa436b44564b8dc3ba7c189a0d3202884eadafd4",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 19.68726244941909,
+            "edge_normal_max_epe_nm": 7.196739130435503,
+            "edge_normal_mean_epe_nm": 0.7640019350160496,
+            "edge_normal_top10_mean_epe_nm": 6.712927536231561,
+            "max_nominal_contour_deviation_nm": 19.68726244941909,
+            "max_nominal_shape_error_nm": 19.68726244941909,
+            "mean_nominal_contour_deviation_nm": 1.681727338286779,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.09349756300298485,
+            "nominal_violation_ratio_over_5nm": 0.09349756300298485,
+            "p95_nominal_contour_deviation_nm": 8.8298567246565,
+            "pv_band_area_per_target_edge_um": 0.007609891095038804,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 18.96395766756498
+          },
+          "assets": {
+            "core": {
+              "target": "poly-08-core-target.png",
+              "mask": "poly-08-core-mask.png",
+              "sraf": "poly-08-core-sraf.png",
+              "contour": "poly-08-core-contour.png",
+              "pvb": "poly-08-core-pvb.png",
+              "overlay": "poly-08-core-overlay.png",
+              "mask_view": "poly-08-core-mask_view.png",
+              "resist_view": "poly-08-core-resist_view.png",
+              "pvb_view": "poly-08-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-08-zoom-target.png",
+              "mask": "poly-08-zoom-mask.png",
+              "sraf": "poly-08-zoom-sraf.png",
+              "contour": "poly-08-zoom-contour.png",
+              "pvb": "poly-08-zoom-pvb.png",
+              "overlay": "poly-08-zoom-overlay.png",
+              "mask_view": "poly-08-zoom-mask_view.png",
+              "resist_view": "poly-08-zoom-resist_view.png",
+              "pvb_view": "poly-08-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 9,
+          "kind": "repeat",
+          "retained_frame": 9,
+          "recipe_sha256": "45cf2e7c2c8fe19c9e23784012321b0445187a050d3e264a4cd2ac38b3723d18",
+          "measurement_sha256": "5aa889aedb9de53a754a849d7ae984b03ff17dd59c476c682c000d9ff4e4a908",
+          "result_gds_sha256": "0c43ec1888c5057dd88914102f7a11872288250eff1b5bffa15114f00096b7b9",
+          "target_sha256": "aa10373ce5f9e4771245a3c9981627857c92f9ff7c983744b2f2743e2baa117c",
+          "metrics": {
+            "corner_max_deviation_nm": 21.274697488176102,
+            "edge_normal_max_epe_nm": 6.866666666667243,
+            "edge_normal_mean_epe_nm": 0.5877653876860707,
+            "edge_normal_top10_mean_epe_nm": 6.472239747463959,
+            "max_nominal_contour_deviation_nm": 21.274697488176102,
+            "max_nominal_shape_error_nm": 21.274697488176102,
+            "mean_nominal_contour_deviation_nm": 1.7237797591490889,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.10669135149431368,
+            "nominal_violation_ratio_over_5nm": 0.10669135149431368,
+            "p95_nominal_contour_deviation_nm": 10.114803424358007,
+            "pv_band_area_per_target_edge_um": 0.007491418076783103,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 20.958243473567883
+          },
+          "assets": {
+            "core": {
+              "target": "poly-09-core-target.png",
+              "mask": "poly-09-core-mask.png",
+              "sraf": "poly-09-core-sraf.png",
+              "contour": "poly-09-core-contour.png",
+              "pvb": "poly-09-core-pvb.png",
+              "overlay": "poly-09-core-overlay.png",
+              "mask_view": "poly-09-core-mask_view.png",
+              "resist_view": "poly-09-core-resist_view.png",
+              "pvb_view": "poly-09-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "poly-09-zoom-target.png",
+              "mask": "poly-09-zoom-mask.png",
+              "sraf": "poly-09-zoom-sraf.png",
+              "contour": "poly-09-zoom-contour.png",
+              "pvb": "poly-09-zoom-pvb.png",
+              "overlay": "poly-09-zoom-overlay.png",
+              "mask_view": "poly-09-zoom-mask_view.png",
+              "resist_view": "poly-09-zoom-resist_view.png",
+              "pvb_view": "poly-09-zoom-pvb_view.png"
+            }
+          }
+        }
+      ],
+      "viewport": {
+        "core": {
+          "bbox_um": [
+            7.691399999999999,
+            7.7543,
+            17.691399999999998,
+            17.754299999999997
+          ],
+          "width_um": 10,
+          "scale_bar_um": 2
+        },
+        "zoom": {
+          "bbox_um": [
+            14.949999999999998,
+            16.365499999999997,
+            15.549999999999999,
+            16.9655
+          ],
+          "width_um": 0.6,
+          "scale_bar_um": 0.1
+        }
+      },
+      "focus": {
+        "x_um": 15.249999999999998,
+        "y_um": 16.665499999999998,
+        "gauge_id": "cbf8feae6156529afea6:0.1645000000"
+      },
+      "report_sha256": "a4c311234e4729d39fe2bedb0a79eef87ed99cadb18f545b1e1929c4b1e69d94",
+      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve."
+    },
+    {
+      "case_id": "metal1-29-very_sparse-x760-y620",
+      "layer": "metal1",
+      "frames": [
+        {
+          "opc_calls": 0,
+          "kind": "initial",
+          "retained_frame": 0,
+          "recipe_sha256": "6897a5adccaa810483ae99aa18a9e7b972b23cdc421c3a0e00da932c2b632319",
+          "measurement_sha256": "87071a572279fceab503ddee48d4536e097375bfdb62aa300180c415138d370b",
+          "result_gds_sha256": "dd5382a747895b37532a3ae80e6c999aa3ab84cd0ab87412ed0733059cadf506",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 29.787232764010447,
+            "edge_normal_max_epe_nm": 20.49487179487386,
+            "edge_normal_mean_epe_nm": 0.6999640525677647,
+            "edge_normal_top10_mean_epe_nm": 19.574021801615693,
+            "max_nominal_contour_deviation_nm": 29.787232764010447,
+            "max_nominal_shape_error_nm": 29.787232764010447,
+            "mean_nominal_contour_deviation_nm": 2.3684220325642973,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15858677059052953,
+            "nominal_violation_ratio_over_5nm": 0.15858677059052953,
+            "p95_nominal_contour_deviation_nm": 14.160508465447176,
+            "pv_band_area_per_target_edge_um": 0.005027612169092852,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 29.223506139441742
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-00-core-target.png",
+              "mask": "metal1-00-core-mask.png",
+              "sraf": "metal1-00-core-sraf.png",
+              "contour": "metal1-00-core-contour.png",
+              "pvb": "metal1-00-core-pvb.png",
+              "overlay": "metal1-00-core-overlay.png",
+              "mask_view": "metal1-00-core-mask_view.png",
+              "resist_view": "metal1-00-core-resist_view.png",
+              "pvb_view": "metal1-00-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-00-zoom-target.png",
+              "mask": "metal1-00-zoom-mask.png",
+              "sraf": "metal1-00-zoom-sraf.png",
+              "contour": "metal1-00-zoom-contour.png",
+              "pvb": "metal1-00-zoom-pvb.png",
+              "overlay": "metal1-00-zoom-overlay.png",
+              "mask_view": "metal1-00-zoom-mask_view.png",
+              "resist_view": "metal1-00-zoom-resist_view.png",
+              "pvb_view": "metal1-00-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 1,
+          "kind": "candidate",
+          "retained_frame": 1,
+          "recipe_sha256": "207b60218160b152f48bddec19d7abeb2f5d619665e6611562e7df9f948680f9",
+          "measurement_sha256": "709a2eab5da05ec2f0b3aef5f4d5b4b33a1795dd934cf0cb29015cf70fab2aec",
+          "result_gds_sha256": "e1257a2fd103eabd24730ceb6a7fe00e5a196772d718939334d680a90bb8e55a",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 28.367939650247543,
+            "edge_normal_max_epe_nm": 20.186956521738963,
+            "edge_normal_mean_epe_nm": 0.6691143038514301,
+            "edge_normal_top10_mean_epe_nm": 17.037995482778005,
+            "max_nominal_contour_deviation_nm": 28.367939650247543,
+            "max_nominal_shape_error_nm": 28.367939650247543,
+            "mean_nominal_contour_deviation_nm": 2.324341892447118,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15715720326881086,
+            "nominal_violation_ratio_over_5nm": 0.15715720326881086,
+            "p95_nominal_contour_deviation_nm": 13.96422514260712,
+            "pv_band_area_per_target_edge_um": 0.005027067311469759,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.223876252755076
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-01-core-target.png",
+              "mask": "metal1-01-core-mask.png",
+              "sraf": "metal1-01-core-sraf.png",
+              "contour": "metal1-01-core-contour.png",
+              "pvb": "metal1-01-core-pvb.png",
+              "overlay": "metal1-01-core-overlay.png",
+              "mask_view": "metal1-01-core-mask_view.png",
+              "resist_view": "metal1-01-core-resist_view.png",
+              "pvb_view": "metal1-01-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-01-zoom-target.png",
+              "mask": "metal1-01-zoom-mask.png",
+              "sraf": "metal1-01-zoom-sraf.png",
+              "contour": "metal1-01-zoom-contour.png",
+              "pvb": "metal1-01-zoom-pvb.png",
+              "overlay": "metal1-01-zoom-overlay.png",
+              "mask_view": "metal1-01-zoom-mask_view.png",
+              "resist_view": "metal1-01-zoom-resist_view.png",
+              "pvb_view": "metal1-01-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 2,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "5b6cf0309133c84d246fe12ab874faee8eef5aeb83dce39a8cf2ac7bf51e781b",
+          "measurement_sha256": "11038b8b5af171b890cbfa52baaca40f1aeb9509675351d160e61908ac37bc91",
+          "result_gds_sha256": "a6e937e74f7e601281eed7061a27277238ebabf1919a500b14d77622903fa46b",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 28.21790211904592,
+            "edge_normal_max_epe_nm": 19.869565217392804,
+            "edge_normal_mean_epe_nm": 0.685502872074718,
+            "edge_normal_top10_mean_epe_nm": 15.671333759591203,
+            "max_nominal_contour_deviation_nm": 28.21790211904592,
+            "max_nominal_shape_error_nm": 28.21790211904592,
+            "mean_nominal_contour_deviation_nm": 2.35562438012819,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15832573251889456,
+            "nominal_violation_ratio_over_5nm": 0.15832573251889456,
+            "p95_nominal_contour_deviation_nm": 14.011973972621362,
+            "pv_band_area_per_target_edge_um": 0.0050367644244915894,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.016146319385392
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-02-core-target.png",
+              "mask": "metal1-02-core-mask.png",
+              "sraf": "metal1-02-core-sraf.png",
+              "contour": "metal1-02-core-contour.png",
+              "pvb": "metal1-02-core-pvb.png",
+              "overlay": "metal1-02-core-overlay.png",
+              "mask_view": "metal1-02-core-mask_view.png",
+              "resist_view": "metal1-02-core-resist_view.png",
+              "pvb_view": "metal1-02-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-02-zoom-target.png",
+              "mask": "metal1-02-zoom-mask.png",
+              "sraf": "metal1-02-zoom-sraf.png",
+              "contour": "metal1-02-zoom-contour.png",
+              "pvb": "metal1-02-zoom-pvb.png",
+              "overlay": "metal1-02-zoom-overlay.png",
+              "mask_view": "metal1-02-zoom-mask_view.png",
+              "resist_view": "metal1-02-zoom-resist_view.png",
+              "pvb_view": "metal1-02-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 3,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "517a08959773fe1845cc4edc735a571137a006143843b8bba474eb6739d1a738",
+          "measurement_sha256": "a12e3a7c212c8542139aeaff75a765eafa795b2a3682ec37635b68beade5e5c9",
+          "result_gds_sha256": "96d63db24ec7e8d7856a07bd4051f713c45d42a3f8def83b38646fa54cf8ff7e",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 29.12537180238305,
+            "edge_normal_max_epe_nm": 19.68695652174013,
+            "edge_normal_mean_epe_nm": 1.0711704323510756,
+            "edge_normal_top10_mean_epe_nm": 16.986289377865482,
+            "max_nominal_contour_deviation_nm": 29.12537180238305,
+            "max_nominal_shape_error_nm": 29.12537180238305,
+            "mean_nominal_contour_deviation_nm": 2.7753555193960966,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.16931850637086446,
+            "nominal_violation_ratio_over_5nm": 0.16931850637086446,
+            "p95_nominal_contour_deviation_nm": 14.680488522951443,
+            "pv_band_area_per_target_edge_um": 0.005135371560360894,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 28.194069772546925
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-03-core-target.png",
+              "mask": "metal1-03-core-mask.png",
+              "sraf": "metal1-03-core-sraf.png",
+              "contour": "metal1-03-core-contour.png",
+              "pvb": "metal1-03-core-pvb.png",
+              "overlay": "metal1-03-core-overlay.png",
+              "mask_view": "metal1-03-core-mask_view.png",
+              "resist_view": "metal1-03-core-resist_view.png",
+              "pvb_view": "metal1-03-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-03-zoom-target.png",
+              "mask": "metal1-03-zoom-mask.png",
+              "sraf": "metal1-03-zoom-sraf.png",
+              "contour": "metal1-03-zoom-contour.png",
+              "pvb": "metal1-03-zoom-pvb.png",
+              "overlay": "metal1-03-zoom-overlay.png",
+              "mask_view": "metal1-03-zoom-mask_view.png",
+              "resist_view": "metal1-03-zoom-resist_view.png",
+              "pvb_view": "metal1-03-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 4,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "7ac73023d8c2b08103dd129463d551f4da7a6f402b7aab3b272698cb6dacde34",
+          "measurement_sha256": "53b2f6be4203afae2154d00e37e2947bc9377b7ad4dd2a34b5f22445b32b4f2f",
+          "result_gds_sha256": "0fbc239d0874584af926acbeccec6cd76b0b23a7fabc081a009690928be2e0cd",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 28.31766233289911,
+            "edge_normal_max_epe_nm": 19.98695652173943,
+            "edge_normal_mean_epe_nm": 0.653482766134807,
+            "edge_normal_top10_mean_epe_nm": 15.705913043478414,
+            "max_nominal_contour_deviation_nm": 28.31766233289911,
+            "max_nominal_shape_error_nm": 28.31766233289911,
+            "mean_nominal_contour_deviation_nm": 2.3124680242322904,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15686238379967016,
+            "nominal_violation_ratio_over_5nm": 0.15686238379967016,
+            "p95_nominal_contour_deviation_nm": 13.941129360005327,
+            "pv_band_area_per_target_edge_um": 0.005032379388279186,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 26.80413583886105
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-04-core-target.png",
+              "mask": "metal1-04-core-mask.png",
+              "sraf": "metal1-04-core-sraf.png",
+              "contour": "metal1-04-core-contour.png",
+              "pvb": "metal1-04-core-pvb.png",
+              "overlay": "metal1-04-core-overlay.png",
+              "mask_view": "metal1-04-core-mask_view.png",
+              "resist_view": "metal1-04-core-resist_view.png",
+              "pvb_view": "metal1-04-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-04-zoom-target.png",
+              "mask": "metal1-04-zoom-mask.png",
+              "sraf": "metal1-04-zoom-sraf.png",
+              "contour": "metal1-04-zoom-contour.png",
+              "pvb": "metal1-04-zoom-pvb.png",
+              "overlay": "metal1-04-zoom-overlay.png",
+              "mask_view": "metal1-04-zoom-mask_view.png",
+              "resist_view": "metal1-04-zoom-resist_view.png",
+              "pvb_view": "metal1-04-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 5,
+          "kind": "candidate",
+          "retained_frame": 2,
+          "recipe_sha256": "95477afe65ea71feb5fde8b8ee8fde49777546e2dbeb384b70b28684ac18f3a1",
+          "measurement_sha256": "088de42164e58f6ee66cfe99ecd23fc37142aa0c96ddd92216286738b03e2e75",
+          "result_gds_sha256": "8fe1ef23c765b642e639e641b00e5a716534d269c8fcd8c7ac00d761ea5f8225",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 28.458158397632594,
+            "edge_normal_max_epe_nm": 19.586956521740362,
+            "edge_normal_mean_epe_nm": 0.7160755115705668,
+            "edge_normal_top10_mean_epe_nm": 16.61281215521324,
+            "max_nominal_contour_deviation_nm": 28.458158397632594,
+            "max_nominal_shape_error_nm": 28.458158397632594,
+            "mean_nominal_contour_deviation_nm": 2.358502161795328,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15542053233340397,
+            "nominal_violation_ratio_over_5nm": 0.15542053233340397,
+            "p95_nominal_contour_deviation_nm": 13.903237033152307,
+            "pv_band_area_per_target_edge_um": 0.005036634626791127,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 28.212680045944875
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-05-core-target.png",
+              "mask": "metal1-05-core-mask.png",
+              "sraf": "metal1-05-core-sraf.png",
+              "contour": "metal1-05-core-contour.png",
+              "pvb": "metal1-05-core-pvb.png",
+              "overlay": "metal1-05-core-overlay.png",
+              "mask_view": "metal1-05-core-mask_view.png",
+              "resist_view": "metal1-05-core-resist_view.png",
+              "pvb_view": "metal1-05-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-05-zoom-target.png",
+              "mask": "metal1-05-zoom-mask.png",
+              "sraf": "metal1-05-zoom-sraf.png",
+              "contour": "metal1-05-zoom-contour.png",
+              "pvb": "metal1-05-zoom-pvb.png",
+              "overlay": "metal1-05-zoom-overlay.png",
+              "mask_view": "metal1-05-zoom-mask_view.png",
+              "resist_view": "metal1-05-zoom-resist_view.png",
+              "pvb_view": "metal1-05-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 6,
+          "kind": "candidate",
+          "retained_frame": 6,
+          "recipe_sha256": "5fa74bb8f0dbcd30846423ec23c683e93353322f1c947c28b4b4bec52094150f",
+          "measurement_sha256": "bad41fe2fe101b8d58616cdcc3e0c4afea7d68582463da8e22ab1cb4b2cd11ae",
+          "result_gds_sha256": "7d0468e8539e34b9026b558c7550de9e108fb6abb0c7da1fe5c95d01b2df5305",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 28.021598812346202,
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "max_nominal_contour_deviation_nm": 28.021598812346202,
+            "max_nominal_shape_error_nm": 28.021598812346202,
+            "mean_nominal_contour_deviation_nm": 2.2613573490516043,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15327080703758642,
+            "nominal_violation_ratio_over_5nm": 0.15327080703758642,
+            "p95_nominal_contour_deviation_nm": 13.753233343134173,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.218882355429923
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-06-core-target.png",
+              "mask": "metal1-06-core-mask.png",
+              "sraf": "metal1-06-core-sraf.png",
+              "contour": "metal1-06-core-contour.png",
+              "pvb": "metal1-06-core-pvb.png",
+              "overlay": "metal1-06-core-overlay.png",
+              "mask_view": "metal1-06-core-mask_view.png",
+              "resist_view": "metal1-06-core-resist_view.png",
+              "pvb_view": "metal1-06-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-06-zoom-target.png",
+              "mask": "metal1-06-zoom-mask.png",
+              "sraf": "metal1-06-zoom-sraf.png",
+              "contour": "metal1-06-zoom-contour.png",
+              "pvb": "metal1-06-zoom-pvb.png",
+              "overlay": "metal1-06-zoom-overlay.png",
+              "mask_view": "metal1-06-zoom-mask_view.png",
+              "resist_view": "metal1-06-zoom-resist_view.png",
+              "pvb_view": "metal1-06-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 7,
+          "kind": "candidate",
+          "retained_frame": 6,
+          "recipe_sha256": "c47cc1981885b91a596ec3880f0640091f30c57d6f85d0b9660e952dc5ad691f",
+          "measurement_sha256": "f6bb5aa97b2221d8e003b21fbe8305a090e235ae288d70c49919302520c58e9b",
+          "result_gds_sha256": "b4251bbe8ae0f96a0ba1dd7bc95c537634e60bbad78cb52de539da6e40d847e2",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 31.21550896589801,
+            "edge_normal_max_epe_nm": 20.069565217392338,
+            "edge_normal_mean_epe_nm": 0.9874588230223359,
+            "edge_normal_top10_mean_epe_nm": 19.066101250657574,
+            "max_nominal_contour_deviation_nm": 31.21550896589801,
+            "max_nominal_shape_error_nm": 31.21550896589801,
+            "mean_nominal_contour_deviation_nm": 2.7037169876448686,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.16844633210798993,
+            "nominal_violation_ratio_over_5nm": 0.16844633210798993,
+            "p95_nominal_contour_deviation_nm": 14.807992520738441,
+            "pv_band_area_per_target_edge_um": 0.005004853894778315,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 29.560493581780555
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-07-core-target.png",
+              "mask": "metal1-07-core-mask.png",
+              "sraf": "metal1-07-core-sraf.png",
+              "contour": "metal1-07-core-contour.png",
+              "pvb": "metal1-07-core-pvb.png",
+              "overlay": "metal1-07-core-overlay.png",
+              "mask_view": "metal1-07-core-mask_view.png",
+              "resist_view": "metal1-07-core-resist_view.png",
+              "pvb_view": "metal1-07-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-07-zoom-target.png",
+              "mask": "metal1-07-zoom-mask.png",
+              "sraf": "metal1-07-zoom-sraf.png",
+              "contour": "metal1-07-zoom-contour.png",
+              "pvb": "metal1-07-zoom-pvb.png",
+              "overlay": "metal1-07-zoom-overlay.png",
+              "mask_view": "metal1-07-zoom-mask_view.png",
+              "resist_view": "metal1-07-zoom-resist_view.png",
+              "pvb_view": "metal1-07-zoom-pvb_view.png"
+            }
+          }
+        },
+        {
+          "opc_calls": 8,
+          "kind": "repeat",
+          "retained_frame": 8,
+          "recipe_sha256": "5fa74bb8f0dbcd30846423ec23c683e93353322f1c947c28b4b4bec52094150f",
+          "measurement_sha256": "8de96911ff3666953546ea2ef9f99567aabd667571b48571898595c31fef7327",
+          "result_gds_sha256": "55cd9a25cc9f47489a777d2209a487458b444316148b3216bf610163fbec1cef",
+          "target_sha256": "cb6facdb4e9ff644071a5b414fae661a6e5027615ca56e6160cd4de6f2751dc3",
+          "metrics": {
+            "corner_max_deviation_nm": 28.021598812346202,
+            "edge_normal_max_epe_nm": 19.569565217393503,
+            "edge_normal_mean_epe_nm": 0.6210029012397282,
+            "edge_normal_top10_mean_epe_nm": 15.568713003920198,
+            "max_nominal_contour_deviation_nm": 28.021598812346202,
+            "max_nominal_shape_error_nm": 28.021598812346202,
+            "mean_nominal_contour_deviation_nm": 2.2613573490516043,
+            "mrc_total_result_count": 0,
+            "nominal_contour_deviation_ratio_over_5nm": 0.15327080703758642,
+            "nominal_violation_ratio_over_5nm": 0.15327080703758642,
+            "p95_nominal_contour_deviation_nm": 13.753233343134173,
+            "pv_band_area_per_target_edge_um": 0.005038539733502554,
+            "sraf_printability_violation_count": 0,
+            "top10_mean_nominal_contour_deviation_nm": 27.218882355429923
+          },
+          "assets": {
+            "core": {
+              "target": "metal1-08-core-target.png",
+              "mask": "metal1-08-core-mask.png",
+              "sraf": "metal1-08-core-sraf.png",
+              "contour": "metal1-08-core-contour.png",
+              "pvb": "metal1-08-core-pvb.png",
+              "overlay": "metal1-08-core-overlay.png",
+              "mask_view": "metal1-08-core-mask_view.png",
+              "resist_view": "metal1-08-core-resist_view.png",
+              "pvb_view": "metal1-08-core-pvb_view.png"
+            },
+            "zoom": {
+              "target": "metal1-08-zoom-target.png",
+              "mask": "metal1-08-zoom-mask.png",
+              "sraf": "metal1-08-zoom-sraf.png",
+              "contour": "metal1-08-zoom-contour.png",
+              "pvb": "metal1-08-zoom-pvb.png",
+              "overlay": "metal1-08-zoom-overlay.png",
+              "mask_view": "metal1-08-zoom-mask_view.png",
+              "resist_view": "metal1-08-zoom-resist_view.png",
+              "pvb_view": "metal1-08-zoom-pvb_view.png"
+            }
+          }
+        }
+      ],
+      "viewport": {
+        "core": {
+          "bbox_um": [
+            6.675999999999999,
+            6.9315,
+            16.676,
+            16.9315
+          ],
+          "width_um": 10,
+          "scale_bar_um": 2
+        },
+        "zoom": {
+          "bbox_um": [
+            13.709999999999997,
+            8.4695,
+            14.309999999999999,
+            9.069500000000001
+          ],
+          "width_um": 0.6,
+          "scale_bar_um": 0.1
+        }
+      },
+      "focus": {
+        "x_um": 14.009999999999998,
+        "y_um": 8.7695,
+        "gauge_id": "52825fa1788f527bc7e7:0.0255000000"
+      },
+      "report_sha256": "2e7c7427333f84beaccb9f201ebc01236b7dc3195b14ab3601326ce2123ddbce",
+      "scope": "Fixed R0 worst-gauge viewport across all frames. Later global maxima may move. Rendered candidates include rejected trials; retained_frame points to the same incumbent as the curve."
+    }
+  ],
+  "files": [
+    {
+      "path": "poly-00-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-00-core-mask.png",
+      "sha256": "3d6ce78f7f20dd472f5e0bbb5582ec1474998c652b369d5e090080ba761ac32b",
+      "bytes": 8072
+    },
+    {
+      "path": "poly-00-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-00-core-contour.png",
+      "sha256": "79b370fe7ec2e63e48bac7b78c68d44d376e47b37f9246dd21f030f5ad1b8162",
+      "bytes": 12243
+    },
+    {
+      "path": "poly-00-core-pvb.png",
+      "sha256": "96a26f975597560493ae88fbbfa02518c43c5c0c76b395b8de70e5c0c48f8fc1",
+      "bytes": 11411
+    },
+    {
+      "path": "poly-00-core-overlay.png",
+      "sha256": "f1ea1911038e98de5bb3b16f5361acdd04707e416c27cf3bf7a2c9f76bdb7be7",
+      "bytes": 28757
+    },
+    {
+      "path": "poly-00-core-mask_view.png",
+      "sha256": "a8eb54f74a2ffceb4ca404d8a488ef349e863e55906c0e45c3f254019020da4b",
+      "bytes": 19557
+    },
+    {
+      "path": "poly-00-core-resist_view.png",
+      "sha256": "6d510a2122f9ce5c76eda43b17f94238e160378dffa197ec50afdbaeb90021a5",
+      "bytes": 16762
+    },
+    {
+      "path": "poly-00-core-pvb_view.png",
+      "sha256": "239b0c8a57242912e57324852688fcedb7d7a745e1ef9014dc3cc2f0fd21eaad",
+      "bytes": 15721
+    },
+    {
+      "path": "poly-00-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-00-zoom-mask.png",
+      "sha256": "ce57726091b5e5754fddf7310405b5c18751e9deee7f8ebab84565c93dc8b6a5",
+      "bytes": 4033
+    },
+    {
+      "path": "poly-00-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-00-zoom-contour.png",
+      "sha256": "864a2b37dcb92663083b394d3739e060efecaa79cd707b7146d56e0de602917d",
+      "bytes": 5961
+    },
+    {
+      "path": "poly-00-zoom-pvb.png",
+      "sha256": "bfa31c505a861d87a6da2dba34e0de3c445d4e4581511e176271ca67fb2da809",
+      "bytes": 6241
+    },
+    {
+      "path": "poly-00-zoom-overlay.png",
+      "sha256": "50e8f5e04ec48f64914ed8fc5e1a5e8a0981617acb63b9cd7e2d35bb09a7464a",
+      "bytes": 11093
+    },
+    {
+      "path": "poly-00-zoom-mask_view.png",
+      "sha256": "b905b1d55e142d92294a55f458dd6dc4a00c0b941aa833aa3dc3bc1c9f78752b",
+      "bytes": 4652
+    },
+    {
+      "path": "poly-00-zoom-resist_view.png",
+      "sha256": "98988ec293874284adbc55275b647ac96707f8d8546bde27b51bebbc06b98b87",
+      "bytes": 9259
+    },
+    {
+      "path": "poly-00-zoom-pvb_view.png",
+      "sha256": "46b0b49d1666230325d2527c43e050640e18f3fb4922e4dad308cea913189b82",
+      "bytes": 6689
+    },
+    {
+      "path": "poly-01-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-01-core-mask.png",
+      "sha256": "ec153f6a953bcebbe4f9da827502a9ddb613ccae79d97d36ee0dd4fb9027a7ac",
+      "bytes": 8706
+    },
+    {
+      "path": "poly-01-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-01-core-contour.png",
+      "sha256": "3460b789c19835b130f3f56ab404e02dd95d57b596ea27e2ccd437d61cb0be99",
+      "bytes": 12048
+    },
+    {
+      "path": "poly-01-core-pvb.png",
+      "sha256": "3bffce4dc1a346c02181270ada8c8b1d07043e569b5188afac068d1d9c88f69f",
+      "bytes": 11262
+    },
+    {
+      "path": "poly-01-core-overlay.png",
+      "sha256": "edc8e35ab664dff27a8c4765b2b25abb6446d82bca3a7706e9caaa073ee3a27d",
+      "bytes": 28235
+    },
+    {
+      "path": "poly-01-core-mask_view.png",
+      "sha256": "1cf782dc7dde79d32a9c2c409da158a6a9d6dda1781defd274ddd1a973ac817b",
+      "bytes": 20311
+    },
+    {
+      "path": "poly-01-core-resist_view.png",
+      "sha256": "4f73060464d495dfdf68e1d082339840eb6d0b4b2314b4dd57e2abca9a5aa771",
+      "bytes": 16199
+    },
+    {
+      "path": "poly-01-core-pvb_view.png",
+      "sha256": "8f93e5cf7d3399efbe2d2ebe6b72144d5a88569e844ce99bbcee6e3d0291bef6",
+      "bytes": 15452
+    },
+    {
+      "path": "poly-01-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-01-zoom-mask.png",
+      "sha256": "df7b149b1ff72cfa1ad25d28c907b4e5caea42f7584fc4a9738fd1489727735e",
+      "bytes": 4209
+    },
+    {
+      "path": "poly-01-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-01-zoom-contour.png",
+      "sha256": "7d15ab037a0e0798ae4de1bb206d01d2ad1b5ca5450d198f30665c327259623e",
+      "bytes": 5873
+    },
+    {
+      "path": "poly-01-zoom-pvb.png",
+      "sha256": "c8186914a0fd5ccccbffce5bd2ccbbe6f4d45ab5c1ade5e0239f4aeac34646ad",
+      "bytes": 6220
+    },
+    {
+      "path": "poly-01-zoom-overlay.png",
+      "sha256": "7f9828e3b5a47098ba521d9ec6c0ea2a18c33c69e21e4291a8901e1b4221a3ea",
+      "bytes": 11290
+    },
+    {
+      "path": "poly-01-zoom-mask_view.png",
+      "sha256": "0b2a1b13c9ebfdfc113b0b69858dbffba9ccd5d68a5a890c794f183eaa484b80",
+      "bytes": 4856
+    },
+    {
+      "path": "poly-01-zoom-resist_view.png",
+      "sha256": "ee9aaa8cd5e5ec3b94feffe76c81f74f6dd469f29c8e97ab34f8c218d8f481cf",
+      "bytes": 9154
+    },
+    {
+      "path": "poly-01-zoom-pvb_view.png",
+      "sha256": "b63b392eaef000c671670c32966d86172b4b5170caad1b05e8cb04e100a0d9db",
+      "bytes": 6673
+    },
+    {
+      "path": "poly-02-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-02-core-mask.png",
+      "sha256": "bf3a14293f318397ff9d0a0fcf01eb9633eb2c5e4fe2f6adb8e9406c32938766",
+      "bytes": 10197
+    },
+    {
+      "path": "poly-02-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-02-core-contour.png",
+      "sha256": "452a9e2d357186509a55bb8b8621bed11aabfb9340ec970aeed5424c24b6d483",
+      "bytes": 12226
+    },
+    {
+      "path": "poly-02-core-pvb.png",
+      "sha256": "5062d502fd540ae96a2ced0d0f4c556bbc23228636b4ead8700ba0045d82f680",
+      "bytes": 11517
+    },
+    {
+      "path": "poly-02-core-overlay.png",
+      "sha256": "835a1a24ee68eb0364a644419295bdaac87aea96a5ecd78f7cfa6c44949bce1e",
+      "bytes": 28644
+    },
+    {
+      "path": "poly-02-core-mask_view.png",
+      "sha256": "199e68fa22d494e83f24c355adb527506040dc4230cf0772e0706b7f30c2b18d",
+      "bytes": 21935
+    },
+    {
+      "path": "poly-02-core-resist_view.png",
+      "sha256": "de3446d60a9e56548385b9d095ea4ec7c2da4408a4cc1edaa2dc648e73eb79a3",
+      "bytes": 16360
+    },
+    {
+      "path": "poly-02-core-pvb_view.png",
+      "sha256": "11104fcd5cff5dddfb8da030f1e81a7c9d7d74310b254b5e7f9cff09739c02da",
+      "bytes": 15591
+    },
+    {
+      "path": "poly-02-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-02-zoom-mask.png",
+      "sha256": "d4e6025cd1b51857347426d8f362f3fd9f5a10e8286617a592dd6cd090571c29",
+      "bytes": 4281
+    },
+    {
+      "path": "poly-02-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-02-zoom-contour.png",
+      "sha256": "21d33d033c1f7637da070d9b784e37b93ab8268d2b6fb87c61410afcf0ab639a",
+      "bytes": 5981
+    },
+    {
+      "path": "poly-02-zoom-pvb.png",
+      "sha256": "bf8cf99f91380722cbc41198e0e9872d36f3e67d1dcdf9394d2118d722fe130f",
+      "bytes": 6418
+    },
+    {
+      "path": "poly-02-zoom-overlay.png",
+      "sha256": "6d4b68a528db0ab2fa885b4262db0ca7e2555181ab5075e9c52d814a7b6fae5c",
+      "bytes": 12027
+    },
+    {
+      "path": "poly-02-zoom-mask_view.png",
+      "sha256": "a22c859b940e631419b223b4ca95c031a3836b784472016764c2eb398e17ae22",
+      "bytes": 4958
+    },
+    {
+      "path": "poly-02-zoom-resist_view.png",
+      "sha256": "d0f5baf24826957cf50f79f020ccc2a6d8d1744e18305bde50ab33a87492281b",
+      "bytes": 9616
+    },
+    {
+      "path": "poly-02-zoom-pvb_view.png",
+      "sha256": "6087955d841b970c5c0559d4bf3bfac69476a7b303390502ba452c4368173ca0",
+      "bytes": 6969
+    },
+    {
+      "path": "poly-03-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-03-core-mask.png",
+      "sha256": "e9579bafc738b1cf860e07c22a41ae62798785cb8e495196a56feced4dabb5b7",
+      "bytes": 8783
+    },
+    {
+      "path": "poly-03-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-03-core-contour.png",
+      "sha256": "6d84aa1590c71efca5273d21125a8479c249d4c6dc479837137b028a632b03a0",
+      "bytes": 12136
+    },
+    {
+      "path": "poly-03-core-pvb.png",
+      "sha256": "7b0cf4c537eb216926959becf150949f3809159b1c864157a0ae817d14876a94",
+      "bytes": 11277
+    },
+    {
+      "path": "poly-03-core-overlay.png",
+      "sha256": "397aea116385fb6859815f42ec8cd9628957645944dec4260b7fe4a07fa88d4c",
+      "bytes": 28506
+    },
+    {
+      "path": "poly-03-core-mask_view.png",
+      "sha256": "6500736d3a8ddd9621a5c42bc8ed4f80bb7ae51910ce31a189d6eec15fa0d8f8",
+      "bytes": 20450
+    },
+    {
+      "path": "poly-03-core-resist_view.png",
+      "sha256": "66eef1792f0fa72c81b2898a318ca01a4e36dedc51810545a265f58b0da128b2",
+      "bytes": 16381
+    },
+    {
+      "path": "poly-03-core-pvb_view.png",
+      "sha256": "fbc25e3330743aba8d6182b9537ff30ccde72e151e6a26ee21f4ac64a131d3fa",
+      "bytes": 15431
+    },
+    {
+      "path": "poly-03-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-03-zoom-mask.png",
+      "sha256": "180ae0a082db05f7fd01ba46283f7ba366800edc8a3cd9794e10c604606201a6",
+      "bytes": 4245
+    },
+    {
+      "path": "poly-03-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-03-zoom-contour.png",
+      "sha256": "f115126d072d814b3c21a06fdbd95b66d165e84e1e8fb46da9cca4f19a7c004a",
+      "bytes": 5824
+    },
+    {
+      "path": "poly-03-zoom-pvb.png",
+      "sha256": "600751bdd743aa747b6f5db8ea97f1aa56a6b7ddfa225be1018af601947910f7",
+      "bytes": 6149
+    },
+    {
+      "path": "poly-03-zoom-overlay.png",
+      "sha256": "5cb63eb41403955e4c70276af51891ca3e94fc7542d55454802c5768beedf6ef",
+      "bytes": 11225
+    },
+    {
+      "path": "poly-03-zoom-mask_view.png",
+      "sha256": "17f373bce2b83b83e6ef0992eacd0a15d679a12d761af933cba3d0f3502f6191",
+      "bytes": 4937
+    },
+    {
+      "path": "poly-03-zoom-resist_view.png",
+      "sha256": "887bfc0a1b9ce073e903b7357c1f22d76badceb4eb04832e93a6faab9542070a",
+      "bytes": 9054
+    },
+    {
+      "path": "poly-03-zoom-pvb_view.png",
+      "sha256": "0b112a708a357a32a8b1bd8c15092056be4dd2327c991e5063dcce26f602fbe1",
+      "bytes": 6639
+    },
+    {
+      "path": "poly-04-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-04-core-mask.png",
+      "sha256": "6d1fb40d4df7a2c2eddb9097da5e3c190e6d8c07f95f80e99a04e3e0d4cc0e0b",
+      "bytes": 8986
+    },
+    {
+      "path": "poly-04-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-04-core-contour.png",
+      "sha256": "79e3faae25f6868eb6befc866df20cb4a2314349d6787ade87ba8cc6fdee6816",
+      "bytes": 12131
+    },
+    {
+      "path": "poly-04-core-pvb.png",
+      "sha256": "155c179142c0d3e89d365ebeac517d60a3c7733f39b00eef40a42957c03f63b5",
+      "bytes": 11169
+    },
+    {
+      "path": "poly-04-core-overlay.png",
+      "sha256": "7a0c44607ef4c7545df2694d07583cf3d35afa27ced740e9244f2cc504e17140",
+      "bytes": 28487
+    },
+    {
+      "path": "poly-04-core-mask_view.png",
+      "sha256": "79a5581b0e57a85fc504c21a99a329e97e5aabcb9ad5091e0cebf6a72e71f7c1",
+      "bytes": 20761
+    },
+    {
+      "path": "poly-04-core-resist_view.png",
+      "sha256": "9f6985ace0996e14c32af64fb55c1eeed62135a5fde3d7aff7332276480e6983",
+      "bytes": 16399
+    },
+    {
+      "path": "poly-04-core-pvb_view.png",
+      "sha256": "d4ba5556c7979167b7188b3513ac92fb74d2fa665a55803bf3a8e2ee6b581c24",
+      "bytes": 15247
+    },
+    {
+      "path": "poly-04-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-04-zoom-mask.png",
+      "sha256": "070803a6138735073621776c17883b74e6fb36a213e7d890940c5b6b75341d16",
+      "bytes": 4264
+    },
+    {
+      "path": "poly-04-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-04-zoom-contour.png",
+      "sha256": "fde121631485b4c3027e95d3e276aef50e691b40c75631baca6f0ece4a9ff7bb",
+      "bytes": 5946
+    },
+    {
+      "path": "poly-04-zoom-pvb.png",
+      "sha256": "5316fd1454d2758308f7fb6e13022c1ab354b2f4e82ce34c0470c42646c7f9e2",
+      "bytes": 6231
+    },
+    {
+      "path": "poly-04-zoom-overlay.png",
+      "sha256": "52cf62e78793ffcfc8d52e263045d276378a84ff1355f502ea669dc9c6a313b3",
+      "bytes": 11559
+    },
+    {
+      "path": "poly-04-zoom-mask_view.png",
+      "sha256": "41c8fce4d259387f9aa3360627e8e065ead7340366dd73c0f2d8de3e81c91a7b",
+      "bytes": 4991
+    },
+    {
+      "path": "poly-04-zoom-resist_view.png",
+      "sha256": "ef0075813f8ae8eb67574542b22f213fc14352f838d793ad70b7068e82566285",
+      "bytes": 9259
+    },
+    {
+      "path": "poly-04-zoom-pvb_view.png",
+      "sha256": "8501527347a4dabffea0bf745d64f2df68999a14e762f6d84b51af73713fac82",
+      "bytes": 6734
+    },
+    {
+      "path": "poly-05-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-05-core-mask.png",
+      "sha256": "af18e8f3b03976c47ec889423c0209ad3990b2a40e17be12a46473474044610e",
+      "bytes": 10333
+    },
+    {
+      "path": "poly-05-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-05-core-contour.png",
+      "sha256": "e9b4bea476d38403969b55d2dd80ed7689cf2cee3b99305a6c6b56c72512282b",
+      "bytes": 12240
+    },
+    {
+      "path": "poly-05-core-pvb.png",
+      "sha256": "108ca86a88e3e25f865d5efa34ffc5085a13aaeb1287f668650924af95516008",
+      "bytes": 11541
+    },
+    {
+      "path": "poly-05-core-overlay.png",
+      "sha256": "cdc96a7e51fcf98dcc97c40c39cdd19c6db0042e8313eac4a1abdfc889d616b6",
+      "bytes": 28684
+    },
+    {
+      "path": "poly-05-core-mask_view.png",
+      "sha256": "668c5f4856782a9097c99066b4b7275196652f75ec1e0c8c0ded81a6477eeedf",
+      "bytes": 22098
+    },
+    {
+      "path": "poly-05-core-resist_view.png",
+      "sha256": "80c8617c60dc6d169204df1257f0fd8ccb48cbc0da7462af3ce67aae35db5d2f",
+      "bytes": 16381
+    },
+    {
+      "path": "poly-05-core-pvb_view.png",
+      "sha256": "f7c2d15898b7299c03a247735816fb6288d723920220587078b8eacc64876269",
+      "bytes": 15570
+    },
+    {
+      "path": "poly-05-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-05-zoom-mask.png",
+      "sha256": "f07f50724d8719e38b9e1b16a1720f72bfe1359e6df64ad70d99136977047a3d",
+      "bytes": 4269
+    },
+    {
+      "path": "poly-05-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-05-zoom-contour.png",
+      "sha256": "e18b349508b025a42e238471dbcf719b7a996bc4e6979f04eeb43fad8a850ea3",
+      "bytes": 6010
+    },
+    {
+      "path": "poly-05-zoom-pvb.png",
+      "sha256": "18486928c47597f9752ca2f1ef0794ac371bb18ce7e827ed48c8ab109c2784a2",
+      "bytes": 6382
+    },
+    {
+      "path": "poly-05-zoom-overlay.png",
+      "sha256": "7d47f16b5eed1a98e91344a3086550b44590e49ad09891f6f0ec89a1f703e89e",
+      "bytes": 12096
+    },
+    {
+      "path": "poly-05-zoom-mask_view.png",
+      "sha256": "c692214345bb97a6cec8f18cf2ed393bbb92c87f73971e4e1e8f2506d64eb9e0",
+      "bytes": 4941
+    },
+    {
+      "path": "poly-05-zoom-resist_view.png",
+      "sha256": "e80917e27eccab3f1d0944f023d12978bbf8351279cd7773053898903f44aee3",
+      "bytes": 9622
+    },
+    {
+      "path": "poly-05-zoom-pvb_view.png",
+      "sha256": "029a48e6d97e9d5f5b75707eda7d6e49083b9c57fb3c10f7ad4e941e1a9f40d3",
+      "bytes": 6965
+    },
+    {
+      "path": "poly-06-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-06-core-mask.png",
+      "sha256": "8f0d3061f642ba3ec6a0217d6891c7e7f0ce6b5d48996f600678fa5aa069e6b4",
+      "bytes": 10106
+    },
+    {
+      "path": "poly-06-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-06-core-contour.png",
+      "sha256": "c8e500f70f330bea9fbd88388782c5a0d2d7210cd27adb1c094901f6384867a1",
+      "bytes": 12252
+    },
+    {
+      "path": "poly-06-core-pvb.png",
+      "sha256": "63510e482c197c484969e438733d698fa67e6a28cd8a8850c6fe7acbfc97ff31",
+      "bytes": 11618
+    },
+    {
+      "path": "poly-06-core-overlay.png",
+      "sha256": "380eac84330624618b6bbbac3597dd15259a2a7641ed39e77fc6e39a9404b4ff",
+      "bytes": 28484
+    },
+    {
+      "path": "poly-06-core-mask_view.png",
+      "sha256": "b2ea31c2a144003fa4f03bd82da9dd14ba4b0a1b23d44ac21f50da4e422ece74",
+      "bytes": 21980
+    },
+    {
+      "path": "poly-06-core-resist_view.png",
+      "sha256": "eefaed792845406fc72390b8b2bb158bf82ef83d0e668685ceb651603eb9b99a",
+      "bytes": 16440
+    },
+    {
+      "path": "poly-06-core-pvb_view.png",
+      "sha256": "129a298dfa87a5b64d693e5eb0b6f453fc784f0785d0c658e8cf9eddb29d6be2",
+      "bytes": 15633
+    },
+    {
+      "path": "poly-06-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-06-zoom-mask.png",
+      "sha256": "d64f1179f394e39ace84f1ffe53ecb67a1c353bc7c980b874ef9515c24cab765",
+      "bytes": 4278
+    },
+    {
+      "path": "poly-06-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-06-zoom-contour.png",
+      "sha256": "6a5c319c6588709ca824f527f7c1f260a774eff27b255224a3ac349e2c9b817c",
+      "bytes": 5991
+    },
+    {
+      "path": "poly-06-zoom-pvb.png",
+      "sha256": "d6fc7351b66f9f5c1f0ea1f9a703e08beed64db7bfedca7f63d25c2d07b80307",
+      "bytes": 6381
+    },
+    {
+      "path": "poly-06-zoom-overlay.png",
+      "sha256": "3e5317a9369c9bae38d739cf8c919ffc1bbf1b9bbf6a24aa4e4f94ff9d5432d8",
+      "bytes": 12088
+    },
+    {
+      "path": "poly-06-zoom-mask_view.png",
+      "sha256": "b9dceed8466428f183891558650e3a90c82760b6fdcd0078ace7f4bdba7cb12f",
+      "bytes": 4996
+    },
+    {
+      "path": "poly-06-zoom-resist_view.png",
+      "sha256": "4f3b48c0b98c43c97788fa4bab6dee65af1d97ba958b352c0ac268d8b57fe07c",
+      "bytes": 9639
+    },
+    {
+      "path": "poly-06-zoom-pvb_view.png",
+      "sha256": "c7f8ce9a7de916720705fe5ad6af1a18d9743b95e68f409e3bb9efed0878ce02",
+      "bytes": 6943
+    },
+    {
+      "path": "poly-07-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-07-core-mask.png",
+      "sha256": "ff9ea49c7dc1531c27832ee93bba4ba7a746d7855325370cfb4d21924f1eb29b",
+      "bytes": 10114
+    },
+    {
+      "path": "poly-07-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-07-core-contour.png",
+      "sha256": "e1a3707ea98032ac655ce38c1ae3bab11644a84ba587ec8ec61b8f7064157906",
+      "bytes": 12195
+    },
+    {
+      "path": "poly-07-core-pvb.png",
+      "sha256": "83637b83de8fa68b6941c6f65ab3062a65b2fd51101c982fd2c1df459515367e",
+      "bytes": 11560
+    },
+    {
+      "path": "poly-07-core-overlay.png",
+      "sha256": "60ba12ef011eb8ea08257f3e79d972c4ec56b58e0ce178a3236a040a8543ba4a",
+      "bytes": 28174
+    },
+    {
+      "path": "poly-07-core-mask_view.png",
+      "sha256": "d0bc75451b42edfa08d7836b001f6d31e094e444d0c92f03039b1971f58e8d64",
+      "bytes": 21827
+    },
+    {
+      "path": "poly-07-core-resist_view.png",
+      "sha256": "71ef0d057c34c0f4363bef738949f0984fcf5c5f5098fb6f4c3b2e268bf92377",
+      "bytes": 16343
+    },
+    {
+      "path": "poly-07-core-pvb_view.png",
+      "sha256": "f7b86297a22d79236164c2e6827be6d560237a10aa07167061fd8e4a7f0adace",
+      "bytes": 15740
+    },
+    {
+      "path": "poly-07-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-07-zoom-mask.png",
+      "sha256": "5969593947c1952669181b761f488ca6f7358e82e382299499c4e9cc77717f1d",
+      "bytes": 4246
+    },
+    {
+      "path": "poly-07-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-07-zoom-contour.png",
+      "sha256": "c87e700571d7591d35b6f412199747cc1e016e0781324d20e58357817473d213",
+      "bytes": 5979
+    },
+    {
+      "path": "poly-07-zoom-pvb.png",
+      "sha256": "82784a11b6f47b0ae92847c4c9b460e154ac91ce2027151755d1118da6df48d0",
+      "bytes": 6371
+    },
+    {
+      "path": "poly-07-zoom-overlay.png",
+      "sha256": "292dc791343a8fa636c67857bb111bcfceb14ab66d41a3c4a66cce777b2df7b8",
+      "bytes": 12100
+    },
+    {
+      "path": "poly-07-zoom-mask_view.png",
+      "sha256": "bf44fcd0e0cee079f2de0b54aa0378eec5a267f0a866d77c643ce4d3b9800a94",
+      "bytes": 4942
+    },
+    {
+      "path": "poly-07-zoom-resist_view.png",
+      "sha256": "ba21a9da9ef10e99ad11f715d375be08a06cc8bbf2dab89398078ed1fe9ab716",
+      "bytes": 9617
+    },
+    {
+      "path": "poly-07-zoom-pvb_view.png",
+      "sha256": "241747e4ec551d5d5262705a965b17ba440e3a39f13d347b5a222f2b09c7835a",
+      "bytes": 6963
+    },
+    {
+      "path": "poly-08-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-08-core-mask.png",
+      "sha256": "6d28fef0d36ae3b499c3776c4fa2079e9c073910cf654d37399901ffe42c5a0d",
+      "bytes": 9973
+    },
+    {
+      "path": "poly-08-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-08-core-contour.png",
+      "sha256": "08bad9a5d7a67cb671bc5c8b4721c708f609d892a594f0a7b52dc9450605d8a6",
+      "bytes": 12472
+    },
+    {
+      "path": "poly-08-core-pvb.png",
+      "sha256": "03793be579dbcb7d0a9aaa281e68ca2f257835cf6863f83ba2b62c68d25577bf",
+      "bytes": 11900
+    },
+    {
+      "path": "poly-08-core-overlay.png",
+      "sha256": "4cf3d95becf28406a242d8bcf41966d9b1585505facc209032b42c7bbde7abae",
+      "bytes": 28661
+    },
+    {
+      "path": "poly-08-core-mask_view.png",
+      "sha256": "c0c22805d2cc794eccc4486d34193dd79632209955b7a94a8a04b581c03db8f9",
+      "bytes": 21446
+    },
+    {
+      "path": "poly-08-core-resist_view.png",
+      "sha256": "1d1bad871984f25c8fb1427236fae5e02bf405a0b5c5b7ba5fd8d69a0598d307",
+      "bytes": 16798
+    },
+    {
+      "path": "poly-08-core-pvb_view.png",
+      "sha256": "b907d90843a9a98e849f3bb1a963bdd84591ecd81fb2c59525e68cfa153ad29a",
+      "bytes": 16010
+    },
+    {
+      "path": "poly-08-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-08-zoom-mask.png",
+      "sha256": "212d5361e2321a3d1bcde6396edf5c53899a0ed8b5eaa592076bd3c995abe73c",
+      "bytes": 4335
+    },
+    {
+      "path": "poly-08-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-08-zoom-contour.png",
+      "sha256": "1d5c89c5301a25146d6e810655d696ded21444fa68979a8c6be9d5fcd8d8cee0",
+      "bytes": 5926
+    },
+    {
+      "path": "poly-08-zoom-pvb.png",
+      "sha256": "2e9c73bc4a288146631725dc0885724b4762e9aa6ebef54ae46ef05f6cb68617",
+      "bytes": 6364
+    },
+    {
+      "path": "poly-08-zoom-overlay.png",
+      "sha256": "bff5922b6aa9ebc4aa77c54d2bc996e27a1cb9ca48c63a9da3076db58acd351b",
+      "bytes": 11752
+    },
+    {
+      "path": "poly-08-zoom-mask_view.png",
+      "sha256": "503b4b80780a0deb1601acbb9460937db647f407257e8ac773e3fffacf3ee5f4",
+      "bytes": 4990
+    },
+    {
+      "path": "poly-08-zoom-resist_view.png",
+      "sha256": "2f3aebc02b52857d67cac4692541afe1283f5d669f8d0df6759a111beda54ee8",
+      "bytes": 9396
+    },
+    {
+      "path": "poly-08-zoom-pvb_view.png",
+      "sha256": "222dec32537e7827a765f416d77df0fad285fc56bcab449751c0058f3e3ce460",
+      "bytes": 6942
+    },
+    {
+      "path": "poly-09-core-target.png",
+      "sha256": "7a76ac138e0f24e172a4faf80e7f5b0d3fdd3062f4e44bad51be6ac81ba2edf7",
+      "bytes": 6154
+    },
+    {
+      "path": "poly-09-core-mask.png",
+      "sha256": "6d1fb40d4df7a2c2eddb9097da5e3c190e6d8c07f95f80e99a04e3e0d4cc0e0b",
+      "bytes": 8986
+    },
+    {
+      "path": "poly-09-core-sraf.png",
+      "sha256": "e9b9fe9306d3e2c053fe102ea34dd89f1388fb933466735378ed8141bf28b14f",
+      "bytes": 10605
+    },
+    {
+      "path": "poly-09-core-contour.png",
+      "sha256": "79e3faae25f6868eb6befc866df20cb4a2314349d6787ade87ba8cc6fdee6816",
+      "bytes": 12131
+    },
+    {
+      "path": "poly-09-core-pvb.png",
+      "sha256": "155c179142c0d3e89d365ebeac517d60a3c7733f39b00eef40a42957c03f63b5",
+      "bytes": 11169
+    },
+    {
+      "path": "poly-09-core-overlay.png",
+      "sha256": "7a0c44607ef4c7545df2694d07583cf3d35afa27ced740e9244f2cc504e17140",
+      "bytes": 28487
+    },
+    {
+      "path": "poly-09-core-mask_view.png",
+      "sha256": "79a5581b0e57a85fc504c21a99a329e97e5aabcb9ad5091e0cebf6a72e71f7c1",
+      "bytes": 20761
+    },
+    {
+      "path": "poly-09-core-resist_view.png",
+      "sha256": "9f6985ace0996e14c32af64fb55c1eeed62135a5fde3d7aff7332276480e6983",
+      "bytes": 16399
+    },
+    {
+      "path": "poly-09-core-pvb_view.png",
+      "sha256": "d4ba5556c7979167b7188b3513ac92fb74d2fa665a55803bf3a8e2ee6b581c24",
+      "bytes": 15247
+    },
+    {
+      "path": "poly-09-zoom-target.png",
+      "sha256": "44a75a86eb335127ab23da4d016dbeadcc6e298e9852c3ad5889a803f2f5591d",
+      "bytes": 3753
+    },
+    {
+      "path": "poly-09-zoom-mask.png",
+      "sha256": "070803a6138735073621776c17883b74e6fb36a213e7d890940c5b6b75341d16",
+      "bytes": 4264
+    },
+    {
+      "path": "poly-09-zoom-sraf.png",
+      "sha256": "3511a1e76dc04c11b71fb3e87f41e556d95945bd3f2c69fff79d45fc748e314f",
+      "bytes": 3829
+    },
+    {
+      "path": "poly-09-zoom-contour.png",
+      "sha256": "fde121631485b4c3027e95d3e276aef50e691b40c75631baca6f0ece4a9ff7bb",
+      "bytes": 5946
+    },
+    {
+      "path": "poly-09-zoom-pvb.png",
+      "sha256": "5316fd1454d2758308f7fb6e13022c1ab354b2f4e82ce34c0470c42646c7f9e2",
+      "bytes": 6231
+    },
+    {
+      "path": "poly-09-zoom-overlay.png",
+      "sha256": "52cf62e78793ffcfc8d52e263045d276378a84ff1355f502ea669dc9c6a313b3",
+      "bytes": 11559
+    },
+    {
+      "path": "poly-09-zoom-mask_view.png",
+      "sha256": "41c8fce4d259387f9aa3360627e8e065ead7340366dd73c0f2d8de3e81c91a7b",
+      "bytes": 4991
+    },
+    {
+      "path": "poly-09-zoom-resist_view.png",
+      "sha256": "ef0075813f8ae8eb67574542b22f213fc14352f838d793ad70b7068e82566285",
+      "bytes": 9259
+    },
+    {
+      "path": "poly-09-zoom-pvb_view.png",
+      "sha256": "8501527347a4dabffea0bf745d64f2df68999a14e762f6d84b51af73713fac82",
+      "bytes": 6734
+    },
+    {
+      "path": "metal1-00-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-00-core-mask.png",
+      "sha256": "a08f27c78a94ad0441a1c2743423deea9cdee2264d808bda9ef0b070662947bc",
+      "bytes": 11265
+    },
+    {
+      "path": "metal1-00-core-sraf.png",
+      "sha256": "08b6a98dcf982c1bbaa28882e976738b26598d61a0c468a35507f4c8273c3224",
+      "bytes": 10271
+    },
+    {
+      "path": "metal1-00-core-contour.png",
+      "sha256": "273c18f35affc3357085d1208a9b016a162a08a6c6f96c2ecf7cdfbd76fe8500",
+      "bytes": 25416
+    },
+    {
+      "path": "metal1-00-core-pvb.png",
+      "sha256": "af0062ca1a493232d97be57c169363c749258abf53d056b3f88e2aa1b7a196e5",
+      "bytes": 21152
+    },
+    {
+      "path": "metal1-00-core-overlay.png",
+      "sha256": "fe8b4c286edbfbcf9eba8564695ffd774c6ba15bbc0f62b5b71ee8926fa0d175",
+      "bytes": 55692
+    },
+    {
+      "path": "metal1-00-core-mask_view.png",
+      "sha256": "544d1e95bb2307d96a674f79ef3e3298d3af15e552e68d556cc9d1aaf859502a",
+      "bytes": 29126
+    },
+    {
+      "path": "metal1-00-core-resist_view.png",
+      "sha256": "d489057862aa777a776acca7fef2dd6d779e5067efdf03f9849271cfeda244d0",
+      "bytes": 37915
+    },
+    {
+      "path": "metal1-00-core-pvb_view.png",
+      "sha256": "dbb864ed383da618e0134adb8d5b4272519db45d20ef6b098bd0fa96e2c99709",
+      "bytes": 31578
+    },
+    {
+      "path": "metal1-00-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-00-zoom-mask.png",
+      "sha256": "bd6c479ea44e015f7f0dd62effef8dae52e4308d2ed119156bc5167873499036",
+      "bytes": 3917
+    },
+    {
+      "path": "metal1-00-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-00-zoom-contour.png",
+      "sha256": "6ece8e03548e04821be206b8ee8eba35bb02ec9a5c14925f61533174dbcd92bf",
+      "bytes": 5414
+    },
+    {
+      "path": "metal1-00-zoom-pvb.png",
+      "sha256": "8785a4606dd34b819fa9f2455df836f9d7f6f7788758d294c8f995600feac95c",
+      "bytes": 5771
+    },
+    {
+      "path": "metal1-00-zoom-overlay.png",
+      "sha256": "6f674a30d0a67b97ead5e5e98ecbac3d906a86c2cab1d236854344bb26cf0cb0",
+      "bytes": 8713
+    },
+    {
+      "path": "metal1-00-zoom-mask_view.png",
+      "sha256": "92d9e0dd0386776255bacb6a231df32c6ecc44cf492dcc0bfa037cd8da0dfa69",
+      "bytes": 4220
+    },
+    {
+      "path": "metal1-00-zoom-resist_view.png",
+      "sha256": "377b48a3b49affc30965e5a26311eb78d6e047fd9193d17936b9951c897f2d43",
+      "bytes": 7921
+    },
+    {
+      "path": "metal1-00-zoom-pvb_view.png",
+      "sha256": "49758bf14b9be2b31a221e961307e10c810ed02b015b8582cfd95fbd3d494532",
+      "bytes": 6146
+    },
+    {
+      "path": "metal1-01-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-01-core-mask.png",
+      "sha256": "715d4dc968bca8440234fd469635d20155415c8cdd4e0c1246846b3aa0780402",
+      "bytes": 11417
+    },
+    {
+      "path": "metal1-01-core-sraf.png",
+      "sha256": "08b6a98dcf982c1bbaa28882e976738b26598d61a0c468a35507f4c8273c3224",
+      "bytes": 10271
+    },
+    {
+      "path": "metal1-01-core-contour.png",
+      "sha256": "ba57f7d9e0ded4ff26cf8cf28ccb26dc94582a89e7a0ee91187f182f5405c10b",
+      "bytes": 25498
+    },
+    {
+      "path": "metal1-01-core-pvb.png",
+      "sha256": "dd168dcc476dcec35d8270eede6facf6af0f357d44057769302fd7a7a8919496",
+      "bytes": 21190
+    },
+    {
+      "path": "metal1-01-core-overlay.png",
+      "sha256": "fc41bc1cd4cf49f7990bbb4189f2c397c5e9f79a02f3e38cd9894b499e236372",
+      "bytes": 55500
+    },
+    {
+      "path": "metal1-01-core-mask_view.png",
+      "sha256": "af388c0ae919292c6d4ef4538898034e88a8dc197ec0f432f1a28069a4a05bff",
+      "bytes": 29463
+    },
+    {
+      "path": "metal1-01-core-resist_view.png",
+      "sha256": "1f9a1e9474c0af2760ba78abe3b97cbcaa12198a44a00d0b34b626c2b2b651f1",
+      "bytes": 37807
+    },
+    {
+      "path": "metal1-01-core-pvb_view.png",
+      "sha256": "a9e050179e089e90dbed8c94028d4e6671db95adf44596e7372d9ef04f07f189",
+      "bytes": 31599
+    },
+    {
+      "path": "metal1-01-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-01-zoom-mask.png",
+      "sha256": "ef7538f5ccd5ae3269dbdaf424331bbbc8ccf3823a493a5d2bf4a13d466ca925",
+      "bytes": 3918
+    },
+    {
+      "path": "metal1-01-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-01-zoom-contour.png",
+      "sha256": "3942ba054ab7ca9f94d34a64fc9229cfcb19f07e52ccc69367458599f5975684",
+      "bytes": 5432
+    },
+    {
+      "path": "metal1-01-zoom-pvb.png",
+      "sha256": "a4d5cf41795734644d2a6d0d81e35ceb88b80d2f34f28f0f95e8614a74c67db2",
+      "bytes": 5722
+    },
+    {
+      "path": "metal1-01-zoom-overlay.png",
+      "sha256": "ace6940cdc71ce71d155a8995fc7e9c397d7bacd308a7bf0ec5c517aa368ce63",
+      "bytes": 8635
+    },
+    {
+      "path": "metal1-01-zoom-mask_view.png",
+      "sha256": "daaa056ae1f3018153c309b358b9efb9e707b31885569f4a5b578f171e188b44",
+      "bytes": 4250
+    },
+    {
+      "path": "metal1-01-zoom-resist_view.png",
+      "sha256": "8eaf836ca5adeae7d58a98d5e9cdae65ebb6c5e6ef9e9bc3bd750f060721f8d6",
+      "bytes": 7884
+    },
+    {
+      "path": "metal1-01-zoom-pvb_view.png",
+      "sha256": "bc2b42aa6f935a1ffd35ffd03705eb4d67ea4e4a1f4b1851d08ae5fb11f614a3",
+      "bytes": 6091
+    },
+    {
+      "path": "metal1-02-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-02-core-mask.png",
+      "sha256": "770d1afc05cf893bccd2fae6fb01415fdfe024f050dd37c81cac4739bcef57b6",
+      "bytes": 11531
+    },
+    {
+      "path": "metal1-02-core-sraf.png",
+      "sha256": "c835dc8720675329530582b568275d124a50e5f39df71b4245b7d74b055905d6",
+      "bytes": 10272
+    },
+    {
+      "path": "metal1-02-core-contour.png",
+      "sha256": "984b2cd351b1247981c13e680c5e1f3de0c62132b0d818dc0d0da95530806962",
+      "bytes": 25224
+    },
+    {
+      "path": "metal1-02-core-pvb.png",
+      "sha256": "fdbd5b768bf3ed08292b7a5f187c4df5ed36479568f3022004dc27ad92214096",
+      "bytes": 21501
+    },
+    {
+      "path": "metal1-02-core-overlay.png",
+      "sha256": "42db8d1a95c10efda31e066bea98bd9dc377bc95b8a70008f9bba67baed587b6",
+      "bytes": 55976
+    },
+    {
+      "path": "metal1-02-core-mask_view.png",
+      "sha256": "8ad695b7fa763f67f7ff65c72fb73367d97988cb1024dde35c23fd038ea05081",
+      "bytes": 29638
+    },
+    {
+      "path": "metal1-02-core-resist_view.png",
+      "sha256": "e48c888d8415272787b470aeb5fc5ceec11add05adf5f46ef48da3a2c3892d2a",
+      "bytes": 38042
+    },
+    {
+      "path": "metal1-02-core-pvb_view.png",
+      "sha256": "420329ce7fae328ef31d86d3412328f85bfce8fbb6f389408e02a092a3f0441e",
+      "bytes": 31703
+    },
+    {
+      "path": "metal1-02-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-02-zoom-mask.png",
+      "sha256": "b756e6d6c9cc89dc4a88eb381f73484c60d3840e07edc6bf19a6a4f712d2cc86",
+      "bytes": 3920
+    },
+    {
+      "path": "metal1-02-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-02-zoom-contour.png",
+      "sha256": "a93e3ce41754a5174b0a882dbd2360d24a15e3841c2a46be5dfc97a394476d1b",
+      "bytes": 5473
+    },
+    {
+      "path": "metal1-02-zoom-pvb.png",
+      "sha256": "4148eae4fdfad33c9c9d28f1cc7df11447a94dbd6a352cf7f4e32d061005db48",
+      "bytes": 5730
+    },
+    {
+      "path": "metal1-02-zoom-overlay.png",
+      "sha256": "f56c047b278df5181e3b6294766f5a1c9afb94d7d9609e56b68f28d1be9ee55b",
+      "bytes": 8661
+    },
+    {
+      "path": "metal1-02-zoom-mask_view.png",
+      "sha256": "d9f6dd29a6bfcba2777008194a8ab4d250de392518ae9aca5f88f67be6af40e9",
+      "bytes": 4260
+    },
+    {
+      "path": "metal1-02-zoom-resist_view.png",
+      "sha256": "6fb6d4e75b503a1ba1aa71aaac4756dd35742387ce6688ffcf856771ddf404fa",
+      "bytes": 7824
+    },
+    {
+      "path": "metal1-02-zoom-pvb_view.png",
+      "sha256": "9773b38a4d74f6b7a4d45f7a6b56fabff05c215b5579b6eb8edfdaa563cc4aae",
+      "bytes": 6109
+    },
+    {
+      "path": "metal1-03-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-03-core-mask.png",
+      "sha256": "2b0bb266050ec7bf9597398171041ca5740e7f69924fd352cc131675acdadb48",
+      "bytes": 11397
+    },
+    {
+      "path": "metal1-03-core-sraf.png",
+      "sha256": "3c18c6fff5a286c1d4f574e3b296503ecbce9b9f5491f2da566a8a8f763cf61d",
+      "bytes": 10276
+    },
+    {
+      "path": "metal1-03-core-contour.png",
+      "sha256": "1c6a3bfed8516a48418b1bc036fad2c76d7c21268f9eb574c2d80a27ef0859e6",
+      "bytes": 24064
+    },
+    {
+      "path": "metal1-03-core-pvb.png",
+      "sha256": "2763751dd369eed2962b0fd260ba8ba2b049b46493374a1d27461293ca44c6dc",
+      "bytes": 21872
+    },
+    {
+      "path": "metal1-03-core-overlay.png",
+      "sha256": "1ef31ceaa77dabbaf501e5a90775f16587850f47134161d6d6dd84b6fe552ac9",
+      "bytes": 54713
+    },
+    {
+      "path": "metal1-03-core-mask_view.png",
+      "sha256": "88237db7e37633ddad443e3d7704b01068756bc8e0d2f402be23a01dd52961f9",
+      "bytes": 29589
+    },
+    {
+      "path": "metal1-03-core-resist_view.png",
+      "sha256": "d8fa8d7a2034bf911a3bfd3c6cec9ffcc31ad697f0409dc7533a453f3cc42996",
+      "bytes": 37014
+    },
+    {
+      "path": "metal1-03-core-pvb_view.png",
+      "sha256": "29f687ca206109160f395563bc665d477516d8cf17460b20aabecd3109424812",
+      "bytes": 32455
+    },
+    {
+      "path": "metal1-03-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-03-zoom-mask.png",
+      "sha256": "aee18b34db3c3213c007b87771caab5bd2f34b40b366f993ff0897c52d405dd0",
+      "bytes": 3916
+    },
+    {
+      "path": "metal1-03-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-03-zoom-contour.png",
+      "sha256": "b6a0a921107ecd63dd132d9abb3e605d10db4956ef17cc243f820355024bf0c7",
+      "bytes": 5456
+    },
+    {
+      "path": "metal1-03-zoom-pvb.png",
+      "sha256": "332b0c1fd4abae52c2667a9b08a249320c74ff54bb3fba30545a90c1c8145313",
+      "bytes": 5705
+    },
+    {
+      "path": "metal1-03-zoom-overlay.png",
+      "sha256": "195d2ff30f66cbca8cec460688ec475b77c4044c3fe2175837d5990250cc2394",
+      "bytes": 8709
+    },
+    {
+      "path": "metal1-03-zoom-mask_view.png",
+      "sha256": "10508a6bb249e80975505c40609f166d806ddc432ab650324d3372050b2641bc",
+      "bytes": 4254
+    },
+    {
+      "path": "metal1-03-zoom-resist_view.png",
+      "sha256": "7fc79b83958700834df80dcbd58dca2205bc87b792bacbe2dd8454d2634618ca",
+      "bytes": 7873
+    },
+    {
+      "path": "metal1-03-zoom-pvb_view.png",
+      "sha256": "e52421a5b2eb98116c2676d08cd9420e5fbb46aeb88f8ec14323822cf24a0ac6",
+      "bytes": 6103
+    },
+    {
+      "path": "metal1-04-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-04-core-mask.png",
+      "sha256": "2a711438edaeeeac4a313e7f03dc1a02ac086fe80d8b9f68cc7a278f5ad61429",
+      "bytes": 11598
+    },
+    {
+      "path": "metal1-04-core-sraf.png",
+      "sha256": "abc4fb87636314f3036c9a1bdf8fa28f9c34bf5b8d9b439f074f0c14a428bfd9",
+      "bytes": 10269
+    },
+    {
+      "path": "metal1-04-core-contour.png",
+      "sha256": "b5e2d4c0527c881b9d1ea031b8a450426b94a199b84985401ddc9e8ca7de02bb",
+      "bytes": 25193
+    },
+    {
+      "path": "metal1-04-core-pvb.png",
+      "sha256": "fd02d474363bc8cdca1e1b15463cb9908db851b46c360a476cba1e8b88eadbd9",
+      "bytes": 21142
+    },
+    {
+      "path": "metal1-04-core-overlay.png",
+      "sha256": "79f1273d99485b782d1511c14ae569608ad396be86cbc5fe647a5aac25029173",
+      "bytes": 55425
+    },
+    {
+      "path": "metal1-04-core-mask_view.png",
+      "sha256": "3c8c31055ebf63d60af94a6caf521a55677a459fd651195ebb2da69ad5c36c1c",
+      "bytes": 29667
+    },
+    {
+      "path": "metal1-04-core-resist_view.png",
+      "sha256": "bf40a4d68cc3af0725677984574be7115cc1488b20cda21116eab0a525b8aa07",
+      "bytes": 37792
+    },
+    {
+      "path": "metal1-04-core-pvb_view.png",
+      "sha256": "7dea22c5ab72b3ad053a37093cd9d4746f170ef599957cfe823cc7a2da0f7ced",
+      "bytes": 31597
+    },
+    {
+      "path": "metal1-04-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-04-zoom-mask.png",
+      "sha256": "4560761de2226e381b6a838276bcc405f1dfba0665ac49b22249b7e89618a0be",
+      "bytes": 3915
+    },
+    {
+      "path": "metal1-04-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-04-zoom-contour.png",
+      "sha256": "064f024d968434292ed646cccf2ac192be14980573112c9772abcc7d754a78dd",
+      "bytes": 5494
+    },
+    {
+      "path": "metal1-04-zoom-pvb.png",
+      "sha256": "2fdcf7b26d9c060776d51f50b3339584107ee821333adeda6ad1d7342e7f7717",
+      "bytes": 5729
+    },
+    {
+      "path": "metal1-04-zoom-overlay.png",
+      "sha256": "2f5bda51dca4b2e4a7b15080d3b7e7c8e8e90d618ea2cb873d46505ef47431c5",
+      "bytes": 8660
+    },
+    {
+      "path": "metal1-04-zoom-mask_view.png",
+      "sha256": "f4118aace3ff3267458be506626309f890fef9a7abca37deb233bee42976fa64",
+      "bytes": 4252
+    },
+    {
+      "path": "metal1-04-zoom-resist_view.png",
+      "sha256": "468ca7c634f672ca271a56f26f6ff2d8967424083e34641718991e97987d7884",
+      "bytes": 7856
+    },
+    {
+      "path": "metal1-04-zoom-pvb_view.png",
+      "sha256": "fc0f8a834978528ad4933a452f914020fc3c3e7784f8864f683109d1587b7e76",
+      "bytes": 6082
+    },
+    {
+      "path": "metal1-05-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-05-core-mask.png",
+      "sha256": "5ec926590e5c7db9f5a320ab817f4e212be9dc39dbc5708abf18fc87b96e03f7",
+      "bytes": 11810
+    },
+    {
+      "path": "metal1-05-core-sraf.png",
+      "sha256": "a0eb4dd211cd20a55a53c333e409dcab705fdffcfbbb18c559b6828484535fbe",
+      "bytes": 10272
+    },
+    {
+      "path": "metal1-05-core-contour.png",
+      "sha256": "bd259df6dcfd4f780e43ad5206135b64e2dd0fc3883bf59618413043bd9ef45d",
+      "bytes": 25445
+    },
+    {
+      "path": "metal1-05-core-pvb.png",
+      "sha256": "75d3b33e9880a12617d7d9c5c6eab357ed365c53cd83e5ac418db73eb1cef0d5",
+      "bytes": 21746
+    },
+    {
+      "path": "metal1-05-core-overlay.png",
+      "sha256": "72e10f22cf543094c78b0fb8575a2a5d534031bb9317bc2b4411ec7704a00c1b",
+      "bytes": 56179
+    },
+    {
+      "path": "metal1-05-core-mask_view.png",
+      "sha256": "d61420c9938eeca351b8f37f90e0156dfd77f899ad099e3796ac597b5e46ddc8",
+      "bytes": 30074
+    },
+    {
+      "path": "metal1-05-core-resist_view.png",
+      "sha256": "9e68786379f687ddc3cbac187aea91e9b4354ac6ddb38d00da967e3628b74994",
+      "bytes": 38039
+    },
+    {
+      "path": "metal1-05-core-pvb_view.png",
+      "sha256": "2fffd122c914ecdd90619b9c0c2ce51645d6adf5c30bc0446756029502f8d884",
+      "bytes": 32160
+    },
+    {
+      "path": "metal1-05-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-05-zoom-mask.png",
+      "sha256": "000ad676951af5597f0c77c33f568228870749f3424fe128c4c5f1f52f3d4956",
+      "bytes": 3924
+    },
+    {
+      "path": "metal1-05-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-05-zoom-contour.png",
+      "sha256": "1cfdb9fc1b6c82d74e4efeb74b4ad407d64ef23b63505b33130ec1a7a5dd2acc",
+      "bytes": 5416
+    },
+    {
+      "path": "metal1-05-zoom-pvb.png",
+      "sha256": "ce6085c011f913a06782a616293a6a07015eb054ea028dd3f15c2b6fc5a50740",
+      "bytes": 5710
+    },
+    {
+      "path": "metal1-05-zoom-overlay.png",
+      "sha256": "016fa83a9c94a36b1b0e2a211233b57a466410d712c35448bf0aa8c709484186",
+      "bytes": 8706
+    },
+    {
+      "path": "metal1-05-zoom-mask_view.png",
+      "sha256": "a9c99b006175cab37b68296af66d60d0c750c74733dad201b38ecd8824244802",
+      "bytes": 4295
+    },
+    {
+      "path": "metal1-05-zoom-resist_view.png",
+      "sha256": "d81d770b40c8ef6ac30a24f5d7eae0185419c1ba4d482412508a17129604c1b9",
+      "bytes": 7889
+    },
+    {
+      "path": "metal1-05-zoom-pvb_view.png",
+      "sha256": "5c195211d33a0aeb8783f2462dfacc67361da102c1164e8f082ed4a1af3b98ce",
+      "bytes": 6079
+    },
+    {
+      "path": "metal1-06-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-06-core-mask.png",
+      "sha256": "0795808502308715f5226dfb208ba841279d21b74fdaa63eb06c3396a4809f86",
+      "bytes": 11815
+    },
+    {
+      "path": "metal1-06-core-sraf.png",
+      "sha256": "0c7b04c76fc0012c41a97181b2b09f3620d12279e2aa19753b80e566fa3721d4",
+      "bytes": 10270
+    },
+    {
+      "path": "metal1-06-core-contour.png",
+      "sha256": "e19a1ef43520cd05ce8e3873ec09d9bea806c7795f5f46777883c52907ccb54d",
+      "bytes": 25392
+    },
+    {
+      "path": "metal1-06-core-pvb.png",
+      "sha256": "10f96880c82aa10a5a93ca26bc3c3a945f27a45cf7c700ddd754ab2b039f5a79",
+      "bytes": 21268
+    },
+    {
+      "path": "metal1-06-core-overlay.png",
+      "sha256": "060f8e172347e1afe470909087e432ff4721b411eefd305fa19a0cc38b5fb6cb",
+      "bytes": 55630
+    },
+    {
+      "path": "metal1-06-core-mask_view.png",
+      "sha256": "cc341bcfb1f2c28eadeb2bd7eec7756e210d5d07f48d62070be0d433c69aebe2",
+      "bytes": 30022
+    },
+    {
+      "path": "metal1-06-core-resist_view.png",
+      "sha256": "6e53e5e6c73d8135e39940d68b9dbcabea1e929019b13c36af3d87ed38a56567",
+      "bytes": 37738
+    },
+    {
+      "path": "metal1-06-core-pvb_view.png",
+      "sha256": "a5cfdd760afdae30697e1400feca2ba8bd9a278a4bf04f4de498532bf2a35d63",
+      "bytes": 31508
+    },
+    {
+      "path": "metal1-06-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-06-zoom-mask.png",
+      "sha256": "2f386ed3ee3220d397a7b31b3f044352f0a6c2aa83f39db00ebfc525f4bcf03d",
+      "bytes": 3924
+    },
+    {
+      "path": "metal1-06-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-06-zoom-contour.png",
+      "sha256": "74738038c151e92c352e76cf5ba257df076ea3a5e5b1c664165a8de66de9a8f7",
+      "bytes": 5420
+    },
+    {
+      "path": "metal1-06-zoom-pvb.png",
+      "sha256": "b64ce8a557c28db0943f28dc2cbdd2f42475b48a066d4a91f36983c026d26e8d",
+      "bytes": 5708
+    },
+    {
+      "path": "metal1-06-zoom-overlay.png",
+      "sha256": "845528fb15831e6a06b6420202179975b981e4afdd28f59aebaac44c632f58eb",
+      "bytes": 8747
+    },
+    {
+      "path": "metal1-06-zoom-mask_view.png",
+      "sha256": "7fade00d2095e4a69f325dda2e7188a85dd43c6cab496ad88ba8b727ba44c409",
+      "bytes": 4295
+    },
+    {
+      "path": "metal1-06-zoom-resist_view.png",
+      "sha256": "a8c983b93f9a82acfa690a4ea4a1e754688606e19cf9eea801441e2d2eccc9e4",
+      "bytes": 7886
+    },
+    {
+      "path": "metal1-06-zoom-pvb_view.png",
+      "sha256": "9d586493553f694edc7e1eca102c26ee121f21fee78e0bbd321998895237da1f",
+      "bytes": 6070
+    },
+    {
+      "path": "metal1-07-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-07-core-mask.png",
+      "sha256": "ffc3c9a5f23fa9bf98a439676744d85d26a0033d685b3985fa1e255f51eb1dcd",
+      "bytes": 11309
+    },
+    {
+      "path": "metal1-07-core-sraf.png",
+      "sha256": "61341917f4b8063bfd35382cde5c7dc8ec3326b9d57b74c274c6bb74c889132e",
+      "bytes": 10254
+    },
+    {
+      "path": "metal1-07-core-contour.png",
+      "sha256": "18ea7b080db413ba0a0023eabebb1106343c853d5818e6ee997aa6ebc5f4e647",
+      "bytes": 24377
+    },
+    {
+      "path": "metal1-07-core-pvb.png",
+      "sha256": "0eb41037b20215c047ed788d1321380a4cea61f780a747378b0a2078bb59b527",
+      "bytes": 21926
+    },
+    {
+      "path": "metal1-07-core-overlay.png",
+      "sha256": "d238399f4e54307f89322a0b28309b8b693b02db5cbc0757aa3de747d75631ca",
+      "bytes": 55469
+    },
+    {
+      "path": "metal1-07-core-mask_view.png",
+      "sha256": "342a1847aa21b9301b9bb722530d9ae0b894de84cc7dda4055f0846cdf9ce132",
+      "bytes": 29376
+    },
+    {
+      "path": "metal1-07-core-resist_view.png",
+      "sha256": "f0f3d4bdecb6c9c4803f23b2b48449927d8f138d82311cda72801b170f777c9d",
+      "bytes": 37410
+    },
+    {
+      "path": "metal1-07-core-pvb_view.png",
+      "sha256": "170a739c1f99f9561660d44eeca1e064a9c9b0ea6532974f2c4c1c2902fad1e7",
+      "bytes": 32800
+    },
+    {
+      "path": "metal1-07-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-07-zoom-mask.png",
+      "sha256": "e9ea8cf1caccd1667245441ea1344ac9c135216a0c5ae2dc5aaf86d886234013",
+      "bytes": 3917
+    },
+    {
+      "path": "metal1-07-zoom-sraf.png",
+      "sha256": "2393bd6b5b3290f7c00819520e86be2b1ae6be87410d624f1ad6a978b81a658a",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-07-zoom-contour.png",
+      "sha256": "5142e0ccf2c37da69df41884bb9dbd8498a256839836f6055d613f9eba87c301",
+      "bytes": 5467
+    },
+    {
+      "path": "metal1-07-zoom-pvb.png",
+      "sha256": "4db3bc14f2fa81fdbf0168e298010e7d9d5d906e4343331bb960c0d5626a2e23",
+      "bytes": 5744
+    },
+    {
+      "path": "metal1-07-zoom-overlay.png",
+      "sha256": "8d0869c9175724c184c8478b37ac48509bd54b043b7b677b225f7fed898b8099",
+      "bytes": 8751
+    },
+    {
+      "path": "metal1-07-zoom-mask_view.png",
+      "sha256": "a3674660e63079a56e1842db500d47a8f0e95726e9a030a5b82ca23da19ab890",
+      "bytes": 4277
+    },
+    {
+      "path": "metal1-07-zoom-resist_view.png",
+      "sha256": "21d62db087cc99559165b50bc5489ea24f00288aa1cbb7c3aa4185903d6cbad4",
+      "bytes": 7919
+    },
+    {
+      "path": "metal1-07-zoom-pvb_view.png",
+      "sha256": "4a06d8c3102e04884d2f6d6241792b5ed590d4765affbe64edd9a46b7a30a96c",
+      "bytes": 6037
+    },
+    {
+      "path": "metal1-08-core-target.png",
+      "sha256": "4d9ab7cde3d911ffa152142e65b9a736b35263f4053b466b9ddc72281031b4a7",
+      "bytes": 9851
+    },
+    {
+      "path": "metal1-08-core-mask.png",
+      "sha256": "0795808502308715f5226dfb208ba841279d21b74fdaa63eb06c3396a4809f86",
+      "bytes": 11815
+    },
+    {
+      "path": "metal1-08-core-sraf.png",
+      "sha256": "0c7b04c76fc0012c41a97181b2b09f3620d12279e2aa19753b80e566fa3721d4",
+      "bytes": 10270
+    },
+    {
+      "path": "metal1-08-core-contour.png",
+      "sha256": "e19a1ef43520cd05ce8e3873ec09d9bea806c7795f5f46777883c52907ccb54d",
+      "bytes": 25392
+    },
+    {
+      "path": "metal1-08-core-pvb.png",
+      "sha256": "10f96880c82aa10a5a93ca26bc3c3a945f27a45cf7c700ddd754ab2b039f5a79",
+      "bytes": 21268
+    },
+    {
+      "path": "metal1-08-core-overlay.png",
+      "sha256": "060f8e172347e1afe470909087e432ff4721b411eefd305fa19a0cc38b5fb6cb",
+      "bytes": 55630
+    },
+    {
+      "path": "metal1-08-core-mask_view.png",
+      "sha256": "cc341bcfb1f2c28eadeb2bd7eec7756e210d5d07f48d62070be0d433c69aebe2",
+      "bytes": 30022
+    },
+    {
+      "path": "metal1-08-core-resist_view.png",
+      "sha256": "6e53e5e6c73d8135e39940d68b9dbcabea1e929019b13c36af3d87ed38a56567",
+      "bytes": 37738
+    },
+    {
+      "path": "metal1-08-core-pvb_view.png",
+      "sha256": "a5cfdd760afdae30697e1400feca2ba8bd9a278a4bf04f4de498532bf2a35d63",
+      "bytes": 31508
+    },
+    {
+      "path": "metal1-08-zoom-target.png",
+      "sha256": "804dce0973da8c6dc720cf4099c3b04b86ed0a2922d3eb2c950a7ae8d61e52ef",
+      "bytes": 3778
+    },
+    {
+      "path": "metal1-08-zoom-mask.png",
+      "sha256": "2f386ed3ee3220d397a7b31b3f044352f0a6c2aa83f39db00ebfc525f4bcf03d",
+      "bytes": 3924
+    },
+    {
+      "path": "metal1-08-zoom-sraf.png",
+      "sha256": "f7fd0d6d2b953873435f531b75657d3029d74aef4c9dfebf13d1a85d5795fb1c",
+      "bytes": 3771
+    },
+    {
+      "path": "metal1-08-zoom-contour.png",
+      "sha256": "74738038c151e92c352e76cf5ba257df076ea3a5e5b1c664165a8de66de9a8f7",
+      "bytes": 5420
+    },
+    {
+      "path": "metal1-08-zoom-pvb.png",
+      "sha256": "b64ce8a557c28db0943f28dc2cbdd2f42475b48a066d4a91f36983c026d26e8d",
+      "bytes": 5708
+    },
+    {
+      "path": "metal1-08-zoom-overlay.png",
+      "sha256": "845528fb15831e6a06b6420202179975b981e4afdd28f59aebaac44c632f58eb",
+      "bytes": 8747
+    },
+    {
+      "path": "metal1-08-zoom-mask_view.png",
+      "sha256": "7fade00d2095e4a69f325dda2e7188a85dd43c6cab496ad88ba8b727ba44c409",
+      "bytes": 4295
+    },
+    {
+      "path": "metal1-08-zoom-resist_view.png",
+      "sha256": "a8c983b93f9a82acfa690a4ea4a1e754688606e19cf9eea801441e2d2eccc9e4",
+      "bytes": 7886
+    },
+    {
+      "path": "metal1-08-zoom-pvb_view.png",
+      "sha256": "9d586493553f694edc7e1eca102c26ee121f21fee78e0bbd321998895237da1f",
+      "bytes": 6070
+    }
+  ],
+  "source_script_sha256": "d8f26c4d3c7e54c21c7364517afa093bdcb2f44afcee10d7e0730662b3fbc2ca",
+  "calls": {
+    "opc": 0,
+    "llm": 0
+  },
+  "scope": "Derived raster images, measurements and provenance hashes only. Source GDS, decks, RDB and raw responses remain on server."
+}
