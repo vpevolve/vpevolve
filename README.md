@@ -2,20 +2,19 @@
 
 Public static site: https://vpevolve.github.io/vpevolve/
 
-## Current paper alignment (17 September 2026)
+## Published content
 
-- Homepage: current method, spatially scoped local-rule mechanism, 20-window main comparison, and six-window bank ablations.
-- `/evolution/`: actual completed Poly02 / Metal29 extended-budget trajectories, with candidate outcomes, same-incumbent metrics, repeat and early-stop accounting.
-- `/evolution/archive.html`: the earlier 5 µm development geometry replay, explicitly separated from the current 10 µm study.
-- `assets/current/results.json`: derived physical metrics and source hashes only. Main table cells match the manuscript rounding. Ablation percentages use unrounded verified endpoints.
-- `assets/current/pattern-local-rule.png`: the paper's actual mechanism figure; focus EPE is distinguished from global Max EPE, and the original failed PVB guard is disclosed.
+- Homepage: method diagrams, measured geometry, local-rule mechanism, 20-window comparison, and six-window experience-bank ablations.
+- /evolution/: completed Poly02, Metal29, and selected Metal27 trajectories, with candidate geometry, retained metrics, local/global actions, and endpoint repeats.
+- assets/current/results.json: audited derived metrics and source hashes.
+- assets/current/geometry/: images from the same measured trials.
 
-The current cross-model/source-reuse studies remain pending. Previous model-replay numbers and automatic learned-invariant claims have been removed from the main page. Code/dataset release remains preparing; no draft manuscript is published here.
+Metal27 was selected after observing the main Metal results; it is an illustrative case. The preassigned Poly02 and Metal29 traces remain independently available. All cases use fixed measurement and quality criteria.
 
-These are development-exposed windows from one layout family. Budget caps and realized calls are separate. Retention-induced monotonicity is not a stable-learning claim. A newly selected Metal27 illustration is not substituted for the preassigned Metal29 trace before completion and review.
+## Development and publication
 
-## Development
+Serve this directory with a static HTTP server. No application build is required.
+GitHub Pages uses .github/workflows/pages.yml to deploy the explicit HTML/CSS/JS allowlist and current assets.
+Only derived publication assets are included; raw experiment-server files and local working directories are excluded.
 
-Serve this directory with a static HTTP server. No application build is required for the current homepage and trajectory explorer. The archived `replay.js` bundle and associated geometry remain intact.
-
-GitHub Pages deployment uses `.github/workflows/pages.yml`. Only the explicit public HTML/CSS/JS and assets are staged. No experiment server files or local work directories are deployed.
+Regenerate derived result data with scripts/update-paper-data.py using the current manuscript checkout, then verify case labels, selection notes, source hashes, and image alignment before publishing.
