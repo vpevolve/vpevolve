@@ -35,3 +35,22 @@ fetch('assets/current/results.json').then(r=>{if(!r.ok)throw Error('Data unavail
  const end=pts[pts.length-1];$('.trajectory-preview circle').setAttribute('cx',String(x(end.opc_calls)));$('.trajectory-preview circle').setAttribute('cy',String(y(end.retained_metrics.edge_normal_max_epe_nm)));
 
 }).catch(()=>{$('#results-body').innerHTML='<tr><td colspan="7">Results could not load. <a href="assets/current/results.json">Open the result file</a> or refresh this page.</td></tr>';$('#ablation-cards').textContent='The result file could not load. Please refresh.';});
+
+// Keep the paper's diagrams intact; offer full-resolution inspection on small screens.
+(()=>{
+ let dialog,opener;
+ document.querySelectorAll('[data-paper-zoom]').forEach(link=>link.addEventListener('click',event=>{
+  event.preventDefault();opener=link;
+  if(!dialog){
+   dialog=document.createElement('dialog');dialog.className='paper-dialog';dialog.setAttribute('aria-label','Paper figure enlarged');
+   dialog.innerHTML='<div class="paper-dialog-toolbar"><span>Paper figure · full composition</span><div><button data-paper-size aria-pressed="false">Zoom to 100%</button><button data-paper-close aria-label="Close paper figure">Close ×</button></div></div><div class="paper-dialog-viewport"><img alt=""></div>';
+   document.body.append(dialog);
+   dialog.querySelector('[data-paper-close]').onclick=()=>dialog.close();
+   dialog.querySelector('[data-paper-size]').onclick=e=>{const zoom=dialog.classList.toggle('is-zoomed');e.target.textContent=zoom?'Fit to screen':'Zoom to 100%';e.target.setAttribute('aria-pressed',String(zoom));};
+   dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+   dialog.addEventListener('close',()=>opener?.focus());
+  }
+  const source=link.closest('.paper-figure').querySelector('img'),img=dialog.querySelector('img');img.src=source.src;img.alt=source.alt;
+  dialog.classList.remove('is-zoomed');const size=dialog.querySelector('[data-paper-size]');size.textContent='Zoom to 100%';size.setAttribute('aria-pressed','false');dialog.showModal();dialog.querySelector('.paper-dialog-viewport').scrollTo(0,0);
+ }));
+})();
