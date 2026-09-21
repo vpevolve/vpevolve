@@ -30,6 +30,8 @@ jobs:
           mkdir _site
           cp index.html styles.css script.js geometry.js geometry.css favicon.svg og.png .nojekyll _site/
           cp -R assets _site/assets
+          mkdir _site/themes
+          cp themes/silver.css _site/themes/
           mkdir _site/evolution
           cp evolution/index.html evolution/current.js evolution/current.css _site/evolution/
       - uses: actions/upload-pages-artifact@v3
