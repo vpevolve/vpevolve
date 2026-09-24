@@ -12,7 +12,7 @@ The homepage follows the current ICLR manuscript's online Actor–Reflector–Cu
 - `assets/current/results.json`: manuscript-derived online aggregates, direct-reuse comparison, component study, trajectories, and paired continuation. Regenerate it with `scripts/update-paper-data.py MANUSCRIPT_CHECKOUT`.
 - `assets/current/geometry/geometry.json`: geometry source and image verification manifest. The images are measured outputs; no new physical evaluations were run for the website.
 
-Figure 1 currently uses the last complete manuscript version. A newer, partially edited draft has not been placed on the public page.
+Figure 1 uses the latest author-supplied drawing. Its global and local code-line labels match the current manuscript narrative.
 
 ## Development and publication
 
