@@ -39,7 +39,7 @@
 .release-section .eyebrow{color:#9de7cf}
 .release-section h2 em{color:#a8e6cf}
 .release-section .split-heading>p{color:#b6d0ca}
-.release-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.release-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .release-card{display:flex;flex-direction:column;padding:34px;border:1px solid #426761;border-radius:11px;background:#14343b}
 .release-card>span{color:#9de7cf;font:11px monospace;letter-spacing:.08em}
 .release-card h3{margin:18px 0 14px;font-size:32px}
@@ -53,3 +53,5 @@
 .release-footnote{margin-top:22px;color:#adcac1;font-size:13px;line-height:1.7}
 .release-footnote a{color:#a8ebd2;border-bottom:1px solid #7cb59e}
 @media(max-width:760px){.release-grid{grid-template-columns:1fr}.release-card{padding:26px}.release-card h3{font-size:28px}}
+
+@media(max-width:1100px) and (min-width:761px){.release-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
