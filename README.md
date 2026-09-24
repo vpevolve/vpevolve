@@ -14,9 +14,11 @@ The homepage follows the current ICLR manuscript's online Actor–Reflector–Cu
 
 Figure 1 uses the latest author-supplied drawing. Its global and local code-line labels match the current manuscript narrative.
 
+The open testbed download contains the differentiable simulator, analytic modes, a GDS-to-mask converter, tests, and all 20 layouts. A separate dataset archive contains the GDS files and manifest. SHA-256 checksums are published alongside both archives.
+
 ## Development and publication
 
-Serve this directory with a static HTTP server; no application build is required. GitHub Pages uses `.github/workflows/pages.yml` to deploy the explicit HTML/CSS/JS allowlist and current assets. Only derived publication assets are included; raw experiment-server files and local working directories are excluded.
+Serve this directory with a static HTTP server; no application build is required. GitHub Pages uses `.github/workflows/pages.yml` to deploy the explicit HTML/CSS/JS allowlist and current assets. The site includes derived publication assets and sanitized Apache-2.0 release archives. Raw experiment-server files, local working directories, and private repository history are excluded.
 
 ## Integrated recipe replay
 
