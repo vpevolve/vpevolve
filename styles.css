@@ -17,3 +17,19 @@
 
 /* Monochrome projection-lithography mark. */
 .wordmark .lithography-mark{display:block;flex:none;width:36px;height:36px;color:var(--ink)}@media(max-width:650px){.wordmark .lithography-mark{width:30px;height:30px}}
+
+/* Online Actor–Reflector–Curator results. */
+.online-results-section{background:#e8f1ed;border-block:1px solid #cfdfd7}
+.online-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:0 0 28px}
+.online-card{padding:30px 34px;background:#fff;border:1px solid #bdd7ca;border-radius:10px;box-shadow:0 12px 34px #153b3010}
+.online-card>span{font:12px monospace;letter-spacing:.08em;color:var(--green)}
+.online-card>strong{display:block;margin-top:12px;font:clamp(52px,7vw,90px)/1.1 var(--serif);letter-spacing:-.055em;color:var(--green)}
+.online-card>strong small{font-size:.42em}
+.online-card>p{color:var(--muted);font-size:14px}
+.online-endpoints{display:flex;align-items:center;gap:15px;margin-top:22px;padding-top:17px;border-top:1px solid var(--line);font:15px monospace}
+.online-endpoints i{font-style:normal;color:var(--green)}
+.online-endpoints b:last-child{color:var(--green)}
+.online-table{min-width:880px;background:#fff}
+.online-table tbody th{font-weight:700}
+.online-table tbody td b{color:var(--green)}
+@media(max-width:760px){.online-cards{grid-template-columns:1fr}.online-card{padding:26px}.online-endpoints{font-size:13px}}

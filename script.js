@@ -2,9 +2,9 @@
 const $ = (s) => document.querySelector(s);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 const stages = {
- global: ['RECIPE-WIDE INTERVENTION','Improve the common recipe first.','Change editable recipe settings such as fragmentation, movement limits, and feedback. Search begins globally, with every candidate checked against the same fixed measurement contract.',['parent recipe','typed global edit','physical evaluation'],'Both stages share one evaluation budget. Local search follows diminishing global gains; the scheduler also reserves evaluations for spatial probes.'],
- local: ['SPATIALLY SCOPED INTERVENTION','Act on the pattern behind the error.','Locate the worst gauge, capture its surrounding pattern, and match that geometry. Native markers select edge fragments for bounded mask displacement after OPC; fixed external gauges still score the whole window.',['hotspot pattern','matched fragments','scoped OPC rule'],'Track the original focus and the new global maximum. Better focus EPE alone is not sufficient for retaining a candidate.'],
- memory: ['PERSISTENT MEASURED EXPERIENCE','Keep the evidence, including the failures.','Each physical trial joins the archive with its parent recipe, action, scope, measurements, and outcome. Later proposals retrieve compatible records. In the reviewed-reuse study, all trial facts remain visible while significant observations receive applicability checks.',['measured trial','scoped record','retrieval & checking'],'The actor and harness code remain fixed. Authored engineering skills are part of the design; trial records and retained recipes accumulate during search.']
+ global: ['RECIPE-WIDE INTERVENTION','Tune settings across the layout.','The actor reads the recipe, process manuals, and measured layout feedback before proposing a global parameter edit. The commercial tool evaluates the candidate under fixed quality limits.',['recipe & layout','global edit','physical evaluation'],'Global edits share one ten-trial budget with local rules and diagnostic experiments.'],
+ local: ['SPATIALLY SCOPED INTERVENTION','Write a rule for the remaining hotspot.','Layout tools connect a measured EPE hotspot to its design edge and surrounding geometry. The actor proposes a bounded local rule; deterministic checks compile it and the commercial tool measures the result.',['hotspot geometry','matched edge','local rule'],'The agent compares the original focus, the new worst location, and the full scoring region.'],
+ memory: ['SELF-EVOLVING SKILL BANK','Turn every trial into a better next decision.','After each evaluation, an LLM reflector analyzes the local and global response. An LLM curator distills evidence-linked judgments, checks counterexamples, and suggests tests. The actor retrieves relevant skills before its next trial.',['trial record','reflect & curate','retrieve skill'],'The recipe and Skill Bank evolve during a run; model weights and harness code remain fixed.']
 };
 document.querySelectorAll('[data-stage]').forEach(button => button.addEventListener('click',()=>{
  document.querySelectorAll('[data-stage]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
@@ -15,11 +15,15 @@ if(stack){stack.addEventListener('pointermove',e=>{if(reduced.matches||e.pointer
 function groupButtons(selector,button){document.querySelectorAll(selector).forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});}
 const fmt=(x,n)=>x===null?'—':Number(x).toFixed(n);
 fetch('assets/current/results.json').then(r=>{if(!r.ok)throw Error('Data unavailable');return r.json();}).then(data=>{
- function main(group){const rows=data.main[group],full=rows.find(r=>r.method==='VPEvolve'),baseline=rows.filter(r=>!['Initial recipe','VPEvolve'].includes(r.method)).sort((a,b)=>a.max-b.max)[0];
+ function online(){const layers=data.online.layers,labels={poly:'Poly',metal1:'Metal1'};
+ $('#online-cards').innerHTML=Object.entries(layers).map(([key,row])=>{const drop=(1-row.final.max/row.initial.max)*100;return `<article class="online-card"><span>${labels[key]} · 10 WINDOWS</span><strong>${drop.toFixed(1)}<small>%</small></strong><p>Lower mean window-maximum EPE</p><div class="online-endpoints"><b>${fmt(row.initial.max,3)} nm</b><i>→</i><b>${fmt(row.final.max,3)} nm</b></div></article>`;}).join('');
+ $('#online-table-body').innerHTML=Object.entries(layers).map(([key,row])=>`<tr><th scope="row">${labels[key]}</th><td>${fmt(row.initial.max,3)} → <b>${fmt(row.final.max,3)}</b></td><td>${fmt(row.initial.avg,3)} → <b>${fmt(row.final.avg,3)}</b></td><td>${fmt(row.initial.pvb,3)} → <b>${fmt(row.final.pvb,3)}</b></td><td>${row.final.success}</td><td>${row.final.opccalls} / ${row.final.llmcalls}</td></tr>`).join('');
+ }
+ function main(group){const rows=data.main[group],full=rows.find(r=>r.method==='Direct reuse'),baseline=rows.filter(r=>!['Initial recipe','Direct reuse'].includes(r.method)).sort((a,b)=>a.max-b.max)[0];
  $('#result-main').innerHTML=`${fmt(full.max,3)} <small>nm</small>`;
  $('#result-comparison').textContent=`${((1-full.max/baseline.max)*100).toFixed(2)}% below ${baseline.method}`;
  $('#comparison-bars').innerHTML=[rows[0],baseline,full].map(r=>`<div class="bar-row ${r===full?'ours':''}"><span>${r.method}</span><div><i style="width:${r.max/Math.max(...rows.map(v=>v.max))*100}%"></i></div><b>${fmt(r.max,3)}</b></div>`).join('');
- $('#results-body').innerHTML=rows.map(r=>`<tr class="${r.method==='VPEvolve'?'ours':''}"><th scope="row">${r.method}</th><td>${fmt(r.max,3)}</td><td>${fmt(r.avg,3)}</td><td>${fmt(r.pvb,6)}</td><td>${r.mrc}</td><td>${fmt(r.success,0)}</td><td>${r.calls??'—'}</td></tr>`).join('');
+ $('#results-body').innerHTML=rows.map(r=>`<tr class="${r.method==='Direct reuse'?'ours':''}"><th scope="row">${r.method}</th><td>${fmt(r.max,3)}</td><td>${fmt(r.avg,3)}</td><td>${fmt(r.pvb,6)}</td><td>${r.mrc}</td><td>${fmt(r.success,0)}</td><td>${r.calls??'—'}</td></tr>`).join('');
  }
  function ablation(group){const rows=data.ablation[group],full=rows.find(r=>r.arm==='reviewed'),frozen=rows.find(r=>r.arm==='frozen');
  const tags={nohistory:'RECORD ACCESS OFF',frozen:'STARTING RECORDS',nolocal:'GLOBAL ACTIONS ONLY',full:'DIRECT ONLINE REUSE',reviewed:'FACTS + REVIEWED REUSE'};
@@ -29,14 +33,14 @@ fetch('assets/current/results.json').then(r=>{if(!r.ok)throw Error('Data unavail
  $('#continuation-body').innerHTML=['poly','metal1','all'].map(g=>{const r=data.continuation[g],k='edge_normal_max_epe_nm';return `<tr><th scope="row">${{poly:'Poly',metal1:'Metal1',all:'Overall'}[g]}</th><td>${fmt(r.start,3)}</td><td>${fmt(r.global[k],3)}</td><td><b>${fmt(r.local[k],3)}</b></td><td>${fmt(100*(1-r.local[k]/r.start),1)}%</td></tr>`;}).join('');
  document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{groupButtons('[data-group]',b);main(b.dataset.group);}));
  document.querySelectorAll('[data-ablation]').forEach(b=>b.addEventListener('click',()=>{groupButtons('[data-ablation]',b);ablation(b.dataset.ablation);}));
- main('all');ablation('all');
+ online();main('all');ablation('all');
  const trace=data.trajectories.find(r=>r.layer==='poly'), pts=trace.points;
  const x=v=>30+v/trace.opc_submitted*440,y=v=>175-v/trace.initial.edge_normal_max_epe_nm*140;
  let path='';pts.forEach((p,i)=>{path+=i?` H${x(p.opc_calls)} V${y(p.retained_metrics.edge_normal_max_epe_nm)}`:`M${x(p.opc_calls)},${y(p.retained_metrics.edge_normal_max_epe_nm)}`;});
  document.querySelectorAll('.trajectory-preview .trace-line,.trajectory-preview .trace-glow').forEach(el=>el.setAttribute('d',path));
  const end=pts[pts.length-1];if($('.trajectory-preview circle'))$('.trajectory-preview circle').setAttribute('cx',String(x(end.opc_calls)));if($('.trajectory-preview circle'))$('.trajectory-preview circle').setAttribute('cy',String(y(end.retained_metrics.edge_normal_max_epe_nm)));
 
-}).catch(()=>{$('#results-body').innerHTML='<tr><td colspan="7">Results could not load. <a href="assets/current/results.json">Open the result file</a> or refresh this page.</td></tr>';$('#ablation-cards').textContent='The result file could not load. Please refresh.';});
+}).catch(()=>{$('#online-cards').textContent='The result file could not load. Please refresh.';$('#online-table-body').innerHTML='<tr><td colspan="6">Results could not load. <a href="assets/current/results.json">Open the result file</a> or refresh this page.</td></tr>';$('#results-body').innerHTML='<tr><td colspan="7">Results could not load. <a href="assets/current/results.json">Open the result file</a> or refresh this page.</td></tr>';$('#ablation-cards').textContent='The result file could not load. Please refresh.';});
 
 // Keep the paper's diagrams intact; offer full-resolution inspection on small screens.
 (()=>{

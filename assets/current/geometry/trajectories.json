@@ -4,7 +4,7 @@
     "layer": "poly",
     "view_id": "poly",
     "display_label": "Poly19",
-    "selection": "Selected dense window from the ten-candidate main study. Close-up fixed at its pre-local worst gauge; later global maxima can move.",
+    "selection": "Selected dense window from the ten-candidate direct-reuse comparison. Close-up fixed at its pre-local worst gauge; later global maxima can move.",
     "status": "complete",
     "stop_reason": "physical_budget_exhausted",
     "initial": {
@@ -512,7 +512,7 @@
     "layer": "metal1",
     "view_id": "metal1",
     "display_label": "Metal45",
-    "selection": "Selected dense window from the ten-candidate main study. Close-up fixed at its pre-local worst gauge; later global maxima can move.",
+    "selection": "Selected dense window from the ten-candidate direct-reuse comparison. Close-up fixed at its pre-local worst gauge; later global maxima can move.",
     "status": "complete",
     "stop_reason": "physical_budget_exhausted",
     "initial": {

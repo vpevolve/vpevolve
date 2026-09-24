@@ -2,29 +2,22 @@
 
 Public static site: https://vpevolve.github.io/vpevolve/
 
-## Current content — 21 September 2026
+## Current content — 24 September 2026
 
-Release: silver/blue theme, monochrome lithography mark, integrated recipe replay directly after the physical-layer section. Theme comparison controls are excluded from the published site.
+The homepage follows the current ICLR manuscript's online Actor–Reflector–Curator experiment. It presents the virtual process engineer, the LLM reflector and curator, and the evolving Skill Bank. The new recipe-development Figure 1 is shown alongside the current Figure 3 method diagram.
 
-- Homepage: the two author-drawn paper figures, measured layer stack, dense hotspot comparisons, twenty-window main results, five-condition experience study, and paired global/local continuation results.
-- Main results switch between Overall, Poly and Metal. Ten candidates plus one endpoint repeat per window; seven baselines and VPEvolve. Main-study and reviewed-reuse results remain separate.
-- Dense Poly19 and Metal45: co-registered 10 µm, 600 nm and 180 nm views. The close-up tracks the worst gauge immediately before local correction; fixed-focus error and full-window maximum are labelled separately.
-- Homepage `#evolution` (old `/evolution/` links redirect here): all ten candidates and the endpoint repeat for both dense main-study cases; synchronized layout, mask, resist and PVB images with max/average EPE, PVB and MRC curves.
-- `assets/current/results.json`: paper-aligned aggregate results.
-- `assets/current/geometry/geometry.json`: source and image verification manifest; 720 verified images across 24 measured frames. No synthetic or interpolated geometry.
+- Main result: 20 windows cropped from FreePDK45-generated full-chip layouts, ten Poly and ten Metal1. Each online task has ten physical trials, an R0 evaluation, and an endpoint repeat. Poly mean window-maximum EPE falls from 18.294 to 5.525 nm; Metal1 falls from 22.052 to 16.495 nm. All 20 endpoints meet the paper's feasibility and improvement criteria.
+- Direct-reuse comparison: eight-method results from the earlier controller are labeled separately. The dense Poly19 and Metal45 geometry explorer and recipe replay also belong to this comparison; they are not online Actor–Reflector–Curator trajectories.
+- Six-window component study: five direct-reuse conditions, including frozen and reviewed reuse. The paired global/local continuation remains a separate controlled study.
+- `assets/current/results.json`: manuscript-derived online aggregates, direct-reuse comparison, component study, trajectories, and paired continuation. Regenerate it with `scripts/update-paper-data.py MANUSCRIPT_CHECKOUT`.
+- `assets/current/geometry/geometry.json`: geometry source and image verification manifest. The images are measured outputs; no new physical evaluations were run for the website.
 
-The two dense cases illustrate local geometry changes. Aggregate claims use all assigned study windows. No new physical evaluations were run to create the website visuals.
+Figure 1 currently uses the last complete manuscript version. A newer, partially edited draft has not been placed on the public page.
 
 ## Development and publication
 
-Serve this directory with a static HTTP server. No application build is required.
-GitHub Pages uses `.github/workflows/pages.yml` to deploy the explicit HTML/CSS/JS allowlist and current assets.
-Only derived publication assets are included; raw experiment-server files and local working directories are excluded.
-
-Regenerate derived result data with `scripts/update-paper-data.py` using the current manuscript checkout. Geometry provenance and visual requirements are recorded under `.research/figures/`.
-
-Validation: JavaScript syntax and git whitespace checks pass; image bytes and SHA-256 values verified against the manifest; homepage/replay checked in-browser, including case selection, close-up views and slider controls.
+Serve this directory with a static HTTP server; no application build is required. GitHub Pages uses `.github/workflows/pages.yml` to deploy the explicit HTML/CSS/JS allowlist and current assets. Only derived publication assets are included; raw experiment-server files and local working directories are excluded.
 
 ## Integrated recipe replay
 
-The homepage now hosts the complete replay. `assets/current/recipes.json` records each measured recipe diff against its actual parent, checked against the same recipe hashes as the trajectory. Global parameter edits and local pattern/edge displacement edits update with the trial slider. The endpoint repeat displays the last candidate edit with an explicit label. Key executable lines are shown first; complete filtered diffs expand on demand. Machine paths, output-file statements and comments are omitted. No new OPC or LLM calls.
+The homepage hosts the direct-reuse replay. `assets/current/recipes.json` records each measured recipe diff against its actual parent, checked against the same recipe hashes as the trajectory. Global parameter edits and local pattern/edge displacement edits update with the trial slider. The endpoint repeat displays the last candidate edit with an explicit label. Key executable lines are shown first; complete filtered diffs expand on demand. Machine paths, output-file statements, and comments are omitted.
