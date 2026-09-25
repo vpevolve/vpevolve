@@ -38,7 +38,8 @@
 
 .final-section { padding: 100px 0; }
 .cross-model-section { background: #eef2f8; border-block: 1px solid var(--line); }
-.cross-model-section .main-table { margin-top: 30px; }
+.cross-model-section .paper-figure { margin-bottom: 26px; }
+.cross-model-section .main-table { margin-top: 0; }
 .long-horizon-section { background: var(--paper); }
 
 .long-toolbar {

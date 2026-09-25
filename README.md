@@ -11,7 +11,7 @@ The page presents the VPEvolve method, measured recipe visualizations, the final
 - Mechanism ablation: Full VPEvolve, Frozen Experience, and three component variants across 20 cases.
 - Paired experience study: ACE and VPEvolve experience continue from the same trial-five recipe and raw history for five additional trials.
 - Paired local correction: global-only and global-plus-local continuations from ten common pre-local recipes, four additional trials each.
-- Cross-model full run: Claude, GPT, Gemini, DeepSeek, GLM, and Gemma each fill all three model roles on the benchmark.
+- Cross-model full run: Claude, GPT, Gemini, DeepSeek, GLM, and Gemma each fill all three model roles on the benchmark. The paper figure accompanies the exact-value table.
 - Long-horizon optimization: Poly02 Full and Frozen complete 100 trials; Metal29 Full completes 100 and Frozen ends at trial 57. The displayed curves stop at each run's last observed trial.
 
 `assets/current/final-results.json` contains the public aggregate metrics and source hashes needed by the tables. The Bayesian optimization row follows the paper's main table, and the six-model comparison follows its cross-model figure. Recorded `opc` counts include R0; the displayed comparison subtracts one R0 call per case to match the paper's call accounting. `assets/current/long-horizon-curves.json` contains retained maximum EPE and PVB change by trial for the two selected long-horizon cases. The source handoff was verified before export; its internal trajectories, paths, prompts, and model exchanges are not published here. PVB in these public files is in `10^-3 µm`, while long-horizon PVB curves use percent change from each case's R0.
