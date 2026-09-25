@@ -24,11 +24,15 @@ function chart(key,label,unit){
  if(!p.feasible)return `<path d="M${X-4} ${Y-4}l8 8m-8 0l8-8" stroke="#e7ad97" stroke-width="1.4"><title>${title} · infeasible</title></path>`;
  return `<circle cx="${X}" cy="${Y}" r="3.7" stroke="#9de7cf" fill="${p.retained?'#9de7cf':'#081c23'}"><title>${title}</title></circle>`;
  }).join('');
- return `<article class="trace-chart"><h3>${label}<small>${unit}</small></h3><svg viewBox="0 0 360 238" role="img" aria-label="${label} of retained recipe and measured candidates over ${study.opc_submitted} actual OPC calls">${grid}${cap?`<path class="cap" d="M52 ${y(cap)}H337"/>`:''}<path class="cursor" d="M${x(points[index].opc_calls)} 35V195"/><path class="path" d="${path}"/>${marks}${ticks}<text class="axis-text" x="194" y="236" text-anchor="middle">Cumulative OPC calls</text></svg></article>`;
+ const lastCandidate=points.filter(p=>p.kind==='candidate').at(-1);
+ const endpoints=key===maxKey&&lastCandidate?`<text class="endpoint-label" x="${x(points[0].opc_calls)+8}" y="${y(points[0].retained_metrics[key])-9}">R0 ${f(points[0].retained_metrics[key])}</text><text class="endpoint-label" x="${x(lastCandidate.opc_calls)-8}" y="${y(lastCandidate.retained_metrics[key])-9}" text-anchor="end">R${lastCandidate.slot} ${f(lastCandidate.retained_metrics[key])}</text>`:'';
+ return `<article class="trace-chart"><h3>${label}<small>${unit}</small></h3><svg viewBox="0 0 360 238" role="img" aria-label="${label} of retained recipe and measured candidates over ${study.opc_submitted} actual OPC calls">${grid}${cap?`<path class="cap" d="M52 ${y(cap)}H337"/>`:''}<path class="cursor" d="M${x(points[index].opc_calls)} 35V195"/><path class="path" d="${path}"/>${marks}${endpoints}${ticks}<text class="axis-text" x="194" y="236" text-anchor="middle">Cumulative OPC calls</text></svg></article>`;
 }
 function render(){
  const p=study.points[index],m=p.retained_metrics;$('#trial').value=String(index);$('#trial-label').textContent=p.kind==='initial'?'R0':p.kind==='repeat'?`OPC ${p.opc_calls} · repeat`:`OPC ${p.opc_calls}`;
- $('#trace-summary').textContent=`${study.points.filter(x=>x.kind==='candidate').length} candidates + 1 repeat · ${study.llm_reserved} model calls · completed`;
+ const candidates=study.points.filter(x=>x.kind==='candidate');
+ const improvements=candidates.filter(x=>x.retained&&x.candidate_metrics[maxKey]<study.points[x.slot-1].retained_metrics[maxKey]-1e-6).length;
+ $('#trace-summary').textContent=`${improvements}/${candidates.length} candidates improve maximum EPE · ${study.llm_reserved} model calls`;
  $('#trace-graphs').innerHTML=chart(maxKey,'Maximum EPE','nm')+chart(meanKey,'Average EPE','nm')+chart(pvbKey,'PVB / target edge','µm')+chart(mrcKey,'MRC violations','count');
  const initial=p.kind==='initial',repeat=p.kind==='repeat';
  $('#event-type').textContent=initial?'ORIGINAL R0':repeat?'ENDPOINT REPEAT':`CANDIDATE ${p.slot} / ${p.stage.toUpperCase()} EDIT`;
@@ -43,7 +47,7 @@ function render(){
  renderGeometry();
  renderRecipe();
 }
-fetch(new URL('replay-results.json?v=20260925-final',assetBase)).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{data=d;study=d.trajectories.find(x=>x.view_id===new URLSearchParams(location.search).get('case'))||d.trajectories[0];index=study.points.length-1;$('#trial').disabled=false;$('#trial').max=String(index);document.querySelectorAll('[data-case]').forEach(b=>{const active=b.dataset.case===study.view_id;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});render();
+fetch(new URL('replay-results.json?v=20260925-metal44',assetBase)).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{data=d;study=d.trajectories.find(x=>x.view_id===new URLSearchParams(location.search).get('case'))||d.trajectories[0];index=study.points.length-1;$('#trial').disabled=false;$('#trial').max=String(index);document.querySelectorAll('[data-case]').forEach(b=>{const active=b.dataset.case===study.view_id;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});render();
  document.querySelectorAll('[data-case]').forEach(b=>b.addEventListener('click',()=>{pause();study=data.trajectories.find(r=>r.view_id===b.dataset.case);index=study.points.length-1;$('#trial').max=String(index);document.querySelectorAll('[data-case]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render();}));
  $('#trial').addEventListener('input',e=>{pause();index=Number(e.target.value);render();});$('#previous').addEventListener('click',()=>{pause();index=Math.max(0,index-1);render();});$('#next').addEventListener('click',()=>{pause();index=Math.min(study.points.length-1,index+1);render();});
  $('#play').addEventListener('click',()=>{if(timer){pause();return;}if(index===study.points.length-1)index=0;render();$('#play').textContent='Ⅱ Pause';$('#play').setAttribute('aria-label','Pause measured trials');timer=setInterval(()=>{index++;render();if(index===study.points.length-1)pause();},1100);});
@@ -103,6 +107,6 @@ function renderRecipe(){
  $('#recipe-line-count').textContent=`+${row.lines_added} / −${row.lines_removed}`;
  $('.recipe-full').hidden=initial;
 }
-fetch(new URL('recipes.json?v=20260921',assetBase)).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{recipeData=d;renderRecipe();}).catch(()=>{$('#recipe-state').textContent='Recorded recipe changes could not load.';});
+fetch(new URL('recipes.json?v=20260925-metal44',assetBase)).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{recipeData=d;renderRecipe();}).catch(()=>{$('#recipe-state').textContent='Recorded recipe changes could not load.';});
 document.addEventListener('click',e=>{const link=e.target.closest('[data-replay-case]');if(!link||!data)return;document.querySelector(`[data-case="${link.dataset.replayCase}"]`)?.click();});
 })();

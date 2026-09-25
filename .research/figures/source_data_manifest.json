@@ -1,45 +1,16 @@
 {
-  "date": "2026-09-21",
-  "status": "local preview; not published",
-  "source": "Frozen repaired-main twenty-window study",
-  "selection": "Two dense illustrative cases; aggregate tables include all assigned windows",
-  "geometry_manifest": "../../assets/current/geometry/geometry.json",
-  "results": "../../assets/current/results.json",
-  "cases": [
+  "figures": [
     {
-      "case_id": "poly-19-dense-x240-y480",
-      "report_sha256": "8a5b29ed58d534d504aba6ef1a5b34d34844a8c9e98be4448deab305134f74ba",
-      "parent_slot": 2,
-      "focus": {
-        "x_um": 17.02,
-        "y_um": 4.7455,
-        "gauge_id": "1bd0e0adb683dfa11c3b:0.1545000000",
-        "normal": [
-          1.0,
-          0.0
-        ]
-      }
-    },
-    {
-      "case_id": "metal1-45-dense-x680-y540",
-      "report_sha256": "ada329108d28f9d2c42b94028469be77b2a49c980546f8f966b20acc73a1fb68",
-      "parent_slot": 3,
-      "focus": {
-        "x_um": 13.465499999999999,
-        "y_um": 9.504999999999999,
-        "gauge_id": "7e6145fb9c40ac74af14:0.0255000000",
-        "normal": [
-          -0.0,
-          1.0
-        ]
-      }
+      "figure_id": "project-page-metal44",
+      "panel": "interactive-case",
+      "source": "main_and_ablation/main/trajectories/metal1-44-dense-x20-y740/trajectory.json",
+      "script": "scripts/build_measured_example.py",
+      "outputs": [
+        "assets/current/replay-results.json",
+        "assets/current/recipes.json",
+        "assets/current/geometry/geometry.json"
+      ],
+      "notes": "Candidate and retained maximum EPE improve at every one of ten measured trials; physical images derive from the corresponding GDS outputs."
     }
-  ],
-  "verification": {
-    "png_hashes_verified": 720,
-    "frames": 24,
-    "new_opc_calls": 0,
-    "new_llm_calls": 0,
-    "browser": "Homepage and replay rendered; hotspot case switching and replay view/slider controls checked; no broken loaded images or console errors"
-  }
+  ]
 }

@@ -2,7 +2,7 @@
 'use strict';
 (() => {
  const base=new URL('assets/current/geometry/',document.currentScript.src);
- const ready=fetch(new URL('geometry.json?v=20260921-dense',base)).then(r=>{if(!r.ok)throw Error('Geometry unavailable');return r.json();});
+ const ready=fetch(new URL('geometry.json?v=20260925-metal44',base)).then(r=>{if(!r.ok)throw Error('Geometry unavailable');return r.json();});
  const colors={target:'#f4c27a',mask:'#748fcf',sraf:'#c697f2',contour:'#6eefca',pvb:'#f392ad'};
  const labels={target:'Target layout',mask:'Main mask',sraf:'Assist features',contour:'Resist contour',pvb:'Variation band'};
  const order=['pvb','mask','sraf','target','contour'];
@@ -21,7 +21,7 @@
  const mount=document.getElementById('physical-microscope');if(!mount){ready.catch(()=>{});return;}
  ready.then(g=>{
   let c=g.cases.find(x=>x.layer==='metal1'),slot=c.frames.length-1,view='zoom',exploded=false;
-  mount.innerHTML=`<div class="microscope-toolbar"><div class="segmented"><button data-geo-case="poly" aria-pressed="false">Poly19 · dense</button><button data-geo-case="metal1" class="active" aria-pressed="true">Metal45 · dense</button></div><div class="geometry-tools"><div class="segmented"><button data-geo-view="detail" aria-pressed="false">180 nm focus</button><button data-geo-view="zoom" class="active" aria-pressed="true">600 nm detail</button><button data-geo-view="core" aria-pressed="false">10 µm window</button></div><button class="explode-toggle" aria-pressed="false">Separate layers ↗</button></div></div>
+  mount.innerHTML=`<div class="microscope-toolbar"><div class="segmented"><button data-geo-case="poly" aria-pressed="false">Poly19 · dense</button><button data-geo-case="metal1" class="active" aria-pressed="true">Metal44 · dense</button></div><div class="geometry-tools"><div class="segmented"><button data-geo-view="detail" aria-pressed="false">180 nm focus</button><button data-geo-view="zoom" class="active" aria-pressed="true">600 nm detail</button><button data-geo-view="core" aria-pressed="false">10 µm window</button></div><button class="explode-toggle" aria-pressed="false">Separate layers ↗</button></div></div>
   <div class="microscope-body"><div class="microscope-stage"><div class="microscope-planes"></div><div class="microscope-scale"></div><span class="microscope-coordinate">FIXED PRE-LOCAL HOTSPOT</span></div><aside class="microscope-controls"><p class="eyebrow">PHYSICAL LAYERS</p><h3>Look beneath<br>the numbers.</h3><p class="microscope-help">Toggle a layer to see how the corrected mask prints against its target.</p><div class="layer-switches">${['target','mask','sraf','contour','pvb'].map(k=>`<label style="--key:${colors[k]}"><input type="checkbox" data-layer="${k}" checked><i></i>${labels[k]}</label>`).join('')}</div><div class="microscope-readout"></div><div class="segmented microscope-snapshot"><button data-snapshot="initial" aria-pressed="false">Original R0</button><button data-snapshot="final" class="active" aria-pressed="true">Final retained</button></div><p class="microscope-help">Actual simulated geometry. A fixed crop makes each measured change visible.</p></aside></div>`;
   function render(){const frame=c.frames[slot];
    mount.querySelector('.microscope-planes').innerHTML=order.map((k,i)=>`<div class="microscope-plane" data-layer-plane="${k}" style="--depth:${i};--key:${colors[k]}"><img src="${url(frame.assets[view][k])}" alt="${labels[k]} at OPC ${slot}"><span>${labels[k]}</span></div>`).join('');

@@ -16,7 +16,7 @@ The page presents the VPEvolve method, measured recipe visualizations, the final
 
 `assets/current/final-results.json` contains only the public aggregate metrics and source hashes needed by the tables. `assets/current/long-horizon-curves.json` contains retained maximum EPE and PVB change by trial for the two selected long-horizon cases. The source handoff was verified before export; its internal trajectories, paths, prompts, and model exchanges are not published here. PVB in these public files is in `10^-3 µm`, while long-horizon PVB curves use percent change from each case's R0.
 
-The Poly19 and Metal45 hotspot, layout-layer, and recipe-trace visualizations are individual measured examples. Their geometry and recipe-diff assets are separate from the aggregate result files. `assets/current/replay-results.json` supplies the trace visualization.
+The Poly19 and Metal44 hotspot, layout-layer, and recipe-trace visualizations are individual measured examples. Metal44 comes from the completed online Full run: all ten candidates improve maximum EPE, the first two through global edits and the next eight through local rules. Its geometry and recipe changes are synchronized to the same trial records. `assets/current/replay-results.json` supplies the trace visualization.
 
 ## Development and publication
 

@@ -14,7 +14,7 @@ const stack=$('.hero-stack');
 if(stack){stack.addEventListener('pointermove',e=>{if(reduced.matches||e.pointerType==='touch')return;const r=stack.getBoundingClientRect();stack.style.setProperty('--rx',`${(e.clientY-r.top-r.height/2)/50}deg`);stack.style.setProperty('--ry',`${(e.clientX-r.left-r.width/2)/45}deg`);});stack.addEventListener('pointerleave',()=>{stack.style.setProperty('--rx','0deg');stack.style.setProperty('--ry','0deg');});}
 function groupButtons(selector,button){document.querySelectorAll(selector).forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});}
 const fmt=(x,n)=>x===null?'—':Number(x).toFixed(n);
-fetch('assets/current/replay-results.json').then(r=>{if(!r.ok)throw Error('Replay data unavailable');return r.json();}).then(data=>{
+fetch('assets/current/replay-results.json?v=20260925-metal44').then(r=>{if(!r.ok)throw Error('Replay data unavailable');return r.json();}).then(data=>{
  const trace=data.trajectories.find(r=>r.layer==='poly'),pts=trace.points;
  const x=v=>30+v/trace.opc_submitted*440,y=v=>175-v/trace.initial.edge_normal_max_epe_nm*140;
  let path='';pts.forEach((p,i)=>{path+=i?` H${x(p.opc_calls)} V${y(p.retained_metrics.edge_normal_max_epe_nm)}`:`M${x(p.opc_calls)},${y(p.retained_metrics.edge_normal_max_epe_nm)}`;});
