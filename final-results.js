@@ -5,16 +5,18 @@
   const labels = {
     raw: 'Raw Actor', react: 'ReAct', textual: 'Textual Memory',
     reasoningbank: 'ReasoningBank', ace: 'ACE', static: 'Static Harness',
+    bayesian: 'Bayesian opt.',
     full: 'VPEvolve', frozen: 'Frozen Experience',
     without_m1: 'w/o Domain Response Reflection',
     without_m2: 'w/o Scoped Experience Revision',
     without_m3: 'w/o Experiment Guidance'
   };
-  const baselineOrder = ['raw', 'react', 'textual', 'reasoningbank', 'ace', 'static'];
+  const baselineOrder = ['raw', 'react', 'textual', 'reasoningbank', 'ace', 'static', 'bayesian'];
   const mechanismOrder = ['full', 'frozen', 'without_m1', 'without_m2', 'without_m3'];
 
   function aggregate(rows, method, layer) {
-    const selected = rows.filter(row => row.method === method && (layer === 'all' ? row.layer !== 'overall' : row.layer === layer));
+    const explicitOverall = layer === 'all' && rows.find(row => row.method === method && row.layer === 'overall');
+    const selected = explicitOverall ? [explicitOverall] : rows.filter(row => row.method === method && (layer === 'all' ? row.layer !== 'overall' : row.layer === layer));
     if (!selected.length) throw Error(`Missing result: ${method}/${layer}`);
     const total = key => selected.reduce((sum, row) => sum + (row[key] ?? 0), 0);
     const n = total('n');
@@ -48,7 +50,7 @@
       return `<article class="online-card"><span>${names[layer]} · 10 WINDOWS</span><strong>${fmt(reduction,1)}<small>%</small></strong><p>Lower mean window-maximum EPE</p><div class="online-endpoints"><b>${fmt(initial.max)} nm</b><i>→</i><b>${fmt(final.max)} nm</b></div></article>`;
     }).join('');
     $('#online-table-body').innerHTML = rows.map(({layer, initial, final, run}) =>
-      `<tr><th scope="row">${names[layer]}</th><td>${fmt(initial.max)} → <b>${fmt(final.max)}</b></td><td>${fmt(initial.mean)} → <b>${fmt(final.mean)}</b></td><td>${fmt(initial.pvb)} → <b>${fmt(final.pvb)}</b></td><td>${run.complete}/${run.n}</td><td>${run.opc} / ${run.llm}</td></tr>`
+      `<tr><th scope="row">${names[layer]}</th><td>${fmt(initial.max)} → <b>${fmt(final.max)}</b></td><td>${fmt(initial.mean)} → <b>${fmt(final.mean)}</b></td><td>${fmt(initial.pvb)} → <b>${fmt(final.pvb)}</b></td><td>${run.complete}/${run.n}</td><td>${run.opc - run.n} / ${run.llm}</td></tr>`
     ).join('');
   }
 
@@ -67,7 +69,7 @@
     ).join('');
     $('#results-body').innerHTML = rows.map(row => {
       const initialRow = row.method === 'R0';
-      return `<tr class="${row === full ? 'ours' : ''}"><th scope="row">${initialRow ? 'Initial recipe' : labels[row.method]}</th><td>${fmt(row.max)}</td><td>${fmt(row.mean)}</td><td>${fmt(row.pvb)}</td><td>${initialRow ? '—' : `${row.complete}/${row.n}`}</td><td>${initialRow ? '—' : `${row.success}/${row.n}`}</td><td>${initialRow ? '—' : `${row.opc} / ${row.llm}`}</td></tr>`;
+      return `<tr class="${row === full ? 'ours' : ''}"><th scope="row">${initialRow ? 'Initial recipe' : labels[row.method]}</th><td>${fmt(row.max)}</td><td>${fmt(row.mean)}</td><td>${fmt(row.pvb)}</td><td>${initialRow ? '—' : `${row.complete}/${row.n}`}</td><td>${initialRow ? '—' : `${row.success}/${row.n}`}</td><td>${initialRow ? '—' : `${row.opc - row.n} / ${row.llm}`}</td></tr>`;
     }).join('');
   }
 
@@ -99,14 +101,11 @@
   }
 
   function renderCrossModel(data) {
-    $('#cross-model-body').innerHTML = ['poly', 'metal1'].flatMap(layer => {
-      const qwen = aggregate(data.main.rows, 'full', layer);
-      qwen.complete = aggregate(data.mechanism.rows, 'full', layer).complete;
-      const deepseek = aggregate(data.deepseek.rows, 'full', layer);
-      return [['Qwen3.6-27B', qwen], ['DeepSeek Flash', deepseek]].map(([model, row]) =>
-        `<tr><th scope="row">${layer === 'poly' ? 'Poly' : 'Metal1'}</th><td>${model}</td><td>${fmt(row.max)}</td><td>${fmt(row.mean)}</td><td>${fmt(row.pvb)}</td><td>${row.complete}/${row.n}</td></tr>`
-      );
-    }).join('');
+    $('#cross-model-body').innerHTML = ['poly', 'metal1'].flatMap(layer =>
+      data.crossModel.rows.filter(row => row.layer === layer).map(row =>
+        `<tr><th scope="row">${layer === 'poly' ? 'Poly' : 'Metal1'}</th><td>${row.model}</td><td>${fmt(row.max)}</td><td>${fmt(row.mean)}</td><td>${fmt(row.pvb)}</td></tr>`
+      )
+    ).join('');
   }
 
   function chart(layer, metric, source) {
@@ -148,7 +147,7 @@
   }
 
   Promise.all([
-    fetch('assets/current/final-results.json?v=20260925-final').then(response => {if (!response.ok) throw Error('Final results unavailable'); return response.json();}),
+    fetch('assets/current/final-results.json?v=20260926-paper').then(response => {if (!response.ok) throw Error('Final results unavailable'); return response.json();}),
     fetch('assets/current/long-horizon-curves.json?v=20260925-final').then(response => {if (!response.ok) throw Error('Long-horizon curves unavailable'); return response.json();})
   ]).then(([data, curves]) => {
     renderOnline(data);
