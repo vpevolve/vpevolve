@@ -1,25 +1,23 @@
 # VPEvolve project page
 
-Public static site: https://vpevolve.github.io/vpevolve/
+Public site: https://vpevolve.github.io/vpevolve/
 
-## Current content — 24 September 2026
+The page presents the VPEvolve method, measured recipe visualizations, the final experiment summaries, and links to the separate public code and layout repository.
 
-The homepage follows the current ICLR manuscript's online Actor–Reflector–Curator experiment. It presents the virtual process engineer, the LLM reflector and curator, and the evolving Skill Bank. The new recipe-development Figure 1 is shown alongside the current Figure 3 method diagram.
+## Results shown on the page
 
-- Main result: 20 windows cropped from FreePDK45-generated full-chip layouts, ten Poly and ten Metal1. Each online task has ten physical trials, an R0 evaluation, and an endpoint repeat. Poly mean window-maximum EPE falls from 18.294 to 5.525 nm; Metal1 falls from 22.052 to 16.495 nm. All 20 endpoints meet the paper's feasibility and improvement criteria.
-- Direct-reuse comparison: eight-method results from the earlier controller are labeled separately. The dense Poly19 and Metal45 geometry explorer and recipe replay also belong to this comparison; they are not online Actor–Reflector–Curator trajectories.
-- Six-window component study: five direct-reuse conditions, including frozen and reviewed reuse. The paired global/local continuation remains a separate controlled study.
-- `assets/current/results.json`: manuscript-derived online aggregates, direct-reuse comparison, component study, trajectories, and paired continuation. Regenerate it with `scripts/update-paper-data.py MANUSCRIPT_CHECKOUT`.
-- `assets/current/geometry/geometry.json`: geometry source and image verification manifest. The images are measured outputs; no new physical evaluations were run for the website.
+- Main online run: 20 FreePDK45-derived windows, ten per layer. Mean window-maximum EPE changes from 18.294 to 5.361 nm on Poly and from 22.052 to 15.692 nm on Metal1. All 20 full-method runs complete and pass endpoint repeat.
+- Matched baselines: six agent methods across the same 20 cases and ten-trial budget.
+- Mechanism ablation: Full VPEvolve, Frozen Experience, and three component variants across 20 cases.
+- Paired experience study: ACE and VPEvolve experience continue from the same trial-five recipe and raw history for five additional trials.
+- Paired local correction: global-only and global-plus-local continuations from ten common pre-local recipes, four additional trials each.
+- Cross-model full run: DeepSeek Flash fills every model role on 20 cases; the page compares it with the Qwen3.6-27B full run.
+- Long-horizon optimization: Poly02 Full and Frozen complete 100 trials; Metal29 Full completes 100 and Frozen ends at trial 57. The displayed curves stop at each run's last observed trial.
 
-Figure 1 uses the latest author-supplied drawing. Its global and local code-line labels match the current manuscript narrative.
+`assets/current/final-results.json` contains only the public aggregate metrics and source hashes needed by the tables. `assets/current/long-horizon-curves.json` contains retained maximum EPE and PVB change by trial for the two selected long-horizon cases. The source handoff was verified before export; its internal trajectories, paths, prompts, and model exchanges are not published here. PVB in these public files is in `10^-3 µm`, while long-horizon PVB curves use percent change from each case's R0.
 
-The Code & data section links directly to the dedicated `vpevolve/vpevolve_code_and_data` repository for the full source, standalone simulator, and 20-layout archive. Downloadable source and data are hosted in that repository.
+The Poly19 and Metal45 hotspot, layout-layer, and recipe-trace visualizations are individual measured examples. Their geometry and recipe-diff assets are separate from the aggregate result files. `assets/current/replay-results.json` supplies the trace visualization.
 
 ## Development and publication
 
-Serve this directory with a static HTTP server; no application build is required. GitHub Pages uses `.github/workflows/pages.yml` to deploy the explicit HTML/CSS/JS allowlist and current assets. The site includes derived publication assets and direct links to the independent public code repository. Raw experiment-server files, local working directories, and private repository history are excluded.
-
-## Integrated recipe replay
-
-The homepage hosts the direct-reuse replay. `assets/current/recipes.json` records each measured recipe diff against its actual parent, checked against the same recipe hashes as the trajectory. Global parameter edits and local pattern/edge displacement edits update with the trial slider. The endpoint repeat displays the last candidate edit with an explicit label. Key executable lines are shown first; complete filtered diffs expand on demand. Machine paths, output-file statements, and comments are omitted.
+Serve this directory with a static HTTP server. GitHub Pages deploys the explicit HTML, CSS, and JavaScript allowlist in `.github/workflows/pages.yml`, plus the current public assets. The Code & data section links to the separate Apache-2.0 repository containing the public source, simulator, and 20 layouts.
